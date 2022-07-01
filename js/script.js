@@ -120,7 +120,7 @@ var x = 9; // inicializando la variable
 // La estamos creando y al mismo tiempo la estamos inicializando.
 
 var miIdioma = 'Español';
-// ------------------------------------------------------
+// ----------------
 
 
 // TEMA 7: Variables NO inicializadas
@@ -135,6 +135,28 @@ a = 365;
 
 // Una vez que es asigando el valor a la variable
 console.log(a);
+// ------------------------------------------------------
+
+
+// TEMA 8: Mayusculas y Minusculas (Case-sensitive)
+
+// A la hora de declarar variables y al mandarlas a llamar tiene que ser especificamente el mismo nombre tal cual esta asignado a esa varialble por ejemplo:
+var myLastName = 'Enriquex';
+
+// si mandamos a llamar de esta manera "MYLASTNAME" nuestra variable, esta, no sera reconocida ya que no cuenta con las mismas caracteristicas de nombre con la que fue declarada.
+console.log(MYLASTNAME); // Error 
+// Y nos manda un error de "is not defined"
+
+console.log(Mylastname); // Error
+// Igual sucede en este caso
+
+// Asi que si queremos mandar a llamar a nuestras variables sin errores tiene que ser exacta la combinacion de mayusculas y minusculas
+
+console.log(myLastName);
+// Con este ultimo por fin podemos ver nuestra variable ya que cuenta con la combinacion exacta de letras mayusculas y minusculas y esta fue la que definimos y es la unica que va a reconocer el programa.
+
+// Case-sensitive
+    // Es sensible a mayusculas y minusculas en los nombres del programa.
 // ------------------------------------------------------
 
 
