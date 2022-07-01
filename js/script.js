@@ -29,6 +29,38 @@ Varias lineas */
 // ------------------------------------------------------
 
 
+// TEMA 3: Variables
+
+// Una variable es como una caja donde podemos guardar un valor
+
+// ¿Qué hace una variable? ¿Cual es su funcion?
+// Una variale lo que hace es crear un espacio en la memoria del dispositivo para que guardemos un valor especifico en ese lugar de memoria
+
+// ¿Como crear una variable en JavaScript?
+var miVariable = 'Estamos aprendiendo JavaScript';
+
+// Podemos acceder a la variable y usar su valor en el programa.
+
+// Para mostrarla vamos a ocupar la consola para mostrar el valor:
+console.log(miVariable);
+
+// Podemos cambiar el valor de la variable
+miVariable = 16;
+console.log(miVariable);
+// Asi podemos asignar cualquier valor que queremos en la variable
+// Cualquier otro tipo de valor lo podemos trabajar con las variables
+
+// Nombre descriptivo a la variable, es lo mas recomendable a la hora de nombrar las variables
+var miNombre = 'Joao';
+
+// 3 alternativas para poder llamar a una variable con sus palabras reservadas
+    // const
+    // let
+    // var
+
+// ------------------------------------------------------
+
+
 
 
 
