@@ -84,9 +84,32 @@ console.log(b); // Tiene un valor y es "2"
 // Entonces en este momento como le asignamos un valor a "a".
  a = 20;
  console.log(a);
-
-
 // ------------------------------------------------------
+
+
+// TEMA 5: Asignar el Valor de una Variable a Otra Variable
+
+// Definamos una variable llamada "a"
+var a = 5;
+var b = a;
+// en la variable "b" la definimos con el valor de la variable "a", entonces esa variable tenia el valor de 5, como podemos trabajar con esa variable y usarla en nuestro programa tambien podemos asignarla a otra variable.
+
+// en este caso vamos asignar "a" a la variable "b"
+console.log(a);
+console.log(b);
+
+// ----------------
+// Otra opcion alternativa de poder asignar el valor de una variable a otra
+var a = 5;
+var b;
+
+// En lugar de asignarlo en la misma linea, puede ser asignada en otra linea distinta
+b = a;
+console.log(a);
+console.log(b);
+// ------------------------------------------------------
+
+
 
 
 
