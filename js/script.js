@@ -110,6 +110,34 @@ console.log(b);
 // ------------------------------------------------------
 
 
+// TEMA 6: Inicializar Variable
+
+// Ahora que entendemos todo este proceso de crear variables, declararlas y asignar los valores
+var x = 9; // inicializando la variable
+
+// Al declarar la variable (en este caso) tambien le estamos asignando un valor a la variable que es "9"
+// A esto se le conoce como "inicializando una variable".
+// La estamos creando y al mismo tiempo la estamos inicializando.
+
+var miIdioma = 'Español';
+// ------------------------------------------------------
+
+
+// TEMA 7: Variables NO inicializadas
+
+// Es una variable que todavia no tiene un valor asignado
+
+var a; // Esta variable NO ha sido inicializada porque NO tiene un valor
+var b; // Recuerda que el valor asigando para este tipo de variables se le conoce como "undefined"
+
+console.log(a);
+a = 365;
+
+// Una vez que es asigando el valor a la variable
+console.log(a);
+// ------------------------------------------------------
+
+
 
 
 
