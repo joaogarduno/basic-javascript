@@ -160,6 +160,81 @@ console.log(myLastName);
 // ------------------------------------------------------
 
 
+// TEMA: 9 Operaciones Aritmeticas Basicas
+
+// -----> SUMA
+
+// ¿Como podemos sumar 2 numeros en Javascript?
+var suma = 7 + 12;
+console.log(suma);
+// ----------------
+
+
+// -----> RESTA
+
+// Restar un numero en Javascript
+
+// Asiganamos el resultado a una variable
+var resta = 15 - 5; // Resultado Positivo
+console.log(resta);
+
+// Vemos si podemos actualizar el valor de esta variable a un valor NEGATIVO
+resta = 5 - 15; // Resultado Negativo
+console.log(resta);
+
+// Nuestro resultado tambien puede ser CERO
+resta = 15 - 15;
+console.log(resta);
+// ----------------
+
+
+// -----> MULTIPLICACIÓN
+
+// Podemos multiplicar los numeros en Javascript
+var producto = 5 * 3;
+console.log(producto);
+
+// Actualizamos el valor de la variable "producto"
+producto = 9 * 0;
+console.log(producto);
+
+// Valores negativos
+producto = -5 * 6;
+console.log(producto);
+
+// 
+producto = 5 * -6;
+console.log(producto);
+
+// signos
+producto = -5 * -6;
+console.log(producto);
+// ----------------
+
+
+// -----> DIVISION
+
+// ¿Como podemos divir un numero entre otro en Javascript?
+var cociente = 20 / 2;
+console.log(cociente);
+
+// Actualizamos valor de "cociente" y el resultado que esperamos no es un numero entero si no un decimal, tambien podemos manejar ese tipo de casos en Javascript.
+cociente = 17 / 31;
+console.log(cociente);
+// El resultado nos arroja muchos decimales (0.5483870967741935) para poder representar esa fraccion.
+// Pero el numero de decimales es finito, porque la computadora puede guardar un numero finito de decimales.
+// El numero final es el resultado de redondear una secuencia de numeros que estarian antes y no es el resultado exactamente el que tenemos aqui solo es una aproximacion
+
+// Finalmente vemos el siguiente caso, nos preguntamos que va a pasar, ya que si intentamos dividir entre CERO (0), lo cual no esta definido matematicamente, vamos a obtener algo inesperado
+cociente = 3 / 0;
+console.log(cociente);
+// Cuando vemos el valor que se asigno a la variable es "infinity", es decir equivale a un valor infinito
+
+// ----------------
+// ------------------------------------------------------
+// ------------------------------------------------------
+
+
 
 
 
