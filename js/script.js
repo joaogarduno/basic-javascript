@@ -57,8 +57,37 @@ var miNombre = 'Joao';
     // const
     // let
     // var
+// ------------------------------------------------------
+
+
+// TEMA 4: Operadores de Asignacion
+
+// ¿Como podemos asignar una varlor a una varible?
+
+// Sin asignar ningun valor
+var a;
+// Estamos creando una variable llamada "a" con la palabra reservada "var"
+
+// Estamos asignando un valor a una variable
+var b = 2
+// La estamos creando y a la misma vez estamos asignado un valor
+
+console.log(a); // Undefined
+console.log(b); // Tiene un valor y es "2"
+
+// undefined
+    // "undefined" es un tipo de dato
+    // Es el valor que se asigna por defecto a una variable cuando no tiene asigando un valor, solo la estamos creando.
+// Entonces las variables tienen un valor que se asigna por defecto que se llama "undefined"
+// Esto nos dice que la variable no tiene todavia ningun valor asignado.
+
+// Entonces en este momento como le asignamos un valor a "a".
+ a = 20;
+ console.log(a);
+
 
 // ------------------------------------------------------
+
 
 
 
