@@ -232,6 +232,90 @@ console.log(cociente);
 
 // ----------------
 // ------------------------------------------------------
+
+
+// TEMA 10: Números Decimales
+
+// Crear numeros decimales en JavaScript
+
+// Seran muy utiles para representar este tipo de numero en nuestro programa
+var miNumeroDecimal = 23.4;
+// Al encontrar un punto que separa a los numero decimos que trabajeremos o estamos trabajando con decimales
+
+// Otro ejemplo
+var peso = 78.34;
+// ----------------
+
+
+// TEMA 11: Operaciones Aritmeticas Basicas con Numeros Decimales
+
+// -----> MULTIPLICAR Números Decimales
+// Podemos operar con numeros decimales en Javascript al igual como lo hicimos con los numeros enteros
+
+// Veremos como podemos multiplicar numeros decimales en Javascript
+var producto = 3.4 * 10.4;
+console.log(producto);
+// Multiplicamos 2 valores decimales y el resultado es un numero decimal
+
+// Actualizar esa variable para poder hacer distinta operacion, para poder entender como podemos operar con este tipo de dato
+producto = 2.4 * 4;
+// Multiplicar un numero decimal por un numero entero
+console.log(producto);
+// Y nos retorna un numero decimal
+
+// Otra forma
+var producto = 6 * 8.9;
+console.log(producto);
+// En este caso podemos ver el redondeo que ocurre, este producto no se puede representar como un numero decimal con finitos decimales (53.400000000000006), la computadora se tiene que aproximar a ese valor.
+// Entonces como no lo puede representar al 100% de forma exacta lo representa con ciertos numeros decimales (53.400000000000006)
+// En teoria el resultado si lo hacemos manualmente seria 53.4, pero la computadora no puede representarlo de forma exacta, asi que representa una aproximacion
+
+// Tambien podemos multiplicar por CERO (0)
+producto = 3.6 * 0;
+console.log(producto);
+// Tambien el cero se puede representar como un numero decimal, es equivalente en este caso
+// Son 2 tipos distintos de datos pero el valor es el mismo
+
+// Tambien tenemos un "producto" que sea un resultado negativo
+producto = -5.7 * 3.4;
+console.log(producto);
+// Resultado negativo porque alguno de los factores es negativo
+// ----------------
+
+
+
+// -----> DIVIDIR Números Decimales
+
+// Otra operacion aritmetica que podemos realizar con los numero decimales en JavaScript es Dividir los numeros decimales en JavaScript es dividir los nuemeros decimales.
+var cociente = 5.0 / 2.0;
+console.log(cociente);
+// En este caso es equivalente si colocamos
+    // 5.0 / 2.0
+    // 5.0 / 2
+    // 5 / 2
+
+// Ahora actualizamos esta variable al cociente
+cociente = 2.3 / 6.7;
+console.log(cociente);
+// El resultado es un numero decimal "redondeado" ya que no sera representado de forma exacta
+
+
+// Ahora intenetemos dividir un numero decimal entre 0.0
+cociente = 4.2 / 0.0;
+console.log(cociente);
+// Recuerda que cuando dividimos entre CERO el valor asignado era infinity o infinito
+
+// Tambien la regla de los signos se vana preservar en la division
+// ------------------------------------------------------
+
+
+
+
+// ----------------
+// ------------------------------------------------------
+// ----------------
+// ------------------------------------------------------
+// ----------------
 // ------------------------------------------------------
 
 
