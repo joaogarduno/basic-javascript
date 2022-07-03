@@ -311,6 +311,34 @@ console.log(cociente);
 
 
 
+// TEMA 12: RESTO de una División
+
+// ¿Como obtener el RESTO de una división en JavaScript?
+
+// Esta operacion es particularmente importante cuando queremos verificar si un numero es "par" o "impar"
+
+// ¿Como obtener el resto de dividir 15 / 5?
+var resto = 15 % 5;
+// El simbolo de porcentaje es el operador que nos va a permitir obtener el resto de la division
+
+// ¿Como vamos a obtener ese resto?
+console.log(resto);
+
+// Actuaizamos la variable
+resto = 5 % 5;
+console.log(resto);
+
+// Probamos con todos los numero:
+    // 5 % 1, 5 % 2, 5 % 3, 5 % 4, 5 % 5,
+
+
+
+
+
+
+
+
+
 // ----------------
 // ------------------------------------------------------
 // ----------------
