@@ -361,18 +361,38 @@ librosCompardos++;
 console.log(librosCompardos);
 
 // Esta es la forma de incrementar la variable en uno
-
-
-
-
-
-
-
-
-// ----------------
-
-// ----------------
 // ------------------------------------------------------
+
+
+
+// TEMA 14: Reducir el valor de una variable
+
+// Tambien podemos reducir el valor de una variable en JavaScript
+
+// Veamos como poder reducir el valor, el valor actual de una variable en uno
+
+var numeroDeEstudiantes = 256;
+console.log(numeroDeEstudiantes);
+// Como reducir el valor actual de esa variable en 1
+
+// Lo que tenemos que hacer es asignar el nuevo valor a la variable
+numeroDeEstudiantes = numeroDeEstudiantes - 1;
+console.log(numeroDeEstudiantes);
+
+// Hay una forma mucho mas concisa de escribir esa misma linea de codigo
+numeroDeEstudiantes--;
+console.log(numeroDeEstudiantes);
+
+
+
+
+
+
+
+// ----------------
+
+// ----------------
+
 // ----------------
 // ------------------------------------------------------
 
