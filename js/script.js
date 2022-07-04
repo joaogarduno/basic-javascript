@@ -330,7 +330,37 @@ console.log(resto);
 
 // Probamos con todos los numero:
     // 5 % 1, 5 % 2, 5 % 3, 5 % 4, 5 % 5,
+// ------------------------------------------------------
 
+
+
+// TEMA 13: Incrementar el valor de una variable
+
+// ¿Como modificar el valor de una variable en Javascript?
+
+// Alternativa que no es asignar un nuevo valor directamente si no incrementar su valor actual
+var librosCompardos = 105;
+console.log(librosCompardos);
+
+// Ahora ya sabemos que su valor inicial es 105
+
+// Nuestra primera opcion para poder incrementar su valor a 106 en caso de que la persona decida comprar otro libro nuevo
+
+// OPCION 1
+librosCompardos = librosCompardos + 1;
+// ¿Que es lo que hace esta linea?
+// Esta linea se evalua primero del lado derecho, se analiza que nosotros decimos tecnicamente se evalua cuando resulte un valor especifico, se evalua ese lado derecho la expresion y ese valor resultante se asigna a esta variable --> librosComprados (del lado izquierdo)
+
+// Depues de incrementarla en uno, mostramos su valor
+console.log(librosCompardos);
+
+
+// OPCION 2
+// Esta opcion es mas concisa y es la que en general se ocupa en JavaScript y es cuando queremos incrementar el valor en 1
+librosCompardos++;
+console.log(librosCompardos);
+
+// Esta es la forma de incrementar la variable en uno
 
 
 
@@ -340,7 +370,7 @@ console.log(resto);
 
 
 // ----------------
-// ------------------------------------------------------
+
 // ----------------
 // ------------------------------------------------------
 // ----------------
