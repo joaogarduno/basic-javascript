@@ -461,6 +461,34 @@ console.log(salario);
 
 
 
+// TEMA 18: Asignacion de División
+
+// se cubren las 4 operaciones principales que podemos realizar con asignacion compuesta, veremos en este caso la División
+var d = 39;
+
+d = d / 3;
+console.log(d);
+
+// OTRO
+d /= 2;
+console.log(d);
+
+
+// OTRO EJEMPLO
+var salario = 45000;
+
+console.log(salario);
+salario /= 2;
+console.log(salario);
+
+
+// Con esto ya sabemos como realizar las 4 operaciones que sabemos usar con la asignacion compuesta.
+// ------------------------------------------------------
+
+
+
+
+
 
 
 
