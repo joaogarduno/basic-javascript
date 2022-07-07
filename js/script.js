@@ -375,26 +375,61 @@ var numeroDeEstudiantes = 256;
 console.log(numeroDeEstudiantes);
 // Como reducir el valor actual de esa variable en 1
 
+// OPTION 1
 // Lo que tenemos que hacer es asignar el nuevo valor a la variable
 numeroDeEstudiantes = numeroDeEstudiantes - 1;
 console.log(numeroDeEstudiantes);
 
+// OPTION 2
 // Hay una forma mucho mas concisa de escribir esa misma linea de codigo
 numeroDeEstudiantes--;
 console.log(numeroDeEstudiantes);
-
-
-
-
-
-
-
-// ----------------
-
-// ----------------
-
-// ----------------
 // ------------------------------------------------------
+
+
+
+// TEMA 15: Asignación de Suma 
+
+// Ya podemos incrementar el valor de nuestra variable en 1 y reducirla en 1
+
+// Pero que pasa si nosotros queremos recirla o incrementarla en otro valor que no sea "1"
+var a = 23;
+
+// Queremos incrementar el valor de a en 5
+a = a + 5;
+console.log(a);
+
+// Pero existe otra forma mas concisa para poder realizar esto
+var b = 30;
+b += 10;
+console.log(b);
+
+// con esto decimos "añade 5 al actual valor de b y asignalo a esa variable"
+// que vendria siendo lo mismo que hacer esto -> "b = b + 10"
+
+// Pero es mas consiso y facil de leer de esta forma "b += 20"
+// ----------------
+
+
+
+// Se puede sumar cualquier cantidad utilizando esta sitaxis no necesariamente debe ser un numero entero
+var totalVentas = 13567.34;
+console.log(totalVentas);
+totalVentas += 345.67;
+console.log(totalVentas);
+
+
+
+
+
+
+
+// ----------------
+
+// ----------------
+
+// ----------------
+
 
 
 
