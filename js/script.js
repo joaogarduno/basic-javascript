@@ -436,6 +436,28 @@ console.log(b);
 var totalDeuda = 2446;
 totalDeuda -= 345;
 console.log(totalDeuda);
+// ------------------------------------------------------
+
+
+
+// TEMA 17: Asignacion de Multiplicacion
+
+// Podemos utilizar la misma sintaxis de asignacion compuesta para realizar tambien una MULTIPLICACION, con el valor actual de una variable
+var c = 23;
+c = c * 2;
+console.log(c);
+
+// OTRA FORMA
+var c = 2;
+c *= 2;
+console.log(c);
+
+// OTRO
+var salario = 45000;
+console.log(salario);
+salario *= 5;
+console.log(salario);
+// ------------------------------------------------------
 
 
 
@@ -448,20 +470,6 @@ console.log(totalDeuda);
 // ----------------
 
 // ----------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
