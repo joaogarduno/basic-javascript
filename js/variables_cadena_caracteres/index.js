@@ -25,6 +25,53 @@ var apellido = 'Saldaña Medrana';
 
 // var apellido = 'macarena ferrano";
 // Esto es un error
+// ------------------------------------------------------
+
+// TEMA 20: Escapar comillas en cadenas de caracteres
+
+// En el tema anterior se vio lo siguiente...
+// ¿Como definir una cadena de caracteres? ¿Con comillas dobles o comillas simples?
+
+// Pero existe un solo caso en el que cada una de estas, en el que puede causar problemas lo que nos obliga a que tipo de comillas elegir.
+var miCadena = "imprimo una cadena de caracteres normal, con comillas dobles";
+
+// Pero que pasa si yo quiero que en mi cade de caracteres lleve comillas....
+
+// Ejemplo
+// Cuando queremos incluir comillas dentro de una cade de caracteres necesitamos utilizar un tipo especifico de comillas, es decir, si quieres hacer lo siguiente...
+var miCadena = "Soy una cadena de "caracteres"";
+// Esto nos da un error ya que como se comento antes debemos utilizar un tipo de comillas especifico si la situacion es similar a la que estamos viendo
+
+// Existen varias formas para solucionar este tipo de problemas
+    // - Escapar
+    // - 
+
+// ejemplo 1: "Escape"
+// esto omite las comillas y considera como su fuera parte de la cadena y no como un caracter especial que tiene una funcion dentro de la cadena, si no que una cadena mas en la cadena de caracteres.
+// Eso lo logramos con...
+var miCadena = "Soy una cadena de \"caracteres\"";
+console.log(miCadena);
+// Lo hacemos con la barra invertida antes de las comillas
+// ----------------
+
+
+
+
+// TEMA 21: Cadena de Caracteres con Comillas Simples
+
+// Tambien podemos definir cadena de caracteres con comillas simples
+var miMet;
+
+miMet = 'Jugando con "JavaScript"';
+console.log(miMet);
+
+// TAMBIEN SE PUEDE...
+var message;
+
+message = "Jugando con 'Javascript'";
+console.log(message);
+// ------------------------------------------------------
+
 
 
 
