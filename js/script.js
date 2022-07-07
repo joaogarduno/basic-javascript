@@ -411,20 +411,39 @@ console.log(b);
 // ----------------
 
 
-
 // Se puede sumar cualquier cantidad utilizando esta sitaxis no necesariamente debe ser un numero entero
 var totalVentas = 13567.34;
 console.log(totalVentas);
 totalVentas += 345.67;
 console.log(totalVentas);
+// ------------------------------------------------------
 
 
 
+// TEMA 16: Asignación de Resta
 
+// Asi como podemos incremantar el valor de una variable en otro valor especifico podemos reducir el valor de una variable
+var b = 23;
+b = b - 3;
+console.log(b);
 
-
-
+// forma mas consisa
+b -= 9;
+console.log(b);
 // ----------------
+
+// OTRO EJEMPLO
+var totalDeuda = 2446;
+totalDeuda -= 345;
+console.log(totalDeuda);
+
+
+
+
+
+
+
+
 
 // ----------------
 
