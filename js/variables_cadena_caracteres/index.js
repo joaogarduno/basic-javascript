@@ -27,6 +27,8 @@ var apellido = 'Saldaña Medrana';
 // Esto es un error
 // ------------------------------------------------------
 
+
+
 // TEMA 20: Escapar comillas en cadenas de caracteres
 
 // En el tema anterior se vio lo siguiente...
@@ -71,6 +73,51 @@ var message;
 message = "Jugando con 'Javascript'";
 console.log(message);
 // ------------------------------------------------------
+
+
+
+
+// TEMA 22: Secuencia de escape
+
+// Existe algo que se denomina "secuencia de escape"
+
+/*
+SECUENCIA DE ESCAPE:
+
+Codigo | Resultado
+--------------------
+\'      Comilla simple
+\"      Comilla doble
+\\      Barra invertida
+\n      Línea Nueva
+\r      Retorno de Carro
+\t      Tabulación
+\b      Retroceso
+\f      Salto de página
+...
+
+*/
+
+// La secuencia de escape son una combinacion de caracteres que no se representan a si mismos en una cadena de caracteres
+// La tabla anterior son algunas de las secuencias de escape que podemos usar
+
+// COMILLAS DOBLES:
+console.log("Estoy jugando y aprendiendo \"JavaScript\"");
+
+// BARRA INVERTIDA:
+console.log("Estoy jugando y aprendiendo \\ JavaScript");
+
+// Linea nueva en la cadena
+console.log("Estoy jugando... \ny aprendiendo JavaScript");
+// ------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
