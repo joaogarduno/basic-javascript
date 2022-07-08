@@ -114,6 +114,25 @@ console.log("Estoy jugando... \ny aprendiendo JavaScript");
 
 
 
+// TEMA 23: Concatenar cadenas de caracteres
+
+// Tambien podemos unir cadena de caracteres
+
+// Esto suele ser muy util cuando necesitamos formar una sola cadena a partir de varias cadenas, y podemos hacerlo con el operador de "suma" "+".
+
+var nombreCompleto = "Joao " + "Garduno";
+console.log(nombreCompleto);
+
+// Otra alternativa
+var nombreCompleto = "Joao" + " " + "Garduno";
+console.log(nombreCompleto);
+// ------------------------------------------------------
+
+
+
+
+
+
 
 
 
@@ -126,8 +145,6 @@ console.log("Estoy jugando... \ny aprendiendo JavaScript");
 // ----------------
 // ----------------
 // ----------------
-
-
 
 
 // ------------------------------------------------------
