@@ -206,6 +206,31 @@ console.log(miCadena.length);
 
 miCadena = '¡Estoy aprendiendo a programar en JavaScript!';
 console.log(miCadena.length);
+// ------------------------------------------------------
+
+
+
+
+// TEMA 27: Notacion de corchetes: Primer Caracter
+    // -> recordar que este nombre se utilizo en el ejemplo anterior a la hora de hacer commit
+
+// Esta es una notacion que nos permite acceder a los caracteres individuales de una cadena.
+
+// Veamos como poder accer al primer caracter de una cadena
+var lenguajeDeProgramacion = 'JavaScript';
+
+// "JavaScript" esa cadena de caracteres tiene una estructura interna, que nos va a permitir acceder a sus caracteres
+
+/*
+Cadena:  J a v a S c r i p t
+Indices: 0 1 2 3 4 5 6 7 8 9
+*/
+
+// Cada uno de esos caracteres de la cadena tiene un indice asociado, que es un numero entero que comienza en cero y se incrementa en uno para cada caracter hacia la derecha
+
+// El primer caracter de la caderna esta ubicado en el indice 0 (cero), y podemos usar ese indice para acceder a ese caracter
+console.log(lenguajeDeProgramacion[9]);
+// con esto ya sabemos como poder acceder al primer caracter
 
 
 
