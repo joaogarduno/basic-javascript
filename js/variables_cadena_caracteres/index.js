@@ -131,6 +131,30 @@ console.log(nombreCompleto);
 
 
 
+// TEMA 24: Construir cadenas con variables
+
+// Tambien podemos contruir cadenas con variables
+
+//  Lo hacemos con el mismo operador ( + ) que utilizamos para concatenar las cadenas
+var verbo = 'Programar';
+
+// Podemos usar esa varible para poder concatenar las cadenas y generar un mensaje
+var mensaje = 'Estoy aprendiendo a ' + verbo; // asi es como se concatena con el operador de la SUMA (+)
+console.log(mensaje);
+
+
+// Tambien podemos concatenar esa misma varible que contiene una cadena en cualquier punto de la misma cadena, es decir en cualquier punto del mensaje
+var verbo = 'Programar';
+
+var mensaje = 'Estoy aprendiendo a ' + verbo + 'con amor y paciencia';
+console.log(mensaje);
+
+// Esto es util cuando queremos personalizar el valor de una cadena, porque podemos simplemente tomar el valor de una varible y va a parecer el mensaje o como un resultado que podemos usar en nuestro programa
+
+
+
+
+
 
 
 
