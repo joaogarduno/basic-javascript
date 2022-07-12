@@ -171,6 +171,42 @@ mensajeCompleto += parteFinal;
 console.log(mensajeCompleto);
 
 // Ahora entendemos como formar cadenas concatenando otras cadenas que estan guardadas no asignadas a una variable
+// ------------------------------------------------------
+
+
+
+
+// TEMA 26: Longitud de una Cadena de Caracteres
+
+// Como podemos realizar una operacion que es extremadamente comun en programacion
+
+// Encontrar la longitud de una cadena
+
+// La longitud o tamaño se refiere simplemente a cuantos caracteres tiene una cadena de caracteres, incluyendo espacios y cualquier simbolo que esta pueda tener.
+
+
+// Ejemplos:
+// Si declaramos la siguiente variable "miCadena" vamos asignar distintos valores
+var miCadena;
+
+// Por ejemplo la cadena puede esta formada por un solo caracter, puede ser cualquier caracter (simbolo, espacio, letra, etc.)
+miCadena = 'AB ';
+
+// digamos que en nuestro programa necesitamos saber cuantos caracteres contiene esa cadena.
+
+// Lo que podemos hacer es escribir el nombre de la variable y en donde necesitemos usar ese valor de la longitud
+console.log(miCadena.length);
+// Esta propiedad de la cadena (.length) nos va a permitir saber cuantos caracteres contiene
+// ----------------
+
+// OTRO EJEMPLO:
+// Cuantos caracteres tiene esta cadena:
+miCadena = 'JavaScript';
+console.log(miCadena.length);
+
+miCadena = '¡Estoy aprendiendo a programar en JavaScript!';
+console.log(miCadena.length);
+
 
 
 
