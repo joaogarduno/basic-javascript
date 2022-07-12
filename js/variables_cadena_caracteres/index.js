@@ -263,6 +263,38 @@ miCadena = 'Hola Mundo';
 console.log(miCadena);
 
 // Entonces no podemos cambiar ningun caracter de forma individual de esta cadena porque son INMUTABLES
+// ------------------------------------------------------
+
+
+
+
+// TEMA 29: Notación de Corchetes: Enésimo Carácter
+
+// Retomaremos el tema anterior que estabamos viendo "TEMA 28: Inmutabilidad de Cadenas de Caracteres" 
+
+// ¿Como usar la notacion de corchetes para acceder a los caracteres individuales de una cadena?, porque no solamente puedes acceder al primer caracter de la cadena, puedes acceder a cualquier caracter, comenzando a contar desde cero
+
+// Ejemplo:
+var miCadena = "JavaScript";
+
+// Otra vez tomamos el ejemplo anterior el diagrama
+/*
+Cadena:  J a v a S c r i p t
+Indices: 0 1 2 3 4 5 6 7 8 9
+*/
+
+// Podemos ver el indice que corresponde a cada uno de esos caracteres
+// por ejemplo el "indice 4" corresponde al caracter "S", el indice 7 corresponde al caracter "i" y asi sucesivamente, incrementado de 1 por cada caracter en la cadena
+
+// ¿Como podemos acceder a cada uno de ellos?
+// usando sus indices con la notacion que ya aprendimos
+console.log(miCadena[6]); // "r"
+console.log(miCadena[2]); // "v"
+
+// ¿Qué pasa si nosotros usamos un indice que esta fuera de los limites permitidos?
+console.log(miCadena[10]); // el resultado no sera un "error" si no que sera un "undefined"
+console.log(miCadena[5.6]); // sera un "undefined"
+
 
 
 
