@@ -150,7 +150,27 @@ var mensaje = 'Estoy aprendiendo a ' + verbo + 'con amor y paciencia';
 console.log(mensaje);
 
 // Esto es util cuando queremos personalizar el valor de una cadena, porque podemos simplemente tomar el valor de una varible y va a parecer el mensaje o como un resultado que podemos usar en nuestro programa
+// ------------------------------------------------------
 
+
+
+
+// TEMA 25: Agregar Variables a cadenas de caracteres
+
+// Tambien podemo usar una sintaxis de un operador visto en tema anteriores, para concatenar cadena de caracteres a variables
+
+var mensajeCompleto = 'Aprendiendo a programar ';
+var parteFinal = 'con motivacion y paciencia';
+
+// Vamos a mostrar el mensaje completo antes de concatenar la parte final y luego vamos a concatenar la parte final
+console.log(mensajeCompleto);
+
+// Este es el proceso de concatenacion
+mensajeCompleto += parteFinal;
+// mensaje completo una vez que ya esta actualizado
+console.log(mensajeCompleto);
+
+// Ahora entendemos como formar cadenas concatenando otras cadenas que estan guardadas no asignadas a una variable
 
 
 
