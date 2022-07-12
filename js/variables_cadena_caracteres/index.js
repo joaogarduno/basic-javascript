@@ -231,6 +231,38 @@ Indices: 0 1 2 3 4 5 6 7 8 9
 // El primer caracter de la caderna esta ubicado en el indice 0 (cero), y podemos usar ese indice para acceder a ese caracter
 console.log(lenguajeDeProgramacion[9]);
 // con esto ya sabemos como poder acceder al primer caracter
+// ------------------------------------------------------
+
+
+
+
+// TEMA 28: Inmutabilidad de Cadenas de Caracteres
+
+// ¿Qué implica que sean inmutables?
+
+// mutables significa que se pueden cambiar
+
+// e inmutables significa que no se pueden cambiar 
+
+// Entonces una vez que nosotros definimos una cadena de caracteres en el programa no podemos cambiar sus elementos individuales, es decir, sus caracteres
+
+// Ejemplos:
+// INMUTABILIDAD
+var miCadena = 'Jola Mundo'; // una letra que depues vamos a querer cambiar
+console.log(miCadena);
+
+// tratar de cambiar el error de nuestra cadena cambiando el caracter dependiendo su indice
+
+// Y para hacer eso hacemos lo siguiente
+miCadena[0] = 'H'; // esto nos causara un Error
+// Entonces esto nos va a causar un error, pero, ¿Por qué? porque las cadenas son Inmutables, es decir no puedes cambiar los caracteres individuales de la cadena
+// Lo que podemos hacer es reasignar la cadena completa
+
+// Notar que aqui no tratamos de cambiar un indice en especifico si no que reasignamos completamente el valor de la variable
+miCadena = 'Hola Mundo';
+console.log(miCadena);
+
+// Entonces no podemos cambiar ningun caracter de forma individual de esta cadena porque son INMUTABLES
 
 
 
