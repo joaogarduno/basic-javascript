@@ -331,7 +331,39 @@ console.log(miCadena[miCadena.length -1]);
 
 // Aprendeimos como acceder al ultimo caracter de una cadena de caracteres.
 // Recuerda que es la longitud de la cadena menos uno
+// ------------------------------------------------------
 
+
+
+
+// TEMA 31: Notación de corchetes: De derecha a izquierda
+
+// Para terminar el tema completamente de "Como podemos usar la notacion de corchetes para acceder a los caracteres de una cadena"
+
+// Si nosotros llegamos al final de la cadena y queremos el penultimo o el antepenultimo caracter o el caracter que esta antes del antepenultimo
+
+// Y otro forma de hacerlo, de tal manera que podemos contar desde el final de la cadena hacia el principio para tener el caracter especifico.
+var miCadena;
+
+/*
+
+El penultimo indice es la longitud menos 2 (-2), porque comenzamos a contar desde 0
+
+miCadena.length es 10. Por lo tanto el penultimo indice es 8.
+
+Cadena:  J a v a S c r i p t
+Indices: 0 1 2 3 4 5 6 7 8 9
+
+*/
+
+miCadena = "Javascript";
+console.log(miCadena[miCadena.length - 2]); // -2 porque queremos el segundo caracter de derecha a izquierda
+
+// Tambien existe otra forma, en lugar de colocar el numero de forma explicita, podrias declarar una variable "n"
+miCadena = "Javascript";
+n = 4;
+console.log(miCadena[miCadena.length - n]);
+// Descubrimos como poder acceder a los caracteres de una cadena de izquierda a derecha y de derecha a izquierda
 
 
 
