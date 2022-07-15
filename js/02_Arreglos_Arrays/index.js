@@ -46,6 +46,60 @@ console.log(notas);
 
 
 
+// TEMA 34: Arreglos Anidados
+
+// Algo muy interesante sobre los arreglos, es que pueden contener cualquier tipo de datos, incluyendo otros arreglos
+
+// Ahora si los elementos dentro del array en lugar de ser enteros o cadenas de caracteres fuesen arreglos. A eso lo llamamos una arreglo "anidado"
+var listaDeEstudiantes = [['Patricio', 50], ['Arenita', 100]]
+
+// De esta manera estamos creando elementos individuales del arreglo principal.
+// Cada uno de estos arreglos puede ser utilizado de forma individual, pero los estamos guardando en una estructura mas grande que los contiene a todos.
+
+console.log(listaDeEstudiantes);
+// ----------------
+
+
+
+// OTRO EJEMPLO
+
+// Digamos que quiero hacer una lista de precios tengo un inventario y queremos crear un arreglo sencillo para los tipos de elementos que vende mi tienda
+var listaDeProductos = [['Camisa', 5.67, 'SR210'], ['Celular', 250, 'SR398'], ['Zapatos', 36.7, 'SR098']];
+// Creamos un arreglo que va a contener una secuencia de arreglos, el arreglo principal va a tener un arreglo por cada elemento, es decir por cada articulo que yo vendo.
+
+// Se hablara depues de como poder tener acceso a esos arreglos anidados.
+
+// Mostramos la lista de productos en la consola
+console.log(listaDeProductos);
+// ----------------
+
+
+
+
+// OTRO EJEMPLO
+// Para mostrar que no solo se puede trabajar con enteros y con cadena de caracteres, podemos crear un arreglo con arreglos anidados que contengan solo numeros decimales.
+var datos = [[3.4, 5.6, 3.2], [6.7, 8.1, 4.5], [2.6, 5.3, 3.4]];
+console.log(datos);
+
+// Ya entendimos como definir un arreglo con arreglos anidados y para que se usan
+// ------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
