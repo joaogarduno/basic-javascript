@@ -294,6 +294,43 @@ console.log(miCadena[2]); // "v"
 // ¿Qué pasa si nosotros usamos un indice que esta fuera de los limites permitidos?
 console.log(miCadena[10]); // el resultado no sera un "error" si no que sera un "undefined"
 console.log(miCadena[5.6]); // sera un "undefined"
+// ------------------------------------------------------
+
+
+
+
+// TEMA 30: Notación de corchetes: Último carácter
+
+// Tambien podemos utilizar la notacion de corchetes para poder encontrar o acceder al ultimo cracter de una cadena
+
+// ¿Qué pasa si solo queremos entrar al ultimo caracter? y en verdad no sabemos explicitamente cual es el ultimo indice
+
+// automatizamos para que pueda funcionar en cualquier cadena de cualquier tamaño o longuitud
+
+// 
+var miCadena;
+
+/*
+El ultimo indice siempre es longitud -1 porque comenzamos a contar desde 0
+
+miCadena.lenght para "Javascript" es 10.
+El último índice es 9.
+
+Cadena:  J a v a S c r i p t
+Indices: 0 1 2 3 4 5 6 7 8 9
+
+*/
+
+// Ahora como podemos representarlo de una forma general que aplique a cualquier cadena
+miCadena = "Javascript"
+console.log(miCadena[miCadena.length -1]); // miCadena.length -> representa el indice - ademas de que va dentro de corchetes
+
+// OTRA
+miCadena = "Python"
+console.log(miCadena[miCadena.length -1]);
+
+// Aprendeimos como acceder al ultimo caracter de una cadena de caracteres.
+// Recuerda que es la longitud de la cadena menos uno
 
 
 
