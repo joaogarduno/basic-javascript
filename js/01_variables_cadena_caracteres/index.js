@@ -364,6 +364,71 @@ miCadena = "Javascript";
 n = 4;
 console.log(miCadena[miCadena.length - n]);
 // Descubrimos como poder acceder a los caracteres de una cadena de izquierda a derecha y de derecha a izquierda
+// ------------------------------------------------------
+
+
+
+
+// TEMA 32 - PROYECTO 1: Palabras en Blanco
+
+// PROYECTO 1
+
+// Version del juego muy popular que se llama "math lips" o "historias locas" en nuestra version seria "palabras en blanco"
+
+// vamos a practicar como concatenar cadena de caracteres tenemos 4 cadenas que representan 4 elementos distintos de una oracion
+var miSustantivo = "perro";
+var miAdjetivo = "negro";
+var miVerbo = "corrio";
+var miAdverbio = "rapidamente";
+
+/*
+
+Concatena las cadenas para crear una cadena que muestre un mensaje.
+Puedes cambiar los valores de las variables.
+
+Por ejemplo: El perro negro corrió rápidamente a la tieneda.
+             La bicicleta pequeña volo a la tienda lentamente.
+
+*/
+
+// Objetivo del juego:
+    // Concatenar las cadenas para crear una cadena que muestre un mensaje, podemos cambiar el valor de las variables
+
+// Entonces vamos a tener que concatenar muchas cadenas para formar nuestra oracion final
+
+// Recuerda que.... no tiene que tener la oracion sentido ya que finalmente el juego original tambien se llama "historias locas" puedes hacer cualquier oracion graciosa tambien.
+
+var palabrasEnBlanco = "El " + miSustantivo + miAdjetivo + miVerbo + miAdverbio + " a la tienda.";
+console.log(palabrasEnBlanco);
+
+// si nos damos cuenta al imprimir el resultado, no estamos incluyendo espacios entre las palabras entre cada una de las variables ya declaradas y asignadas.
+// ------------------
+
+
+// OTRA FORMA
+// Para agregar el espacio simplemente escribimos una cadena que contiene un espacio y lo concatenamos con ambas cadenas
+var palabrasEnBlanco = "El" + " " + miSustantivo + " " + miAdjetivo + " " + miVerbo + " " + miAdverbio + "a la tienda.";
+console.log(palabrasEnBlanco);
+// ------------------
+
+
+// OTRO EJEMPLO:
+
+// PRUEBA
+// "La bicicleta pequeña voló a la tienda lentamente".
+var miSustantivo = 'bicicleta';
+var miAdjetivo = 'pequeña';
+var miVerbo = 'voló';
+var miAdverbio = 'lentamente';
+
+
+// Sustituir la parte del codigo de concatenacion para crear la segunda oracion.
+var palabrasEnBlanco = `La ${miSustantivo} ${miAdjetivo} ${miVerbo} a la tienda ${miAdverbio}.`;
+console.log(palabrasEnBlanco);
+
+// Ya practicamos como concatenar cadena de caracteres, recuerda siempre estar pendiente de los espacios y de los simbolos que son necesarios del principio y al final de la cadena
+
+
 
 
 
