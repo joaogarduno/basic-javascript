@@ -122,12 +122,51 @@ var suma = miArreglo[0] + miArreglo[1] + miArreglo[2];
 
 console.log(suma);
 // Asi es como podemos usar los elementos de una arreglo en nuestro programa simplemente escribimos el nombre de la variable seguido de corchetes y dentro de los corchetes el indice del elemento al cual queremos acceder
+// ------------------------------------------------------------------
 
 
 
 
+// TEMA 36: Modificar Elementos de un Arreglo (Array)
+
+// Tambien es importante tener en cuenta la modificacion de los elementos de un arreglo.
+
+// Ahora con este ejemplo digamos que queremos actualizar el valor o cambiarlo de 10 a 40
+var miArreglo = [10, 20, 30];
+console.log(miArreglo);
+
+// La sintaxis es muy parecida a como "accedemos" al elemento
+miArreglo[0] = 40;
+console.log(miArreglo);
+
+// NOTA: A diferencia de las cadenas de caracteres los arreglos son mutables, si podemos cambiar un elemento individual del arreglo.
+// ----------------
 
 
+// OTRO EJEMPLO:
+
+// Tambien podemos asignar valores de diferentes tipos
+//  Por ejemplo si en el indice 1, quisieramos asignar una cadena de caracteres que diga "Hola".
+var miArreglo = [10, 20, 30];
+
+miArreglo[2] = "Soy patricio y botd";
+console.log(miArreglo);
+// ----------------
+
+
+// OTRO EJEMPLO:
+
+// Tambien podemos asiganar otros tipos de  datos
+
+// Podemos asignar un arreglo como el valor.
+var miArreglo = [10, 20, 30];
+
+miArreglo[1] = [15, 25, 35];
+console.log(miArreglo);
+
+// Ya sabemos como acceder a los elementos de un arreglo con su indice correspondiente, recuerda que comenzamos a contar desde 0 luego 1, luego 2, etc... y asi sucesivamente para cada elemento.
+// Podemos asignar un valor de cualquier tipo de dato.
+// ------------------------------------------------------------------
 
 
 
@@ -143,7 +182,6 @@ console.log(suma);
 // ----------------
 // ----------------
 // ----------------
-
 
 
 // ------------------------------------------------------------------
