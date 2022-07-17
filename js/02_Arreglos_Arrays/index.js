@@ -171,6 +171,57 @@ console.log(miArreglo);
 
 
 
+// TEMA 37: Acceder a Arreglos Multidimensionales
+
+//  Asi como puedes acceder a los elementos de una arreglo elementos como numeros o cadenas tambien podemos acceder a elementos que sean arreglos o arreglos anidados.
+
+// Los arreglos que contienen arreglos anidados se denominan arreglos multidimensionales.
+
+var miArreglo =[[1,2,3], [4,5,6], [7,8,9]];
+
+// ¿Como podemos ocupar los indices para poder tener acceso a esos numeros que tenemos aqui?
+
+/*
+
+Areglo:              [[1,2,3], [4,5,6], [7,8,9]] 
+Indices:                 0        1        2
+Indices Internos:      0 1 2    0 1 2    0 1 2
+
+*/
+
+
+console.log(miArreglo[2][1]);
+// El arreglo esta en el inidice 2, pero, luego de que accedemos a ese arreglo con el indice 2, tenemos que especificar el indice del elemento que queremos acceder que queremos obtener.
+// En este caso obtenemos el elemento 8 el segundo elemento en el arreglo
+
+// Y como podemos darnos cuenta tenemos una secuencia de dos indices, asi es como podemos obtener un elementos de un arreglo anidado.
+
+// Primero especificamos el indice del arreglo y luego el indice del elemento, y el resultado ya no sera un arreglo si no el elemento 8.
+// ----------------
+
+
+
+// OTRO EJEMPLO
+
+// Si queremos accder al elemento 2, y notamos que esta en arreglo que esta en el indice 0 y luego para acceder al numero especifico, es decir, al elemento 2 (numero) cambiamos el segundo indice por el indice 1 para poder tener acceso a ese numero en especifico que es e numero 2 el que queremos mostrar
+var miArreglo =[[1,2,3], [4,5,6], [7,8,9]];
+console.log(miArreglo[0][1]);
+
+// Entonces va primero el indice del arreglo y luego el indice del elemento.
+// ----------------
+
+
+
+
+// OTRO EJEMPLO:
+
+var miArreglo =[[1,2,3], [4,5,6], [7,8,9]];
+
+console.log(miArreglo[0][0]);
+console.log(miArreglo[0][1]);
+console.log(miArreglo[0][2]);
+// ------------------------------------------------------------------
+
 
 
 
