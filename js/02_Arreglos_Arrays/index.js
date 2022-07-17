@@ -60,7 +60,6 @@ console.log(listaDeEstudiantes);
 // ----------------
 
 
-
 // OTRO EJEMPLO
 
 // Digamos que quiero hacer una lista de precios tengo un inventario y queremos crear un arreglo sencillo para los tipos de elementos que vende mi tienda
@@ -75,7 +74,6 @@ console.log(listaDeProductos);
 
 
 
-
 // OTRO EJEMPLO
 // Para mostrar que no solo se puede trabajar con enteros y con cadena de caracteres, podemos crear un arreglo con arreglos anidados que contengan solo numeros decimales.
 var datos = [[3.4, 5.6, 3.2], [6.7, 8.1, 4.5], [2.6, 5.3, 3.4]];
@@ -85,6 +83,45 @@ console.log(datos);
 // ------------------------------------------------------------------
 
 
+
+
+
+
+
+// TEMA 35: Acceder a los Elementos de un Arreglo
+
+// Una ves que definimos nuestro arreglo en nuestro programa es muy importante saber como acceder a sus elementos, porque para eso estamos creando el arreglo, para poder agrupar los elementos y luego utilizarlos o usarlos en el programa
+
+var miArreglo = [10, 20, 30];
+
+/*
+
+Arreglo: [10, 20, 30]
+Indices:   0   1   2
+
+*/
+console.log(miArreglo[0]);
+console.log(miArreglo[1]);
+console.log(miArreglo[2]);
+// Con esto ya podemos tener acceso a los 3 elementos del arreglo.
+
+// -----------------
+
+
+// OTRO EJEMPLO:
+
+// ¿Por qué es importante tener acceso a esos elementos? porque podemos usarlos en el programa.
+
+// Por ejemplo si queremos sumarlos.
+
+// Existe otra forma mas eficiente de hacerlo pero esto es un ejemplo de como se puede usar.
+var miArreglo = [80, 90, 60];
+
+var suma = miArreglo[0] + miArreglo[1] + miArreglo[2];
+// Estamos tomando cada uno de esos valores en el indice: 0, 1, 2 y los estamos sumando y al resultado lo estamos asignando a la variable suma, luego podemos mostrar ese valor en consola.
+
+console.log(suma);
+// Asi es como podemos usar los elementos de una arreglo en nuestro programa simplemente escribimos el nombre de la variable seguido de corchetes y dentro de los corchetes el indice del elemento al cual queremos acceder
 
 
 
