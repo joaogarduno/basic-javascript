@@ -203,7 +203,7 @@ console.log(miArreglo[2][1]);
 
 // OTRO EJEMPLO
 
-// Si queremos accder al elemento 2, y notamos que esta en arreglo que esta en el indice 0 y luego para acceder al numero especifico, es decir, al elemento 2 (numero) cambiamos el segundo indice por el indice 1 para poder tener acceso a ese numero en especifico que es e numero 2 el que queremos mostrar
+// Si queremos acceder al elemento 2, y notamos que esta en el arreglo que esta en el indice 0 y luego para acceder al numero especifico, es decir, al elemento 2 (numero) cambiamos el segundo indice por el indice 1 para poder tener acceso a ese numero en especifico que es e numero 2 el que queremos mostrar
 var miArreglo =[[1,2,3], [4,5,6], [7,8,9]];
 console.log(miArreglo[0][1]);
 
@@ -225,6 +225,25 @@ console.log(miArreglo[0][2]);
 
 
 
+// TEMA 38: .push()
+
+// Los arreglos son estructuras de datos muy poderosas, no solamente podemos acceder y modificar los elementos de un arreglo, tambien podemos agregar elementos al arreglo
+
+// Entonces aprenderemos como agregar esos elementos al arreglo.
+
+// Digamos que tenemos una lista de cadena de caracteres que van a representar las estaciones del año, estan ordenadas en orden alfabetico ¿y cual es la que nos falta? "Verano".
+var estaciones = ['Invierno', 'Otoño', 'Primavera'];
+
+// ¿Como podemos agregar esa cadena de caracteres al arreglo?, con algo llamado un metodo
+
+// Un metodo es como una funcion que podemos llamar para poder hacer algo con un elemento de nuestro codigo.
+
+// Los arreglos tienen metodos especificos que podemos llamar para trabajar con ellos.
+
+// El metodo ".push()" es muy util porque nos permite añadir un elemento al FINAL del arreglo, y eso es lo que necesitamos exactamente en este caso, porque queremos que este ordenado en orden alfabetico.
+
+estaciones.push('Verano'); // Añade un elemento al final del arreglo
+console.log(estaciones);
 
 
 
