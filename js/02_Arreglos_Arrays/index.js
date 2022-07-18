@@ -286,6 +286,32 @@ console.log(estacion);
 
 
 
+// TEMA 40: Metodos utiles para trabajar con arreglos -> .shift()
+
+// Tenemos otro metodo de arreglos que es muy util que nos permite remover el primer elemento del arreglo, en vez de removerlo del final del arreglo, es decir, el ultimo elemento, ahora vamos a remover el primer elemento
+
+var estaciones = ['Invierno', 'Otoño', 'Primavera', 'Verano'];
+
+// ¿Como podemos eliminar la cadena que dice "Invierno"?
+
+// Entonces como podemos eliminar la primera cadena del arreglo "Invierno", el primer elemento.
+
+// El metodo ".shift()" nos permite remover el primer elemento del arreglo, no tenemos que especificar ningun valor.
+// pero los parentesis si son muy muy importante, ya que eso le dice a JavaScript, "Oye quiero que ejecutes esta accion".
+estaciones.shift()
+
+// y luego de ejecutar esa accion podemos ver el valor del arreglo
+console.log(estaciones);
+
+// Con esto podemos ver que "Invierno" fue removido exitosamente del nuestro array, luego de llamar a nuestra funcion .shift()
+
+// Pero tambien podemos agregar un elemento al principio del arreglo... eso lo veremos en el siguiente tema.
+// ----------------
+
+
+
+
+
 
 
 
