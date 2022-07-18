@@ -225,7 +225,7 @@ console.log(miArreglo[0][2]);
 
 
 
-// TEMA 38: .push()
+// TEMA 38: Metodos utiles para trabajar con arreglos -> .push()
 
 // Los arreglos son estructuras de datos muy poderosas, no solamente podemos acceder y modificar los elementos de un arreglo, tambien podemos agregar elementos al arreglo
 
@@ -244,6 +244,52 @@ var estaciones = ['Invierno', 'Otoño', 'Primavera'];
 
 estaciones.push('Verano'); // Añade un elemento al final del arreglo
 console.log(estaciones);
+// ------------------------------------------------------------------
+
+
+
+
+// TEMA 39: Metodos utiles para trabajar con arreglos -> .pop()
+
+// Tambien tenemos un Metodo para mover el ultimo elemento de un arreglo.
+
+// ejemplo:
+var estaciones;
+
+estaciones = ['Primavera', 'Verano', 'Otoño', 'Invierno'];
+
+estaciones.pop();
+console.log(estaciones);
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+// Tambien ademas de remover ese elemento lo retorna, asi que podemos asignarlo a una variable.
+
+// Digamos que tenemos una variable llamada "estacion".
+ var estacion;
+ estaciones = ['Primavera', 'Verano', 'Otoño', 'Invierno'];
+
+//  Y vamos asignarle ese valor que estamos removiendo que es "verano" a la variable estacion, esa es otra ventaja que nos da el metodo ".pop()"
+estacion = estaciones.pop(); // este metodo no toma ningun argumento
+
+console.log(estaciones);
+console.log(estacion);
+
+// Podemos eliminar el elemento y asignarlo a una variable para trabajar con ese elemento de forma individual
+
+// Ahora entendemos como poder trabajar con el metodo .pop()
+// ------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
