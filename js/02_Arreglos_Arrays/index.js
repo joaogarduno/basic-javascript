@@ -306,7 +306,72 @@ console.log(estaciones);
 // Con esto podemos ver que "Invierno" fue removido exitosamente del nuestro array, luego de llamar a nuestra funcion .shift()
 
 // Pero tambien podemos agregar un elemento al principio del arreglo... eso lo veremos en el siguiente tema.
-// ----------------
+// ------------------------------------------------------------------
+
+
+
+
+// TEMA 41: Metodos utiles para trabajar con arreglos -> .unshift()
+
+// Ahora veamos como podemos agregar un elemento al principio de un arreglo
+
+// por ejemplo:
+var estaciones = ['Invierno', 'Otoño', 'Primavera'];
+console.log(estaciones);
+
+// digamos que queremos agregar "verano" al principio del arreglo.
+// que apresca antes de "Invierno" y lo hacemos llamando al metodo ".unshift()"
+estaciones.unshift('Verano'); // decirle a JavaScript que elemento agregar al principio del arreglo
+
+console.log(estaciones);
+
+// Perfecto! ahora conocemos los 4 metodos principales:
+    // .pus()
+    // .pop()
+    // .shift()
+    // .unshift()
+// Para trabajar con el principio y el final de un arreglo
+// ------------------------------------------------------------------
+
+
+
+
+
+// // TEMA 42: Lista de compras
+
+// PROYECTO 2:
+
+// En este proyecto nos centraremos en los arreglos anidados
+// Vamos a escribir un arreglo multidimensional que representa nuestra lista de compras.
+
+// Digamos que queremos ir al supermercado y queremos representar nuestra lista de compras en Javascript 
+
+// Lo primero que hacemos es definir el arreglo principal y luego empezamos a escribir los arreglos anidados
+
+// Creacion de arreglo
+var miListaDeCompras = [['Cereal', 3], ['Leche', 2], ['Galletas', 4], ['Pan', 5], ['Refresco', 7], ['Pollo', 7]];
+// Esto representa nuestra lista de compras en Javascript
+
+// la forma en que normalmente se conoce - solucion de Cereal
+console.log("Voy a comprar " + miListaDeCompras[0][1] + " unidades de " + miListaDeCompras[0][0]);
+
+// OTRA forma de solucionarlo con Cereal
+console.log(`Voy a comprar ${miListaDeCompras[0][1]} unidades de ${miListaDeCompras[0][0]}.`);
+
+// Leche
+console.log(`Voy a comprar ${miListaDeCompras[1][1]} unidades de ${miListaDeCompras[1][0]}.`);
+
+// Galletas
+console.log(`Voy a comprar ${miListaDeCompras[2][1]} unidades de ${miListaDeCompras[2][0]}.`);
+
+// Pan
+console.log(`Voy a comprar ${miListaDeCompras[3][1]} unidades de ${miListaDeCompras[3][0]}.`);
+
+// Refresco
+console.log(`Voy a comprar ${miListaDeCompras[4][1]} unidades de ${miListaDeCompras[4][0]}.`);
+
+// Pollo
+console.log(`Voy a comprar ${miListaDeCompras[5][1]} unidades de ${miListaDeCompras[5][0]}.`);
 
 
 
