@@ -33,9 +33,9 @@ nombreDeNuestraFuncion();
 
 // Agregaremos un poco mas de funcionalidad a nuestra funcion
 
-// Vamos a escribir una funcion con 2 lineas y tambien vamos a gregarle la capacidad de recibir valores de tomar valores cuando la llamamos.
+// Vamos a escribir una funcion con 2 lineas y tambien vamos a gregarle la capacidad de recibir valores, de tomar valores cuando la llamamos.
 
-// ¿Que es lo que vamos a sumar? ¿Que operadores vamos a utilizar y que valores vamos a tener? y para eso dentro del parentesis de la funcion vamos a escribir 2 nombres los cuales, todo lo que se escriba dentro de ese parentesis se le conoce como "prametros"
+// ¿Que es lo que vamos a sumar? ¿Que operadores vamos a utilizar y que valores vamos a tener? y para eso dentro del parentesis de la funcion vamos a escribir 2 nombres los cuales, todo lo que se escriba dentro de ese parentesis se le conoce como "parámetros"
 // Son cualquier nombre que tu le quieras asignar a un valor que va a recibir la funcion o que se va a tomar cuando llamemos a la funcion
 function sumar(a, b){
     var suma = a + b; // Vamos a tomar esos 2 valores de a y b y que en este momento no existen solo hacemos una "referencia", ademas de que, cuando se reciban esos valore los vamos a sumar, vamos asignar ese resultado a una variable llamada "suma"
@@ -90,6 +90,47 @@ concatenarTresCadenas('Esto es', 'una prueba', 'de una cadena', 'de caracteres')
 // ------------------------------------------------------------------
 
 
+
+
+// TEMA 45: Ámbito global y variables globales
+
+// Ahora hablaremos de un aspecto muy importante de las variables en Javascript.
+
+// No todas las variables pueden usarse en todas las dintintas partes del programa, tenemos 2 tipos principales de variables:
+    // Variables -> Globales
+    // Variables -> Locales
+// Vamos a ver como funciona cada una
+
+    
+    // Variable Global
+// Una variable con el ambito global es una varible que se puede usar en cualquier lugar del programa porque esta definida en el programa principal
+
+// ejemplo
+var miVariableGlobal = 5;
+// Esta variable es global porque la estamos definiendo en el programa principal y no dentro de una funcion, asi que si necesitamos acceder a su valor, es decir usarla en el programa, podemos hacerlo.
+
+console.log(miVariableGlobal);
+
+// Y tambien podemos acceder a su valor dentro de una funcion
+function miFuncion(){
+    // digamos que la necesitamos  dentro de una funcion
+    console.log(miVariableGlobal);
+}
+
+// Vamos a mostrar su valor dentro de la funcion para comprobarlo que si existe y si esta definida dentro de la funcion...
+miFuncion();
+
+// Y tambien va estar definida luego de la funcion, basicamente en cualquier lugar del programa
+console.log(miVariableGlobal)
+
+// entonces con todo este codigo estamos mostrando 3 veces el valor de esta variable dentro y fuera de la funcion.
+
+// Ese es el principio basico de una variable global.
+
+// Entonces.. una variable global, es una variable que se puede acceder y usar y modificar en cualquier lugar del programa
+
+// Esto contasta con el concepto de variable Local... que veremos acontinuacion....
+// ------------------------------------------------------------------
 
 
 
