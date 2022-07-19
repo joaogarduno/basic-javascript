@@ -135,6 +135,55 @@ console.log(miVariableGlobal)
 
 
 
+// TEMA 46: Ámbito Local y Variables Locales
+
+// Ahora entenderemos como funcionan las variables locales
+
+// Las variables Locales, como su numbre lo indica son "locales" para una funcion, son variables que definimos dentro de una funcion y que solo se pueden utilizar dentro de esa funcion.
+
+// Ejemplo
+
+// Si definimos una funcion y dentro de esa funcion declaramos una varibale usando "var", mi variable local con un valor de 4
+function miFuncion(){
+    var miVariableLocal = 4;
+
+    // Vamos a mostrar el valor de esa variable dentro de la funcion
+    console.log(miVariableLocal);
+}
+
+// Y ademas vamos a llamar a la funcion para probar que la variable este definida
+miFuncion();
+// Y vemos que dentro de la funcion esa variable si esta definida.
+// ----------------
+
+
+
+// OTRO EJEMPLO
+
+// Pero luego digamos que queremos acceder a esa variable "local", fuera de la funcion, vamos a intentar acceder a esa variable
+// ¿Qué es lo que puede ocurrir?
+function miFuncion(){
+    var miVariableLocal = 4;
+
+    console.log(miVariableLocal);
+}
+
+miFuncion();
+
+console.log(miVariableLocal);
+// nos daremos cuenta que nos muestra un error, ¿Por qué? porque esa variable no esta definida, es decir, cuando ejecutamos este ultimo "console.log()" no nos muestra un resultado y nos arroja un error y nos dice que esa variable no esta definida.
+
+// ¿Por qué? Porque las variables "locales" solo estan definidas dentro de la funcion donde fueron declaradas
+// Ese es el concepto basico de una variable "local"
+
+// Si declaras una variable dentro de una funcion, usando "var" esa variable va ser de tipo "local" y se puede usar dentro de la funcion, pero solo dentro del cuerpo de una funcion (es decir todo lo que abarquen dentro de las llaves de una funcion).
+// Entonces eso quiere decir que no podemos utilizar esa variable fuera de la funcion en el programa principal o en otras funciones
+
+// Entonces... ya sabemos la diferencia entre una variable "local" y una variable "global".
+
+
+
+
 
 
 
