@@ -180,9 +180,69 @@ console.log(miVariableLocal);
 // Entonces eso quiere decir que no podemos utilizar esa variable fuera de la funcion en el programa principal o en otras funciones
 
 // Entonces... ya sabemos la diferencia entre una variable "local" y una variable "global".
+// ------------------------------------------------------------------
 
 
 
+
+// TEMA 47: Ámbito Global vs. Ámbito Local
+
+// ¿Que sucede cuando tenemos una variable global y una variable local con el mismo nombre?
+// Conoceremos el valor que se utiliza al final.
+
+var miNombre = 'Miles';
+
+function mostrarMiNombre(){
+    // Vamos a definir una variable local
+    var miNombre = 'Daysi';
+    // Notaremos que es el mismo nombre de la variable GLOBAL (la anterior, la que esta fuera de la funcion) usando la palabra reservada VAR que nos permite declarar una variable nueva.
+
+    console.log(miNombre);
+    // Pasara algo muy peculiar cuando queramos verificar el valor de la variable "miNombre"
+}
+// Analicemos... ¿Que es lo mas logico que suceda si tenemos una varible GLOBAL con este valor "Miles" y la variable LOCAL con el valor "Daysi"?
+// ¿Qué valor crees que se muestre cuando lo veamos en consola?
+
+
+// Primero: Veremos lo que sucede llamando a la funcion
+mostrarMiNombre();
+// El resultado o el valor que nos muestra es "Daysi"
+
+// ¿Por qué? porque la variable local tiene mayor prioridad.
+
+// Cundo tenemos una variable GLOBAL y una variable LOCAL, la local tiene prioridad dentro de la funcion
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+// Pero tambien que sucede cuando tratamos de mostrar el valor de "miNombre" fuera de la funcion
+
+var miNombre = 'Miles'; // Recordar que tenemos una variable GLOBAL, y esta variable GLOBAL si se puede usar en cualquier lugar del programa en cualquier linea
+
+function mostrarMiNombre(){
+    var miNombre = 'Daysi'; // Recordar que esta es una variable local de la funcion
+    // Es decir solo existe solo dentro de esta funcion llamada "mostrarMinombre()" y no se puede usar en ningun otro lugar del programa
+
+    console.log(miNombre);
+}
+
+mostrarMiNombre();
+
+console.log(miNombre); // se agrega este "console.log()"
+
+// Ahora si lo mostramos en consola veremos que tenemos lo siguiente
+// --> Daysi
+    // Daysi por que estamos utilizando la funcion, entonces dentro de la funcion se usa la variable local.
+
+// --> Miles
+    // Y aqui se utiliza la variable GLOBAL, por que estamos usando el valor de la variable global.
+    // Esa variable Global el unico lugar donde no se va a poder ver ese valor es dentro de la funcion porque hay otra variable local con el mismo nombre.
+    // Pero en el ambiente GLOBAL no hay otra mas que "miNombre" llamandola de esta manera "console.log(miNombre);"
+
+// Es por esto que vemos este comportamiento en nuestro codigo.
+// ------------------------------------------------------------------
 
 
 
