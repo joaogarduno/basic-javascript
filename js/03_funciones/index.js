@@ -275,6 +275,59 @@ console.log(sumar(9, 8));
 
 
 
+// TEMA 49: undefined
+
+// Asi como podemos retornar un valor especifico de una funcion, escribiendolo esplicitamente con "return", tambien podemos omitir esa sentencia
+// Podemos no retornar ningun valor de la funcion, pero en ese caso hay algo muy curioso que debes saber, la funcion, aun asi va retornar un valor por defecto, y ese valor sera "undefined"
+
+// Ejemplo:
+function sumar(a, b){
+    // En lugar de retornar el valor de la suma, lo vamos a mostrar en consola
+    // Es muy distinto mostrar un valor en la consola que retornarlo
+    console.log(a + b);
+
+    // Nosotros no estamos escribiendo esto:
+    // return a + b;
+
+    // Si no que solamente lo estamos mostrando en consola
+}
+
+// Como no estamos retornando ningun valor explicitamente, veremos que es lo que ocurre.
+
+// Antes cuando retornavamos un valor, podiamos mostrar el valor retornado en la consola con "console.log()", por ejemplo:
+console.log(sumar(10, 5));
+// Si llamabamos a la funcion con 2 valores (como en el console.log() anterior) el resultado seria 15 si hubieramos retornado la "suma" y ese valor se hubiera mostrado en consola.
+
+// Pero ahora veamos que ocurre ahora que no tenemos una sentencia "return", y los valores que se muestran son los siguientes:
+    // --> 15
+    // --> undefined
+
+// Entonces la funcion se ejecuta, llamamos a la funcion, se muestra el valor de la suma que es 15 y luego el valor retornado por esa llamada a la funcion se muestra en la consola y ese valor es "undefined".
+// ----------------
+
+
+
+// OTRO EJEMPLO
+
+// Ahora si anteriormente hubieramos colocado un "return" en nuestra funcion tendriamos nuestro resultado en consola que seria 15 es decir...
+function sumar(a, b){
+    return a + b;
+}
+console.log(sumar(20, 10));
+// Y el resultado en consola solo nos muestra el resultado no nos muestra el "undefined"
+// ----------------
+
+
+
+// Pero nosotros solamente estamos mostrando el resultado con el primer ejemplo en la consola.
+
+// Y el valor que se esta regresando a diferencia de este segundo ejemplo, es que en el primer ejemplo el valor que se esta retornando es el total de la suma y ademas un valor "undefined"
+
+// Entonces es importante que sepamos que las funciones regresan un valor, pero ese valor es "undefined"
+
+
+
+
 
 
 
