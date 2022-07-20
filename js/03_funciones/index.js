@@ -247,6 +247,32 @@ console.log(miNombre); // se agrega este "console.log()"
 
 
 
+// TEMA 48: Retornar un Valor
+
+// Las funciones pueden retornar un valor ademas de recibir valores.
+
+// Recuerda que hablamos de las funciones y deciamos que forman como las variables cajitas o un ambiente interno y propio en el programa, en donde puede tener:
+    // Sus propias variables
+// Y tiene una conexion con el programa principal, pero tambien tiene propiedades especiales.
+// Esas propiedades especiales tambien le permite tomar valores y tambien le permite retornar valores, para poder interactuar con el programa principal.
+
+// esto es distinto a cuando mostramos el valor en consola, esta vez retornaremos el valor, entonces veremos a que nos referimos con retornar.
+
+// Vamos a crear una funcion llamada "sumar" que va a tomar 2 parametros "a" y "b", los 2 numero que se van a estar sumando
+function sumar(a, b){
+    // Antes para poder ver el resultado de nuestra operacion o la accion que teniamos que hacer colocabamos "console.log(), que nos permitia mostrar el valor en consola".
+
+    // Pero para retornar ese valor, tenemos que escribir una palabra reservada llamada "return", esa palabra nos va a permitir que la funcion retorne un valor cuando se ejecute esa linea, nosotros que valor vamos a retornar de la funcion... vamos a retornar la suma de "a" y "b"
+    return a + b;
+}
+
+// ahora si nosotros llamamos a la funcion, esta vez nota que nosotros estamos escribiendo "return" y no "console.log()" dentro de la funcion.
+
+// Entonces este resultado no se va a ver en consola si llamamos directamente a la funcion, para mostrar ese valor retornado tenemos que usar.
+console.log(sumar(9, 8));
+// ------------------------------------------------------------------
+
+
 
 
 
