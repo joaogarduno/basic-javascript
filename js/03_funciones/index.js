@@ -324,6 +324,77 @@ console.log(sumar(20, 10));
 // Y el valor que se esta regresando a diferencia de este segundo ejemplo, es que en el primer ejemplo el valor que se esta retornando es el total de la suma y ademas un valor "undefined"
 
 // Entonces es importante que sepamos que las funciones regresan un valor, pero ese valor es "undefined"
+// ------------------------------------------------------------------
+
+
+
+
+// TEMA 50: Asignar un Valor Retornado
+
+// Cuando una funcion retorna un valor, podemos asignar ese valor retornado a una variable.
+
+// Esto es muy util cuando queremos usar ese valor mas tarde en nuestro programa, porque podemos guardarlo
+
+// ejemplo
+
+// Seguimos con la funcion "sumar" con 2 parametros que retornan la suma
+function sumar(a, b){
+    return a + b;
+}
+
+// Ahora digamos que queremos llamar a la funcions "sumar" y le vamos a pasar 2 valores como argumentos
+sumar(5, 4);
+// Si ejecutamos esta funcion notaremos que nos devuelve algo vacio, es decir no se muestra nada.
+
+// Veamos el siguiente ejemplo para saber que hacer cuando no se muestra el valor de la funcion ejecutada.
+// ----------------
+
+
+
+
+// ¿Por qué? porque no estamos motrando el resultado en ningun lado y tampoco lo estamos asigando a ninguna variable, es decir no estamos haciendo nada con ese valor.
+// Y luego que la llamada a la funcion termine el valor se pierde, no lo podemos usar mas, pero... para evitar eso y si queremos guardar ese valor lo que tenemos que hacer es asignarlo a una variable.
+function sumar(a, b){
+    return a + b;
+}
+
+var resultado = sumar(5, 5);
+// Es exactamente igual a como cuando asignamos un valor a una variable.
+// Asi es como podemos asignar el valor retornado a una variable
+
+// Y luego puedes usar el valor donde lo necesites en este caso en la consola estamos mostrando el valor asignado a esa variable
+console.log(resultado);
+// ----------------
+
+
+
+// OTRO EJEMPLO
+
+// Podemos ver otro ejemplo...
+// Podemos definir una funcion que retorne una cadena de caracteres con nuestra meta.
+
+// ¿Pero cual va a ser nuestra meta?
+// Vamos a retornar una cadena de caracteres que diga "Esto de las funciones en Javascript"
+function crearCadenaConMeta(lenguajeDeProgramacion){
+    return 'Estoy aprendiendo algo de las funciones en...' + lenguajeDeProgramacion;
+    // Se concatenan estas 2 cadenas, y la cadena resultante va a ser retornado
+}
+
+// Ahora llamamos a la funcion y asignamos el valor retornando una variable, veamos que pasa
+crearCadenaConMeta('JavaScript');
+// Entonces vamos a pasar la cadena de caracteres 'JavaScript', esto quiere decir que en la cadena donde colocamos "lenguajeDeProgramacion" y ademas parametro, va a tener el valor de "JavaScript", cuando llamemos a la funcion.
+
+// Pero....
+// Si nos damos cuenta que si ejecutamos el codigo anterior notaremos que no se mostrara nada, nos da como resultado algo "vacio"
+// Entonces lo que podemos hacer es asignar ese resultado a una variable
+var miMeta = crearCadenaConMeta('JavaScript');
+
+// Y luego podemos hacer lo que vayamos a necesitar para poder ejecutar esa cadena a traves de una variable, en este caso mostrarlo por consola
+console.log(miMeta);
+
+// Entonces ya sabemos como asignar el valor retornado a una variable
+
+
 
 
 
