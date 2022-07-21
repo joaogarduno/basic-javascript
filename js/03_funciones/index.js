@@ -393,6 +393,71 @@ var miMeta = crearCadenaConMeta('JavaScript');
 console.log(miMeta);
 
 // Entonces ya sabemos como asignar el valor retornado a una variable
+// ------------------------------------------------------------------
+
+
+
+
+// TEMA 51 - PROYECTO 3: Permanece en Fila -> Funciones
+
+// PROYECTO 3
+
+// Ahora que sabemos como trabajar con funciones en Javascript, vamos a aplicar nuestro conocimiento para implementar lo que conocermos como una "COLA", vamos hacer una variacion de una cola que en ingles se conoce como "queue", entonces es una estructura de datos que nos va a permitir agregar elementos a una fila.
+
+/*
+
+PROXIMO EN FILA
+
+En informática una cola (queue) es una estructura de datos abstracta en la cual los elementos se mantienen en orden. Los nuevos elementos se pueden añadir al final de la cola y los elementos previos se retiran del principio de la cola.
+
+ACTIVIDAD:
+Define una funcion llamada "proximoEnLaFila" que tome un arreglo (arreglo) y un numero (elemento) como argumentos. Agrega el numero al final del arreglo y luego elimina el primer elemento del arreglo. La funcion "proximoEnLaFila" debe retornar el elemento que fue removido.
+
+*/
+
+
+function proximoEnLaFila(arreglo, elemento){
+    // Que es lo primero que queremos hacer cuando llamamos a la funcion para agregar un elemento a la fila, agregarla al final del arreglo
+    arreglo.push(elemento); // Metodo que agrega un elemento al final de una arreglo
+
+    // Luego de que lo agregamos al final del arreglo tambien debemos eliminar el primer elemento del arreglo, es decir debemos eliminar el primer elemento.
+
+    // arreglo.shift();    // es el metodo que va a eliminar el primer elemento del arreglo
+    // Si nos fijamos no toma ningun argumento si solamente lo llamamos con parentesis vacios ()
+
+
+    // nos falta la parte final que debe cumplir la funcion
+    // La funcion debe retornar el elemento que fue removido, pero si notamos aun no hay una sentencia "return", ¿Como lo podemos retornar?
+    // Recuerda que el metodo shift() tambien retorna ese elemento, cuando nosotros llamamos a este metodo, podemos asignarlo a una variable o tambien podemos retornarlo.
+    return arreglo.shift()
+    // Listo ya con eso vamos a remover el primer elemento que lo que acabamos de escribir "return arreglo.shift()" va ser reemplazado por ese elemento detras de escena y ese mismo elemento va ser retornado.
+}
+
+// Vamos a probar como funciona nuestra funcion.
+// Si definimos una variable "miArreglo"
+var miArreglo = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// Ahora queremos ver el status de nuestro arreglo, es decir en que estado se encuentra nuestro arreglo antes y despues de llamar a la funcion
+// ¿Y como podemos hacer eso en JavaScript?
+
+// existe una funcion que es muy util para mostrar los arreglos en la consola que se llama "JSON.stringify()" y pasamos el arreglo.
+// JSON.stringify() -> esto nos permite mostrar el arreglo de una forma mas presentable en la consola, es decir estamos convirtiendo el arreglo en una cadena de caracteres con un formato especifico y ademas que se esta concatenando a esta cadena.
+console.log('Antes de: ' + JSON.stringify(miArreglo));
+
+
+// Luego de esto, tambien vamos a mostrarlo despues de hacer el cambio y en el medio tenemos que hacer el cambio, vamos a mostrar el valor retornado tambien, es por eso que vamos a colocar un "console.log()"
+// Llamamos a la funcion "proximoEnLaFila" y el primer argumento que toma es el "arreglo", pero, ¿Cual arreglo vamos a pasar como "argumento"? y pasamos como argumento "miArreglo".
+// Ahora queremos mutar o cambiar este arreglo con los numeros 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+// Y luego de que tenemos ese arreglo queremos agregar un nuevo elemento y agregamos el elemento 6
+// Segun las instrucciones el efecto de llamar esta funcion deberia ser que el primer elemento se va a eliminar del arreglo y se va agregar al final de ese arreglo el nuevo elemento.
+// Entonces el elemento removido es 0 y ese es el elemento que se va a retornar que deberiamos ver en la consola 
+console.log(proximoEnLaFila(miArreglo, 10));
+
+
+console.log('Despues de: ' + JSON.stringify(miArreglo));
+
+// Entonces ya implementamos una funcion que nos permite modificar nuestro arreglo como si fuese una fila o lo que llamamos en estructura de datos una "cola" que en ingles se denomina "queue"
+
 
 
 

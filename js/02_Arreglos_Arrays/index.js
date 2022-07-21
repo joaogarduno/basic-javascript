@@ -272,7 +272,7 @@ console.log(estaciones);
  var estacion;
  estaciones = ['Primavera', 'Verano', 'Otoño', 'Invierno'];
 
-//  Y vamos asignarle ese valor que estamos removiendo que es "verano" a la variable estacion, esa es otra ventaja que nos da el metodo ".pop()"
+//  Y vamos asignarle ese valor que estamos removiendo que es "Invierno" a la variable estacion, esa es otra ventaja que nos da el metodo ".pop()"
 estacion = estaciones.pop(); // este metodo no toma ningun argumento
 
 console.log(estaciones);
