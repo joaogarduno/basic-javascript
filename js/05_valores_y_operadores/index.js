@@ -93,19 +93,48 @@ console.log([1,2,3] == [1,2,3]);
 // Notamos que el resultado es FALSE, ¿Por que? porque este operador cuando se aplica a los arreglos no compara los elementos del arreglo, si no que compara si los arreglos en la memoria representan el mismo objeto.
 
 // Entonces lo importante de todo esto, es que, no deberiamos compara arreglos con este operador
+// ------------------------------------------------------------------
 
 
 
 
+// TEMA 54: Operador de Igualdad Estricta
 
+// Tambien tenemos otro perador que nos permite comparar si ambos tipos de datos son los mismos o no, este es el operado de igualdad estricta.
 
+// Veamos la diferencia entre "igualdad" e "igualdad Estricta"
 
+// Si nosotros comparamos 2 valores de el mismo tipo de dato con el operador de igualdad, este resultado va a ser verdadero.
+console.log(9 == 9); // este resultado sera verdadero TRUE
 
+// Pero... que va a pasar si nosotros tenemos 2 valores que son de distintos tipos de datos, pero que representan el mismo numero el resultado sera TRUE
+console.log(9 == '9'); // Tambien sera verdadero (TRUE)
 
+// Entonces notamos que el valor es verdadero para ambas comparaciones y en ciertas circunstancias tambien nos gustaria comparar si el tipo de dato es el mismo para ambos operandos.
 
+// Pero... que ocurre con este operador ( == )
+// Antes de realizar la comparacion ambos valores se convierten a un tipo de dato comun, es por eso que el resltado que nos da es un TRUE, no importa que sean de diferentes tipos de datos si representan el mismo valor, pero si no queremos que eso ocurra, y queremos que la comparacion tambien determine si el tipo de dato es el mismo o no, simplemente tenemos que agregar un signo igual... " === " a este operador para tener el operador de comparacion de "Igualdad Estricta"
+console.log(9 === 9); // en este caso el resultado sera TRUE
+// ¿Por qué? porque ambos valores son iguales y tienen el mismo tipo de dato.
 
+// Pero... esta es la gran diferencia entre ambos operadores
+console.log(9 === '9'); // FALSE
+console.log(9 === 9); // TRUE
 
+// Si comparamos "nueve" como un numero y "nueve" como una cadena de caracteres con el operador de igualdad estricta, este resultado sera falso como lo podemos ver en el ejemplo de antes.
 
+// Porque no se van a convertir a un tipo de dato comun, solamente se van a comparar en base a su valor y a su tipo de dato
+console.log(9 == '9'); // TRUE
+console.log(9 == 9); // TRUE
+
+console.log(9 === '9'); // FALSE -> porque los tipos de datos son distintos
+console.log(9 === 9); // TRUE
+
+// Entonces... ya sabemos como comparar valores con "igualdad estricta" y su diferencia con el operador de "igualdad"
+
+// Si quieres que se convierta a un tipo de dato comun antes de compararlos, usa el operador de "igualdad" ( == )
+// Y si tambien quieres comparar el tipo de dato usa el operador de "igualdad estricta"
+// ------------------------------------------------------------------
 
 
 
