@@ -35,6 +35,66 @@ console.log(False);
 // Entonces la unica forma de escribir FALSE como el valor Booleano y se interprete como el valor correcto que podemos usar en nuestro programa, es escribir "true" y "false" completamente en minuscula.
 
 // Estos valores "true" y "false" van a ser muy utiles cuando empecemos a escribir condicionales, cuando empecemos a realizar comparaciones de valores y cuando trabajemos con operadores logicos.
+// ------------------------------------------------------------------
+
+
+
+
+// TEMA 53: Operador de Igualdad
+
+// En JavaScrpt puedes comparar valores para saber si son iguales o si no son iguales, si representan en el mismo valor.
+
+// Eso lo podemos hacer con el operador de igualdad.
+console.log(5 == 5); // esto que tenemos aqui (entre parentesis) se denomina expresion.
+// Va a evaluar a "verdadero" o "falso", es verdero si ambos valores son iguales y es falso si los valores son distintos, ese valor final booleano se va a mostrar en la consola, asi que el resultado va a ser TRUE.
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+// Pero si cambiamos el valor a 6 ahora veremos que es FALSE, porque los valores no son iguales.
+console.log(6 == 5);
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+// Y de igualforma podemos comparar cadena de caracteres
+console.log('Hola' == 'Hola');
+// Esta expresion es verdadera asi que el resultado sera TRUE
+
+// Y si comparamos "Hola" con cualquier otra cadena, por ejemplo
+console.log('Hola' == 'Javascript'); // el resultado sera FALSE
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+// La comparacion tambien se hace en base a mayusculas y minusculas.
+
+// Por ejemplo si tenemos 2 cadenas "Hola" y "hola"
+console.log('Hola' == 'hola'); // nuestro resultado sera FALSE
+
+// Porque uno de los caracteres es mayuscula a diferencia de la otra que es minuscula, asi que no son iguales.
+// ----------------
+
+
+
+// OTRO EJEMPLO
+
+// Es importante tambien saber que no deberiamos de comparar "arreglos" con este operador " == ".
+// ¿Por qué...?
+console.log([1,2,3] == [1,2,3]);
+// Porque si nosotros tenemos 2 arreglos con los mismos elementos y estamos comparando los arreglos con los mismos elementos 1,2,3. Podriamos pensar que es TRUE porque son iguales visualmente, tiene los mismos elementos, pero veamos el resultado en consola
+
+// Notamos que el resultado es FALSE, ¿Por que? porque este operador cuando se aplica a los arreglos no compara los elementos del arreglo, si no que compara si los arreglos en la memoria representan el mismo objeto.
+
+// Entonces lo importante de todo esto, es que, no deberiamos compara arreglos con este operador
+
+
 
 
 
