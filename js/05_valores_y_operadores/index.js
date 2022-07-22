@@ -285,6 +285,32 @@ console.log([1,2,3] != [1,2,3]); // TRUE
 
 
 
+// TEMA 57: Operador de Desigualdad Estricta 
+
+// Tambien tenemos al operador que es similar al de igualdad estricta, pero compara desigualdad estricta.
+
+// Veamos la diferencia entre "Desigualdad" y "Desigualdad Estricta" 
+
+// Anteriormente con el operador de "Desigualdad", si nosotros comparabamos...
+console.log(1 != '1'); // FALSE
+// nuestro resultado seria Falso, porque este operador ( != ) convierte a ambos operandos ambos valores a un tipo de dato comun antes de hacer la comparacion, es por eso que es Falso.
+// El detecta que esos 2 numeros son el mismo valor, aunque uno este representado como una cadena de caracteres y el otro sea un numero como tal.
+
+// Pero que ocurre con el operador de desigualdad stricta, si nosotros comparamos estos mismos valores con el operador de "Desigualdad Estricta", nuestro resultado seria verdadero (TRUE)
+console.log(1 !== '1'); // TRUE
+// Por que?, porque esta comparando si ambos valores son del mismo tipo de dato, no lo combierte a un tipo de dato comun
+
+// Y esa es la diferencia entre el operador de "Desigualdad" y el operador de "Desigualdad Estricta", funcionan exactamente igual excepto en este caso, cuando los valores son de distinto tipo de dato, pero representan el mismo valor.
+
+// Es decir... 
+    // este lo combierte a un tipo de datos comun ----> console.log(1 != '1');
+    // Y este no -----> console.log(1 !== '1');
+// Esa es la diferencia
+
+// Asi que ya sabes como trabajar con el operador de "Desigualdad" y el operador de "Desigualdad Estricta" y cuando debes usar uno u otro.
+
+
+
 
 
 
