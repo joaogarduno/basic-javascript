@@ -139,6 +139,96 @@ console.log(9 === 9); // TRUE
 
 
 
+// TEMA 55: Practica como Comparar Valores
+
+// Practicaremos como podemos ocupar el valor de igualdad y el operador de igualdad estricta
+
+// Empezaremos declarando 2 variables, y a estas variables les vamos asignar valores y los vamos a comparar y nuestro "Trabajo" es predecir cual va ser el valor de la comparacion
+var a;
+var b;
+
+a = 5;
+b = 5;
+
+// ¿Cual es el nombre de este operador? Este es el operador de Igualdad, y nos retorna un valor de TRUE
+console.log(a == b); // TRUE
+
+// ¿Cual es el nombre de este operador? Este es el operador de Igualdad Estricta y nos retorna un valor de TRUE
+console.log(a === b); // TRUE
+
+// ¿Por qué ambos tienen el valor de TRUE?
+// ----------------
+
+
+
+// OTRO EJEMPLO
+
+var a;
+var b;
+// Ahora si decidimos cambiar el valor a la variable "b" y mantener el valor "a" que es 5
+a = 5;
+b = 8;
+
+// Ahora vamos a ver en que resulta estas comparaciones
+console.log(a == b); // Aqui estamos ocupando el valor de igualdad y estamos comparando 5 y 8
+// ¿Y que resultado nos mostrara esta expresion? Seria FALSE
+
+// Ahora si usamos el operador de igualdad estricta, cual sera el resultado?? porque los valores son distintos.
+console.log(a === b);
+// Aunque tengan el mismo tipo de dato, es decir aunque sean del mismo tipo de dato, sus valores son distintos
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+// Ahora digamos que actualizamos "b" a la cadena de caracteres 5
+var a;
+var b;
+
+a = 5;
+b = '5';
+
+// Ahora si comparamos a y b, cual va ser el valor de esta expresion con el operador de igualdad
+console.log(a == b); // TRUE
+// ¿Por qué nuestro resultado es TRUE? Porque estamos ocupando el valor de "Igualdad", no el operador de "Igualdad Estricta"
+
+// Ahora si ocupamos el valor de igualdad estricta
+// ¿Cual sera el resultado de esta expresion? FALSE
+console.log(a === b); // FALSE
+// Recordar que los tipos de datos son distintos
+// ----------------
+
+
+
+// OTRO EJEMPLO
+
+// Tambien podemos compara cadena de caracteres
+a = 'JavaScript';
+b = 'JavaScript';
+
+// ¿Cual sera el resultado de ambas?
+console.log(a == b); // TRUE
+console.log(a === b); // TRUE
+
+// Ya practicamos como comparar valores con estos operadores el operador de "Igualdad" y el operador de "Igualdad Estricta"
+// ------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // ----------------
