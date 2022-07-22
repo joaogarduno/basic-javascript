@@ -217,6 +217,73 @@ console.log(a === b); // TRUE
 
 
 
+// TEMA 56: Operador de Desigualdad
+
+// Asi como tenemos un operador de "Igualdad", tambien tenemos un operador de "Desigualdad"
+
+// Este operador compara 2 valores y retorna TRUE (Verdadero) si su valor es distinto y retorna FALSE (Falso) si son iguales.
+
+// Es basicamente lo opuesto del operador de igualdad
+
+// En la siguiente linea de codigo lo leemos "9 Distinto de 6", en ingles este operador se denomina "Not Equal Too" (No igual a...) seria su trduccion literal
+console.log(9 != 6) // TRUE
+// Estamos comparando si 9 "no es igual" a 6 y eso es verdadero ya que se cumple
+
+// LA expresion anterior evalua la expresion TRUE
+// ----------------
+
+
+
+// OTRO EJEMPLO
+
+// Si tenemos dos numero iguales, por ejemplo
+console.log(9 != 9); // FALSE
+// Aqui si tenemos un resultado de FALSE, porque estamos preguntando si 9 es distinto a 9, en ese caso seria FALSA la condicion
+
+// La logica es basicamente lo opuesto del operador de igualdad
+// Entonces...
+    // si los elementos son iguales seria ---> FALSE
+    // si los elementos son distintos seria ---> TRUE
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+// Strings o caracteres.
+
+// Tambien podemos comparar cadena de caracteres, por ejemplo...
+console.log('JavaScript' != 'JavaScript'); // FALSE
+// Este resultado es FALSE porque son iguales
+
+// pero si cambiamos alguna letra de ese string seria de tipo TRUE
+console.log('JavaScript' != 'Javascript'); // TRUE
+// ----------------
+
+
+
+// OTRO EJEMPLO
+
+// Arrays o Arreglos
+
+// En el caso de los arreglos tenemos algo tambien interesante
+
+// Podemos comparar Arreglos con este operador
+console.log([1,2,3] != [1,2,3]); // TRUE
+// Estamos preguntando si el primer arreglo es dintinto al otro
+
+// Pero aun asi no va estar comparando en base a sus elementos si no en base a como estan representados como objetos en la memoria del dispositivo
+
+// En este caso es TRUE porque vemos que tienen los mismos elementos
+
+// El TRUE lo que representa es que estos 2 arreglos son objetos independientes en la memoria de la maquina o del dispositivo y eso es algo relacionado a como se almacenan estos valores en la memoria
+
+// Ahora entendemos como utilizar el operador de "Desigualdad" y su representacion de este signo es el siguiente -> !=
+// !=  --> Simbolo de "Desigualdad"
+// ------------------------------------------------------------------
+
+
+
 
 
 
