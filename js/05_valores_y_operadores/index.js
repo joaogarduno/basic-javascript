@@ -398,6 +398,35 @@ console.log(a > b); // TRUE
 console.log(b > a); // FALSE
 
 // Entonces ya sabemos compara numeros, cadenas de caracteres, y tambien variables para comparar sus valores con el operador "Mayor que" ( > )
+// ------------------------------------------------------------------
+
+
+
+
+// TEMA 59: Operador "Mayor o igual que"
+
+// En JavaScript tambien tenemos otro operador que nos permite incluir el caso en el que ambos valores sean iguales y se llama "Mayor o igual que" y su simbolo es " >= " ese es el simbolo de "mayor o igual que"
+
+// ¿Que es lo que vamos a comparar y como va a ser diferente del operador mayor que?
+
+// Si nosotros comparamos si...
+console.log(5 > 5); // usando el operador "Mayor que" este resultado seria ---> FALSE
+// ¿Por qué? porque estamos preguntando si 5 es "estrictamente mayor que 5" no estamos incluyendo el caso de que 5 pueda ser igual a 5
+
+// Esto es importante y esto es una fuente comun de confusiones cuando estamos programando tenemos que decidir  si queremos incluir el caso en que ambos valores sean iguales, si no lo queremos incluir usamos ese operador "Mayor" (>)
+
+// Y en el caso de que sean iguales la condicion sera Falsa, pero si queremos incluir ese caso tenemos que ir a la siguiente condicion que usa el operador "Mayor o igual que"
+console.log(5 >= 5); // TRUE
+// Podemos ver el simbolo de "mayor que" pero con el signo de "igual" a la derecha, esta condicion nos regresa un valor VERDADERO si ambos valores son iguales, entonces en este caso el valor es TRUE
+
+// Esto es muy importante porque vamos a empezar a escribir condiciones en nuestro codigo que van a decidir que es lo que pasa en el programa y dependiendo del valor de estas condiciones, vamos a ejecutar ciertos bloques de codigo o no.
+
+// La condicion sigue siendo verdadera si ambos valores sean iguales.
+
+// Y esta es la diferencia principal entre estos 2 operadores.
+
+// En el caso de las cadenas de caracteres tambien aplica este cambio, cuando las cadenas de caracteres sean iguales el valor retornado va ser TRUE
+
 
 
 
