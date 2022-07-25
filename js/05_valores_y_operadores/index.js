@@ -426,6 +426,59 @@ console.log(5 >= 5); // TRUE
 // Y esta es la diferencia principal entre estos 2 operadores.
 
 // En el caso de las cadenas de caracteres tambien aplica este cambio, cuando las cadenas de caracteres sean iguales el valor retornado va ser TRUE
+// ------------------------------------------------------------------
+
+
+
+
+// TEMA 60: Operador "Menor que"
+
+// En JavaScript tenemos otro operador llamado "Menor que" y se puede expresar con este simbolo ( < )
+
+// Si queremos verificar si 5 es menor que 6 utilizamos ese operador (<)
+console.log(5 < 6); // TRUE
+// Si 5 es menor que 6 el resultado sera TRUE
+
+// En caso contrario si el valor a la izquierda es mayor que el de la derecha o igual sera falso
+console.log(10 < 3); // FALSE
+// 10 no es menor que 3 asi que el resultado sera falso y asi es basicamente como funciona el operador
+// ----------------
+
+
+
+// OTRO EJEMPLO
+
+// Tambien se puede usar para comparar cadena de caracteres como lo hicimos con operador "Mayor que"
+// En este caso va a comparar la cadena de caracteres en orden alfabetico
+
+// Asi que si comparamos "A" con "B" como cadena de caracteres el resultado sera TRUE, porque "A" viene antes de "B" en orden alfabetico
+console.log("A" < "B"); // TRUE
+// ----------------
+
+
+
+// 
+
+// Tambien si la cadena de caracteres tiene varios caracteres el proceso sera muy similar al que ya vimos en los ejemplos anteriores
+// Se van a comparar los caracteres "B" si esta antes que "C" en orden alfabetico asi que la condicion seria verdadera
+console.log("ABC" < "ACB"); // TRUE
+// Eso es lo que determina el valor de la condicion  
+// ----------------
+
+
+
+// OTRO EJEMPLO
+// 
+// Tambien podemos comparar los valores de variable, que es lo que haremos con nuestros programas normalmente.
+// Si definimos 2 variables y las queremos comparar con este operador ¿Qué es lo que hacemos?, las comparamos simplemente
+var a = 15;
+var b = 7;
+
+console.log(a < b); // FALSE
+console.log(b < a); // TRUE
+
+// Con esto aprendimos como utilizar el operador "Menor que".
+// ------------------------------------------------------------------
 
 
 
