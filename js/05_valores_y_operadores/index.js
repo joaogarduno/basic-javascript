@@ -308,6 +308,96 @@ console.log(1 !== '1'); // TRUE
 // Esa es la diferencia
 
 // Asi que ya sabes como trabajar con el operador de "Desigualdad" y el operador de "Desigualdad Estricta" y cuando debes usar uno u otro.
+// ------------------------------------------------------------------
+
+
+
+
+// TEMA 58: Operador Mayor que
+
+// En JavaScript ademas de comparar si 2 valore son iguales o diferentes, tambien podemos comparar el valor relativo de 2 valores, si un valor es "mayor que el otro", o "mayor o igual que el otro", "menor que el otro" o "menor o igual que el otro"
+
+// Entonces hablaremos de el Operador "Mayor que", ese operador tiene es representado con simbolo ">" y podemos comparar los valores con este operador.
+
+// digamos por ejemplo que queremos comparar, si 6 es "mayor que" 5.
+console.log(6 > 5); // "SI" es mayor que 5 es TRUE (Verdadero)
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+// Tambien podemos compara valores
+console.log(3 > 10); // FALSE (Falso)
+// No hay nigun problema si este elemento es menor, lo que va a ocurrir es que la expresion sea falsa
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+// Tambien podemos usar este operador para comparar cadenas de caracteres, pero.. ¿Qué criterio vamos a ocupar para las cadenas por defecto?
+// JavaScript compara las cadenas segun el orden alfabetico, como normalmente aparecerian en un diccionario
+console.log("B" > "A"); // TRUE
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+// Si tuvieramos otra cadena
+console.log("ACB" > "ABC"); // TRUE
+// ¿Cual seria el resultado de la comparacion de estas cadenas?
+// Puede ser curioso el resultado ¿Por qué?, porque como comparamos cadenas si comienzan con la misma letra.
+
+// Lo que hace JavaScript es comparar cada uno de los caracteres en su secuencia.
+    // A es igual a A -> 
+    // C viene despues que B en orden alfabetico -> Si C viene despues de que B en orden alfabetico, entonces ahi ya podemos determinar el orden de las cadenas.
+
+// Entonces como resultado de esa comparacion de caracteres es TRUE.
+
+// Asi es como se comparan cadenas de caracteres en JavaScript
+// el primer par de caracteres en sus posiciones correspondientes que no sean iguales se comparan y esa comparacion decide el resultado de la expresion.
+
+// Veamos los resultados en la consola, y nos da un TRUE de esa comparacion de caracteres
+// ----------------
+
+
+
+// OTRO EJEMPLO
+
+// Tambien que pasa si una cadena tiene mas caracteres que otra, por ejemplo:
+console.log("AB" > "A"); // TRUE
+// Y vemos en consola como resultado verdadero, y es verdadero porque tiene mas caracteres.
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+// Por orden alfabetico tambien podemos comparar palabras.
+console.log("Mundo" > "Hola"); // TRUE
+// Por oden alfabetico "M" viene luego de la letra "H" en el alfabeto, asi que tambien  podemos comparar estas letras para nosotros tener una idea del orden "M" y "H"
+
+console.log("M" > "H") // TRUE
+// Entonces, esta comparacion es verdadera, es por eso que la anterior comparacion de caracteres que hacemos de "Mundo" y "Hola" es tambien es verdadera, porque "Mundo" viene despues de "Hola" en el diccionario
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+// Otro dato interesante que seguramente utilizaremos en nuestros proyectos, es que podemos usar estos operadores de comparacion con variables y normalmente eso es lo que vamos hacer
+var a = 15;
+var b = 7;
+
+// Nosotros podemos usar esas variables y compararlas
+console.log(a > b); // TRUE
+
+// Y tambien podemos preguntar si "B" es mayor que "A" lo cual seria FALSE
+console.log(b > a); // FALSE
+
+// Entonces ya sabemos compara numeros, cadenas de caracteres, y tambien variables para comparar sus valores con el operador "Mayor que" ( > )
 
 
 
