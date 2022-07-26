@@ -457,7 +457,7 @@ console.log("A" < "B"); // TRUE
 
 
 
-// 
+// OTRO EJEMPLO:
 
 // Tambien si la cadena de caracteres tiene varios caracteres el proceso sera muy similar al que ya vimos en los ejemplos anteriores
 // Se van a comparar los caracteres "B" si esta antes que "C" en orden alfabetico asi que la condicion seria verdadera
@@ -483,12 +483,24 @@ console.log(b < a); // TRUE
 
 
 
+// TEMA 61: Operador "Menor o igual que"
 
+// El operador "Menor igual que" funciona basicamente igual que el operador "Menor que" pero tambien va a incluir el caso en el que ambos valores sean iguales, vamos a concer la diferencia
 
+// Si nosotros verificamos si 5 es menor que 5 en la condicion ese resultado sera falso
+console.log(5 < 5); // FALSE
+// Ya que 5 no es estrictamente menor que 5 es igual a 5.
+// Cuando usamos el operador menor que no estamos tomando en cuenta el caso en el que ambos valores sean iguales y eso a veces nos puede ser util en los programas si necesitamos que un valor sea menor que el otro
 
+// Pero.. si necesitamos tambien tomar en cuenta el caso en el que ambos puedan ser iguales usamos el siguiente operador "Menor igual que" sabemos que solo se agrega el signo "igual"
+console.log(5 <= 5); // TRUE
+// Estamos comparando los valores y sus resultado en este caso va a ser TRUE y ese valor es verdadero porque ambos valores son "iguales"
 
+// Esa es la diferencia principal entre ambos operadores.En el primer caso vemos que es falso con el operador "Menor que" y este ultimo seria Verdadero con el operador "menor o igual que"
 
-
+// Todos los ejemplos anteriores con el operador "menor que" tambien aplican con el operador "menor o igual que" entonces cuando ambos valores sean iguales el resultado sera tambien VERDADERO.
+// Tambien cuando comparamos cadena de caracteres.
+// ------------------------------------------------------------------
 
 
 
