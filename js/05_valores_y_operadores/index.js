@@ -174,7 +174,7 @@ console.log(a == b); // Aqui estamos ocupando el valor de igualdad y estamos com
 // ¿Y que resultado nos mostrara esta expresion? Seria FALSE
 
 // Ahora si usamos el operador de igualdad estricta, cual sera el resultado?? porque los valores son distintos.
-console.log(a === b);
+console.log(a === b); // FALSE
 // Aunque tengan el mismo tipo de dato, es decir aunque sean del mismo tipo de dato, sus valores son distintos
 // ----------------
 
@@ -501,6 +501,98 @@ console.log(5 <= 5); // TRUE
 // Todos los ejemplos anteriores con el operador "menor que" tambien aplican con el operador "menor o igual que" entonces cuando ambos valores sean iguales el resultado sera tambien VERDADERO.
 // Tambien cuando comparamos cadena de caracteres.
 // ------------------------------------------------------------------
+
+
+
+
+// TEMA 62: Operador Logico "and"
+
+// Ahora vamos a ver los operadores logicos en javascript, estos operadores logicos nos permiten combinar distintas expresiones para formar condiciones un poco mas elaboradas o mas complejas.
+
+
+/*
+
+    Tabla de verdad del operador AND
+    Para: X && Y
+
+    |  X  |  Y  |  X && Y  |
+    -----------------------------
+    |  T  |  T  |    T     |
+    |  T  |  F  |    F     |
+    |  F  |  T  |    F     |
+    |  F  |  F  |    F     |
+
+La expresion solo es verdadera cuando ambos operandos son verdaderos.
+// Ambos tienen que ser verdaderos para que el resultado sea verdadero
+
+*/
+
+
+// El primer operador logico que vamos a ver es "and" que en españo significa (y)
+
+// Los operadores logicos tienen algo que se llama tablas de verdad, que determinan cual va ser el resultado de una expresion que usa ese operador
+
+// digamos que tenemos 2 expresiones "X y Y" o 2 valores y esos valores son verdadero o falso y los unimos con el operador AND (&&) que en Javascript es un doble amperson
+
+// Estas son unas distintas combinaciones
+console.log(true && true);
+console.log(true && false);
+console.log(false && true);
+console.log(false && false);
+
+// resultados:
+// true -> Solamente esta expresion es verdadera, y eso es porque ambos valores son VERDADEROS
+// false
+// false
+// false
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+// Nosotros normalmente no vamos a escribir directamente valores TRUE o FALSE si no que vamos a escribir "condiciones"
+var a = 8;
+console.log((a > 5) && (a < 10)); // TRUE
+// Toda esta expresion va a ser verdadera o falsa, pero eso depende de que esta parte es una verdadera y la otra tambien verdadera o no
+
+// las 2 partes cumplen con la condicion de que son verdaderas (TRUE), entonces es por eso que como resultado nos arroja un TRUE, recordando la tabla de arriba para saber el orden.
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+// Ahora digamos que cambiamos el valor de A, entonces el valor de A sera..
+var a = 3;
+console.log((a > 5) && (a < 10)); // FALSE
+// Recordar el orden de nuestra tabla para poder entender el resultado
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+// Si cambiamos el valor y el valor sera..
+var a = 15;
+console.log((a > 5) && (a < 10)); // FALSE
+// Recordar que segun el orden de nuestra trabala, si alguno de los valores es falso el resultado es falso y eso es exactamente lo que vemos en consola
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+// Nos falta el ultimo caso en el ambos son FALSOS
+var a = 1;
+console.log((a > 5) && (a == 3)); // FALSE
+
+// Entonces... ya probamos los 4 casos que tenemos en esta tabla para el operador AND
+
+// Los operadores logicos van a ser muy utiles cuando empcemos a trabajar con condicionales para decidir si una parte del codigo se ejecuta o no basados en ciertas condiciones.
+
+
+
 
 
 
