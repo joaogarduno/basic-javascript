@@ -637,6 +637,48 @@ console.log((a < 5) || (a > 15)); // TRUE
 
 var a = 5;
 console.log((a == 5) || (a < 15)); // TRUE
+// ------------------------------------------------------------------
+
+
+
+
+// TEMA 64: Operador Logico "NOT"
+
+// Hablaremos sobre el 3° operador logico que podemos usar en JavaScript el operador "NOT" en español NOT significa "no" y es el operador que usamos para negar el valor de verdad de otra expresion para negar una expresion
+
+// El signo que usamos para identificar este operador es "!X" el signo de exclamacion se coloca antes de la expresion que queremos negar, conoceremos sus resultados.
+
+/*
+
+Tabla  de verdad del operador NOT.
+Para: !X
+
+ |   X   |   !X   |
+ ------------------------------
+ |   T   |   F   |
+ |   F   |   T   |
+
+ Si la expresion es verdadera agregandole este operador convertimos el resultado en falso y si la expresion es falsa la convertimos en verdadero.
+
+*/
+
+// Comprobemos esa tabla....
+console.log(!true); // FALSE
+console.log(!false); // TRUE
+
+// Estos ejemplos seran mas consisos porque solo necesitamos ver 2 situaciones si la expresion es verdadera y si la expresion es falsa.
+
+// Si definimos una variable la creamos y le asignamos un valor
+var a = 8;
+
+// Vamos a conocer como las utilizamos en las expresiones
+console.log(!(a > 5)); // FALSE
+
+// 
+console.log(!(a < 5)); // TRUE
+
+// Ya tenemos los 3 operadores que podemos usar en nuestro codigo para escribir condiciones mas complejas y para controlar que es lo que pasa en nuestro codigo porque ellas van a ser vitales para poder escribir condicionales
+
 
 
 
