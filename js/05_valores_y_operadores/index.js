@@ -590,10 +590,53 @@ console.log((a > 5) && (a == 3)); // FALSE
 // Entonces... ya probamos los 4 casos que tenemos en esta tabla para el operador AND
 
 // Los operadores logicos van a ser muy utiles cuando empcemos a trabajar con condicionales para decidir si una parte del codigo se ejecuta o no basados en ciertas condiciones.
+// ------------------------------------------------------------------
 
 
 
 
+// Tema 63: Operador Logico "OR"
+
+// OR signafica "ó" en español y cuenta con su tabla de verdad...
+
+/*
+
+    Tabla de verdad del operador OR
+    Para: X  ||  Y
+
+    |  X  |  Y  |  X || Y  |
+    -----------------------------
+    |  T  |  T  |     T    |
+    |  T  |  F  |     T    |
+    |  F  |  T  |     T    |
+    |  F  |  F  |     F    |
+
+La expresion es verdadera si alguno de los dos operandos o ambos son verdaderos.
+
+*/
+
+// En JavaScript el simbolo para respresentarlo es "dos barras verticales" ( || )
+
+// La tabla de verdad para OR es un poco distinta a la tabla de verdad para AND.
+
+// Con el operador OR si cualquiera de los operandos, es decir de los valores es verdadero entonces el resultado es verdadero, puede ser uno el otro o ambos, pueden ser verdaderos para que el resultado sea verdadero, pero si ambos son falsos ahi si el resultado sera FALSO, la expresion es falsa.
+
+// la expresion es verdadera del operador OR si alguno de los dos operandos o ambos son verdaderos, comprovemos la tabla de verdad.
+
+var a = 8;
+
+console.log((a < 5) || (a > 15)); // FALSE
+
+
+var a = 2;
+console.log((a < 5) || (a > 15)); // TRUE
+
+
+var a = 20;
+console.log((a < 5) || (a > 15)); // TRUE
+
+var a = 5;
+console.log((a == 5) || (a < 15)); // TRUE
 
 
 
