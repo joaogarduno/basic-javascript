@@ -115,6 +115,82 @@ console.log('Despues del condicional...');
 
 
 
+// TEMA 66: Cláusula "else"
+
+// Tambien podemos expandir nuestras condicionales para decidir que es lo que ocurre si la clausula de la condicional es falsa
+
+// Escribimos nuestra condicional...
+if(true){
+    console.log('La condicion es VERDADERA');
+} else{
+    console.log('La condicion  es FALSA');
+}
+// Y se lee asi... "Si la condicion es verdadera, si no es falsa"
+
+
+// Pero cambiando la condicional a false veamos que sucede...
+if(false){
+    console.log('La condicion es VERDADERA');
+} else{
+    console.log('La condicion  es FALSA');
+}
+
+// la parte de "else" es la palabra que podemos agregar a los condicionales
+// Es decir, es la misma estructura que trabajamos anteriormente, pero ahora luego de la llave que cierra la clausula "if" escribimos la palabra "else", esta es una palabra especial y reservada en JavaScipt, que nos permiten decidir que es lo que pasa si la condicion llega a ser falsa.
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+var x = 5;
+
+if(x < 2){
+    console.log('Esta condicion es VERDADERA');
+} else{
+    console.log('La condicion es FALSA')
+} // FALSE
+
+// como podemos observar la condicion como resultado es FALSA, y se muestra ese mensaje en consola porque se ejecuta la linea de codigo que esta dentro de la clausula de "else"
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+// "Si la estacion es verano"
+
+var estacion = 'Invierno';
+
+if(estacion == 'Verano'){
+    console.log('Comenzo el verano. Ya podemos ir a la playa.');
+} else{
+    console.log('Ya quiero que llegue el verano para poder ir a la playa');
+} // FALSE
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+// Utilizando el operador de igualdad estricta.
+// Podemos utilizar el operador de igualdad estricta, para verificar el tipo de dato
+
+var estacion = 'Invierno';
+
+if(estacion === 'Verano'){
+    console.log('Comenzo el verano. Ya podemos ir a la playa.');
+} else{
+    console.log('Ya quiero que llegue el verano para poder ir a la playa');
+} // FALSE
+
+// El segundo mensaje fue el que se mostro, porque la condicion es falsa
+
+// Ahora ya sabemos como trabajar con la clausula "else"
+// La clausula "else" sirve como un respaldo y siempre va estar ubicada luego de la clausula "if".
+// La clausula "if" es como la principal y este "else" es simplemente un respaldo, contentado la misma pregunta ¿Qué llegara a pasar si la condicion es falsa?.
+
+
 
 
 
