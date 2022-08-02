@@ -189,6 +189,57 @@ if(estacion === 'Verano'){
 // Ahora ya sabemos como trabajar con la clausula "else"
 // La clausula "else" sirve como un respaldo y siempre va estar ubicada luego de la clausula "if".
 // La clausula "if" es como la principal y este "else" es simplemente un respaldo, contentado la misma pregunta ¿Qué llegara a pasar si la condicion es falsa?.
+// ------------------------------------------------------------------
+
+
+
+
+
+// TEMA 67: Clausula "else if"
+
+// Utilizando varias CONDICIONES
+
+// Ahora que pasa utilizando varias condiciones y para eso tenemos una clausula llamada "else if"
+
+// Los condicionales tambien pueden verificar y manejar varias condiciones.
+
+// En este ejemplo vamos a ver como puedes usar una clausula llamada "else" y "if" que nos permite hacer exactamente eso, manejar condiciones alternativas y decidir que pasa si alguna de ella es verdadera.
+
+// Esta vez trabajaremos con funciones, definimos una funcion que se va a llamar clasificar valor
+
+// Esta funcion va a tomar un valor como un parametro y va derterminar si el valor es divisible entre 2, divisible entre 3 o si no es divisible entre ninguno de esos numeros.
+
+// Y lo haremos con un condicional
+function clasificarValor(valor){
+    if(valor % 2 == 0){
+        console.log('Divisible entre 2');
+    } else if(valor % 3 == 0){
+        console.log('Divisible entre 3.');
+    }     
+    else{
+        console.log('No es divisible entre las opciones');
+    }
+}
+
+// Entre "if" y "else" vamos a poder agregar una clausula nueva que se llama "else if", como lo agregamos.
+// Luego de la llave que cierra "if" escribimos "else if" separados por un espacio y luego colocamos un par de llaves, las llaves son vitales en Javascript, porque le indican al programa hasta donde llega cada bloque de codigo, cada parte de la estructura... pero, la clave aqui es que en ese bloque que agregamos debemos escribir una condicion luego de la palabra "if", esa condicion tambien se puede verificar y vemos la logica de esa condicion
+
+// Y asi es como tenemos nuestra "funcion" con nuestra condicional, pero ¿Como funciona este condicional, cual es la logica del codigo?
+
+// Si en el primer "if" la condicion es verdadera se ejecutara el primer console.log, pero... si esta condicion es falsa se verifica y se verifica que es falsa entonces ese codigo no se ejecuta y pasamos directamente a la segunda clausula con nuestra nueva condicional "else if", se verifica la condicion es decir se evalua la expresion, si es verdadera se ejecuta el console.log que corresponde a esa clausula del "else if", entonces, si esta es falsa pasamos a la siguiente clausula o en su defecto a la clausula "else" si es que existe alguna en esa condicional, y se ejecuta el ultimo console.log.
+
+// Si todas las condiciones anteriores son falsas, en el condicional "else" nos va a servir como un respaldo a esa cuestion conocida como condicion.
+
+// Vamos a llamar a la funcion con distintos valores para conocer como funciona este condicional
+clasificarValor(2); // divisible entre ---> 2
+clasificarValor(15); // divisible entre ---> 3
+clasificarValor(7);// NO es divisible entre las opciones
+
+// Asi es como funciona un condicional que tiene una clausula "else if" si las condiciones anteriores son falsas se evalua su condicon y se ejecuta su codigo si la condicion es verdadera.
+
+// Pero solamente uno de los bloques de codigo se va a ejecutar, eso es clave en los condicionales, y es muy importante como funciona esa parte de los condicionales, solo un bloque de codigo se va a ejecutar, el bloque de codigo que corresponda a la "primera" condicion que es verdadera, si existen muchas condiciones que puedan ser verdaderas, solo la primera que sea verdadera se va a ejecutar y despues el programa va a continuar con la ejecucion normal.
+// ------------------------------------------------------------------
+
 
 
 
