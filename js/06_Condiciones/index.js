@@ -367,6 +367,45 @@ clasificarValor(15); // Valor Mayor o igual que 10
 
 
 
+// TEMA 69: Encadenar Sentencias "if... else"
+
+// Vamos a ver como podemos escribir una condicional con mas de una clausula "else if"
+
+// Vamos a ver un ejemplo de un condicional con 2 clausulas "else if"
+// Vamos a verificar varias condiciones.
+
+// Primero vamos a definir una funcion
+// Y nuestro ejemplo va a estar enfocado en interpretar el indice de masa coorporal de una persona, vamos a tomar ese valor de indice de masa coorporal y luego vamos a clasificarlo con un condicional.
+
+// Los valores van a estar clasificados deacuerdo a una tabla que puedes conseguir en el centro de control de enfermedades de estados unidos el CDC
+
+function interpretarIMC(indiceDeMasaCorporal){
+    if(indiceDeMasaCorporal < 18.5){
+        console.log('BAJO peso');
+    } else if(indiceDeMasaCorporal <= 24.9){
+        console.log('NORMAL peso');
+    } else if(indiceDeMasaCorporal <= 29.9){
+        console.log('SOBRE peso');
+    } else{
+        console.log('Estas a punto de morir');
+    }
+}
+interpretarIMC(32.2);
+interpretarIMC(28.5);
+interpretarIMC(22.2);
+interpretarIMC(17.8);
+interpretarIMC(18.5);
+
+// Ya sabemos como funciona la logica de los condicionales
+
+// Recordar que solo el codigo de la primera condicion verdadera es el que se ejecuta
+// Ninguna de las otras condiciones se evalua o se ejecuta despues de la primera que sea verdadera
+
+// Ya sabemos como trabajar con condicionales y con varias clausulas "else if"
+
+
+
+
 
 
 
