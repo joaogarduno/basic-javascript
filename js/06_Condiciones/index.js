@@ -243,6 +243,126 @@ clasificarValor(7);// NO es divisible entre las opciones
 
 
 
+// TEMA 68: Condicionales - Orden Lógico
+
+// VEamos este ejemplo de esta condicional, ya que es muy importante entender como funciona cada una de sus clausulas y cual va a ser el resultado del codigo
+
+// Definimos una funcion que se llamara "clasificarValor", esta funcion va a tomar un valor como argumento, asi que definimos ahi el parametro de esta funcion y dentro de la funcion vamos a escribir una condicional.
+function clasificarValor(valor){
+    // Esta condicional va a verficar 2 condiciones de ese valor.
+    if(valor < 5){ // Primero verifica si "valor" es menor que 5
+        // Si es el caso mostraremos el siguiente mensaje...
+        console.log('Menor que 5');
+    } else if(valor < 10){ // Si No, si tenemos que verificar la siguiente condicion, ya que la enterior es falsa pasamos a la clausula "else if", esta clausula verifica si el valor es menor que 10
+        // Si es el caso vamos a ver este mensaje
+        console.log('Menor que 10');
+    } else{ // ahora si ambas condiciones anteriores son falsas, es decir el valor "no es menor que 5" y el "valor no es menor que 10", entonces la opcion que nos queda es que el valor sea "Mayor o igual a 10"
+        console.log('El valor es Mayor o igual a 10');
+
+    }
+
+    // Esta es basicamente la estructura del condicional en este ejemplo.
+}
+
+// Aprenderemos pasandole distintos valores que le vamos a pasar a la funcion
+// Llamamos a la funcion de esta forma
+clasificarValor(2); // Menor que 5
+// Se muestra ese mensaje ya que se cumple la primera condicion y es verdadera
+// El valor 2 (es decir el numero dos), se asigna al parametro que llamamos "valor" y luego donde usamos el parametro (en la condicional se va a reemplazar ese valor para comprobar la condicion).
+// En este caso estamos comprobando si 2 es "menor" que 5 y la condicion es verdadera por eso de ejecuta ese console.log, solo una de las clausulas es la que se ejecuta
+
+// Las otras 2 clausulas no se ejecutan.
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+// En este ejemplo la condicion es FALSA
+
+function clasificarValor(valor){
+    if(valor < 5){ 
+        console.log('Menor que 5');
+    } else if(valor < 10){
+        console.log('Menor que 10');
+    } else{
+        console.log('El valor es Mayor o igual a 10');
+    }
+}
+
+clasificarValor(7); // Menor que 10
+
+// Actualizamos el valor a 7 (como "argumento") y el mensaje que nos va a mostrar cambia a "Menor que 10" que pertenece a la segunda clausula de nuestro condicional que es el "else if "
+// ¿Por qué? porque el ARGUMENTO 7 se asigna al PARAMETRO "valor", entonces la condicion se verifica y comparamos
+// ----------------
+
+
+
+// OTRO EJEMPLO: Hablando del ejemplo anterior
+
+// Algo curioso que destacar, ya que en nuestro ejemplo anterior cuando pasabamos el valor 2 como argumento las primeras 2 condiciones eran verdaderas. No se si lo notaste anteriormente, pero es algo importante de resaltar.
+function clasificarValor(valor){
+    if(valor < 5){ 
+        console.log('Menor que 5');
+    } else if(valor < 10){
+        console.log('Menor que 10');
+    } else{
+        console.log('El valor es Mayor o igual a 10');
+    }
+}
+
+clasificarValor(2);
+
+// Ya que en este caso el valor era 2 el valor era menor que 5 y era menor que 10, ambas eran verdaderas, pero solamente se muestra un mensaje, porque solo se ejecuta el codigo de la primera Clausula, bloque o condicion que sea verdadera en la secuencia.
+
+// Por esto es muy importante que siempre se analice el order en el que se escriben estas clausulas.
+// Ya que si nosotros hubieramos cambiado el orden de las condiciones, el mensaje hubiera sido distinto vemos a que nos referimos con el siguiente ejemplo:
+function clasificarValor(valor){
+    if(valor < 10){ 
+        console.log('Menor que 10');
+    } else if(valor < 5){
+        console.log('Menor que 5');
+    } else{
+        console.log('El valor es Mayor o igual a 10');
+    }
+}
+
+clasificarValor(2); // Menor que 10
+
+// Podemos ver que el mensaje cambia y ahora es menor que 10
+// YA que la primera condicion que lee es verdadera, es decir cumple con la condicion y se ejecuta primero.
+
+// Por eso es importante que escojas el orden de las condiciones adecuadamente, para que la primera condicion que sea verdadera sea la que se ejecute.
+// ----------------
+
+
+
+// OTRO EJEMPLO: Si ninguna de las condiciones es verdadera
+
+// Ahora si regresamos todo a la normalidad (El codigo)
+// Vamos a probar si ninguna de las condiciones es verdadera, es decir si ambos son falsas y pasamos a la clausula "else"
+function clasificarValor(valor){
+    if(valor < 5){ 
+        console.log('Menor que 5');
+    } else if(valor < 10){
+        console.log('Menor que 10');
+    } else{
+        console.log('El valor es Mayor o igual a 10');
+    }
+}
+
+clasificarValor(15); // Valor Mayor o igual que 10
+
+// Si pasamos el valor 15 como "argumento" se asigna ese valor al parametro que tenemos con el nombre de "valor" y empieza a leer la condicion y dice...
+    // Primero: como 15 no es menor que 5, la primera condicion es FALSA, no es menor que 10
+    // Segundo: Pasamos a la siguiente clausula del "else if", y como 15 no es menor que 10 esta segunda condicion es FALSA tambien 
+    // Tercero: Pasamos a la siguiente clausula del "else" que sirve como un respaldo y es por eso que esa linea codigo que esta dentro de ese bloque o clausula se ejecuta y vemos el mensaje "El valor es Mayor o igual que 10"
+
+// Ahora entendemos como funciona la logica de las clausulas "if", "else if" y "else".
+
+// Puedes agregar mas de una clausula dependiendo de cuantas condiciones deseas verificar en el condicional lo importante es que la clausula "if" tiene que ser la primera clausula, luego "else if", tiene que ser la segunda clausula o tercera y asi sucesivamente, por ultimo la clausula "else" siempre tiene que estar al final, es la ultima porque sirve como respaldo
+// ------------------------------------------------------------------
+
 
 
 
