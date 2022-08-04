@@ -46,7 +46,7 @@ if(x < 2){
 
 
 
-// EJEMPLO: Condiciones mas elebaoradas
+// EJEMPLO: Condiciones mas elaboradas
 
 var x = 5;
 
@@ -54,7 +54,7 @@ if(x > 2 && x < 10){
     console.log('Condicion verdadera!!');
 }
 
-// Estamos combinando los operadores de comparacion y los operadores logicos para formar condiciones mas complejas
+// Estamos combinando los operadores de comparación y los operadores lógicos para formar condiciones mas complejas
 // ----------------
 
 
@@ -402,7 +402,64 @@ interpretarIMC(18.5);
 // Ninguna de las otras condiciones se evalua o se ejecuta despues de la primera que sea verdadera
 
 // Ya sabemos como trabajar con condicionales y con varias clausulas "else if"
+// ------------------------------------------------------------------
 
+
+
+
+
+// TEMA 70: Codigo de Golf
+
+// Comencemos con nuestro mini proyecto, en este mini proyecto vamos aplicar nuestros conocimientos de operadores de comparacion y de condicionales tambien vamos a definir una funcion asi que vamos a practicar varios de los conceptos que hemos aprendido.
+
+/*
+
+En el juego de Golf cada hoyo tiene un par que representa el numero promedio 
+de golpes que se espera que haga un golfista para introducir la pelota en el hoyo.
+
+Hay un nombre diferente dependiendo de que tan por encima o por debajo del par esten tus golpes.
+
+Tu funcion tomará los argumentos par y golpes.
+
+Retorna la cadena correcta según esta tabla que muestra los golpes 
+en orden de mayor a menor prioridad:
+
+Golpes              Retornar
+-----------------------------------
+1                   "Hole-in-one!"
+<= par -2           "Eagle"
+par - 1             "Birdie"
+par                 "Par"
+par + 1             "Bogey"
+par + 2             "Double Bogey"
+>= par + 3          "Go Home!"
+
+par y golpes siempre serán numéricos y positivos
+
+*/
+
+// Asi que no tenemos porque preocuparnos por otro tipo de valor que pudiera ser negativo u otro tipo de dato.
+
+// Ya con las instrucciones podemos empezar a implementar nuestra funcion primero es la palabra clave llamada "function", eso es vital para definir una funcion y vamos a llamar a la funcion "puntajeDeGolf", y dijimos que la funcion tendria 2 parametros "par" que es el numero promedio de golpes esperados y "golpes" y el numero de golpes ejecutados en realidad.
+function puntajeDeGolf(par, golpes){
+    // Ahora tenemos que usar un condicional para implementar esta tabla, porque dependiendo de la diferencia entre los "golpes" y "par" es que vamos a retornar una cadena especifica
+    if(golpes == 1){
+        return "Hole-in-one"; // Practicando el concepto de como retornar o devolver un valor de una funcion
+    } else if(golpes <= par - 2){
+        return "Eagle";
+    } else if(golpes == par -1){
+        return "Birdie";
+    } else if(golpes == par){
+        return "Par";
+    } else if(golpes == par + 1){
+        return "Bogey";
+    } else if(golpes == par + 2){
+        return "Double Bogey";
+    } else if(golpes >= par + 3){
+        return "Go Home!"
+    }
+}
+console.log(puntajeDeGolf(10, 30));
 
 
 
