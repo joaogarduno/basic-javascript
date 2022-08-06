@@ -460,6 +460,99 @@ function puntajeDeGolf(par, golpes){
     }
 }
 console.log(puntajeDeGolf(10, 30));
+// ------------------------------------------------------------------
+
+
+
+
+// TEMA 71: Sentencias Switch
+
+// Veremos otra estructura muy util para programar en Javascript, encierta forma de reemplazar las condicionales en Javascript
+
+// Vamos a definir una funcion que va a clasificar un valor nuevamente
+function clasificarValor(valor){
+    // El valor sera un numero entre 1 y 4 y cada uno de esos numeros de esos valores van a estar asociados a una cadena especifica una cadena de caracteres, la funcion va a retornar esa clasificacion, esa cadena a partir del numero.
+
+    // En lugar de utilizar una condicional vamos a utilizar algo que se llama sentencia Switch esa sentencia switch nos va a permitir describir codigo que es muy similar al de un condicional.
+    var respuesta;
+
+    // Pero Switch nos permite a partir de una expresion o de un valor decidir que va a pasar en base a ese valor, solo ese valor o solo el resultado de esa expresion que tenemos entre parentesis.
+    // Escribimos la palabra clave Switch y entre parentesis el valor que queremos usar dentro de esta estructura.
+    // En este caso queremos clasificar el valor que recibimos como argumento, como parametro.
+    switch(valor){
+        // Entonces... dentro de las llaves escribimos esto...
+        case 1: 
+        // Si el valor es igual a 1, ¿qué es lo que va a ocurrir?
+            respuesta = "alpha";
+            // Vamos asignar la cadena "alpha" a la variable respuesta
+            break;
+            // Y luego salimos de la sentencia Switch         
+    }
+}
+
+// La sentencia Switch funciona asi, nosotros definimos casos especificos para el valor de esta varible o de esta expresion, si ese valor es igual, a este valor que nosotros escribimos en "case 1" entonces todo lo que esta dentro del "case" se ejecuta.
+
+// Tambien es importante terminar cada caso o cada posibilidad con una sentencia "break"
+// ----------------
+
+
+
+// OTRO EJEMPLO: Segundo caso
+
+function clasificarValor(valor){
+    var respuesta;
+    switch(valor){
+        case 1:
+            respuesta = "alpha";
+            break;
+        case 2:
+            respuesta = "beta";
+            break
+        case 3:
+            respuesta = "gamma";
+            break
+        case 4:
+            respuesta = "delta";
+            break;
+    }
+    return respuesta;
+}
+
+console.log(clasificarValor(3));
+// Esto es como un condicional pero mas especifico, porque nos permite decidir que es lo que va a ocurrir solo en base al valor que tenemos aqui entre parentesis.
+
+// no estamos escribiendo condiciones con operadores de comparacion ni estamos utilizando operadores logicos solo estamos escribiendo un valor y en base a ese valor vamos a ejecutar un bloque de codigo especifico.
+
+// Las sentencias "break" que vemos, lo que hace es detener el proceso de ejecucion de esta estructura, cuando el caso sea correcto, es decir sea verdadero y ese es el valor de la variable, el codigo se va a ejecutar y cuando legue a esta linea de "break" todo lo demas se va a ignorar, si no que simplemente esta estructura  se va a terminar y seguimos con nuestra ejecucion abajo fuera de las llaves del switch, ese es el rol de "break" y por eso es importante ponerlo despues de cada caso para que no se continue ejecutando otros posibles caso mas abajo.
+
+// Pero podemos ver que la sintaxis es mas consisa que la de una condicional para este caso especifico y finalmente vamos a retornar el valor "respuesta"
+
+// La sentencia Switch solo nos permite en este caso seleccionar el valor de la variable respuesta y luego que se haya seleccionado ese valor, se interrumpe inmediatamente su ejecucion y se pasa a esta linea, donde retornamos el valor de la respuesta.
+// ----------------
+
+
+
+// OTRO EJEMPLO: Switch con una cadena de caracteres.
+
+// Con este ejemplo mostraremos que switch no solo se puede interactuar con numeros, si no que tambien con cadena de caracteres, es decir, letras o string.
+var producto = "Pizza";
+
+switch(producto){
+    case "Pizza":
+        console.log("La pizza individual cuesta $10.55");
+    break;
+    case "Hamburguesa":
+        console.log("La hamburgesa sencilla cuestan $6.78");
+    break;
+    case "Helado":
+        console.log("El Helado sencillo cuesta $2.8");
+    break;
+}
+
+console.log("Luego del Switch");
+// Tambien podemos escribir esta sentencia Switch dentro de una funcion como normalmente lo estamos haciendo, con los ejemplos anteriores.
+
+
 
 
 
