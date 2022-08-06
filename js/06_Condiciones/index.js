@@ -548,9 +548,67 @@ switch(producto){
         console.log("El Helado sencillo cuesta $2.8");
     break;
 }
+// Tambien podemos escribir esta sentencia Switch dentro de una funcion como normalmente lo estamos haciendo, con los ejemplos anteriores.
 
 console.log("Luego del Switch");
-// Tambien podemos escribir esta sentencia Switch dentro de una funcion como normalmente lo estamos haciendo, con los ejemplos anteriores.
+
+// Asi es como basicamente funcionan las sentencias Switch, son muy utiles para escribir condicionales cuando tenemos un numero finito especifico de opciones que queremos evaluar.
+
+// Tambien podemos agregar una opcion predeterminada a la sentencua Switch que es el equivalente a la sentencia Switch de una clausula else en un condicional, sirve como un respaldo,  vas a notar como lo podemos hacer, en el proximo tema
+// ------------------------------------------------------------------
+
+
+
+
+// TEMA 72: Sentencias Switch: Opción Predeterminada.
+
+// Tambien podemos agregar una opcion prederterminada a la sentencia Switch, veamos que podemos hacer, esa opcion se va a ejecutar sin ninguno de los valores, es el valor de la variable o de la expresion, comencemos con un ejemplo definiendo una funcion.
+
+// Esta funcion va a seleccionar la opcion que corresponda a un valor especifico entre 1 y 3 y vamos a tener una opcion predeterminada para el idioma en caso de que ninguno de los valores concuerde con el valor de la variable.
+function seleccionarIdioma(valor){
+    // Definimos una variable "idioma", a la cual le vamos asignar el valor del idioma dentro de la sentencia Switch como una cadena, aqui estamos escribiendo Switch y entre parentesis vamos a colocar la variable valor.
+    var idioma;
+
+    // El valor de esa variable va a decidir que es lo que ocurre
+    switch (valor){
+        case 1:
+            idioma = "Español"
+            break;
+        case 2:
+            idioma = "Francés"
+            break;
+        case 3:
+            idioma = "Italiano";
+            break;
+
+        // Aqui es donde se implementa la parte nueva
+        // Puedes agregar una opcion predeterminada para esta sentencia switch, como lo hacemos con la palabra clave "default" 
+
+        // "default" literalmente podemos traducirlo en español como por defecto, es una opcion que se ejecuta por defecto si ninguno de estos valores es el valor de la variable, es equivalente a la clausula "else", es decir es un respaldo si ninguna de las anteriores concuerdan, por defecto vamos a colocar el idioma "ingles" sera la opcion predeterminada, en caso de que el valor no sea ni uno ni 2 ni 3.
+        // Tambien se recomienda que al final del "default" tambien coloquemos una sentencia "break", porque no necesariamente "default" tiene que ser la ultima opcion en esta secuencia, normalmente es la ultima por convencion, como sirve como un respaldo, normalmente la escribimos al final, pero no necesariamente o tecnicamente tiene que ser asi, entonces igual se recomienda colocar un "break", aunque este al final (pero es opcional)
+        default:
+            idioma = "Inglés";
+            break;
+
+    }
+
+    // Y luego que vamos hacer vamos a retornar el valor de la variable idioma
+    return idioma;
+}
+
+
+console.log(seleccionarIdioma(4));
+
+// Para probar con la opcion de "default" es decir ver que resultados espero de eso, seleccionamos un valor que no existe en nuestra sentencia, y asi podemos ver que nuestro "return" o el regreso del valor es "ingles", el que seleccionamos como opcion.
+// Porque ninguno de estos valores es el valor de la variable, no complia con su sentencia, es decir no corresponde a ninguno de los numeros que tenemos como opciones en nuestra condicion, asi que por defecto como no se consiguio el valor especifico se ejecuta su codigo que contiene y el idioma es ingles.
+
+// Asi es como funciona la opcion "defualt" en la sentencia switch es muy util porque nos permite manejar cualquier otro tipo de caso o de valor para esta variable o expresion
+
+// Bien ahora entendemos como trabajar con la sentencia Switch, tambien otra variacionde esta sentencia, de la sentencia switch es, realizar el mismo procedimiento o ejecutar el mismo codigo para varios caso
+
+// Por ejemplo que digamos que el codigo es 2 o 3 queremos hacer exactamente lo mismo, eso es posible y vamos a aprender como lo podemos hacer en la proxima parte.
+// ------------------------------------------------------------------
+
 
 
 
