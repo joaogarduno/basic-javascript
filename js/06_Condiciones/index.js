@@ -612,6 +612,47 @@ console.log(seleccionarIdioma(4));
 
 
 
+// TEMA 73: Sentencias Switch: Múltiples Casos
+
+// En las sentencias Switch tambien podemos escoger, ejecutar un codigo especifico para varios valores, conoceremos como podemos hacer eso
+
+// DEfinimos una funcion que se va a llamar, "clasificarVolumen", vamos a tener numeros entre el 1 y 6 que van a representar la intensidad del volumen en un dispositivo, el parámetro se va a llamar valor, el valor que va a representar el volumen sera una cadena de caracteres que deba describir la intensidad del volumen, puede ser "bajo" "intermedio" "alto", para eso, para asiganr ese valor tenemos una sentencia Switch, esa sentencia Switch va a depender del valor del parametro, el valor o el argumento que pasamos a la funcion.
+
+// Si el valor es 1 digamos que queremos asignar un volumen bajo, y aqui tendiamos break al final del caso como se recomienda.
+
+// Pero si nosotros tambien queremos asignar el volumen intermedio, cuando el valor que tenemos aqui es 2  o es 3, es decir 2 valores pueden realizar la misma accion, como lo podemos escribir.
+
+// Escribimos si el valor es 2 o si el valor es 3, simplemente escribimos cada uno de los posibles caso y que queremos hacer si ese caso es verdadero, por ejemplo, si el valor es 2 o si el valor es 3, que queremos hacer, queremos asignar el volumen intermedio a la variable, ejecutamos esa linea de codigo y luego salimos de la sentencia Switch con "break", tambien podemos tener mas de 2 casos, manejados de la misma forma, por ejemplo.
+
+// 
+
+function clasificarVolumen(valor){
+    var volumen;
+
+    switch(valor){
+        case 1:
+            volumen = "Bajo";
+            break;
+        case 2:
+        case 3:
+            volumen = "Intermedio";
+            break;
+        case 4:
+        case 5:
+        case 6:
+            volumen = "alto";
+            break;
+    }
+
+    return volumen;
+}
+
+console.log(clasificarVolumen(2));
+
+// Ahora ya sabemos como definir o como escribir una sentencia Switch completamente, ya sabes como escribir sus casos, como manejar varios casos de la misma forma y como agregar un caso que se ejecute por defecto si en ninguna de las opciones, es el valor de esta variable o expresion.
+// ------------------------------------------------------------------
+
+
 
 
 

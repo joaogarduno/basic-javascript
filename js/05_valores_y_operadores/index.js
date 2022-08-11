@@ -42,7 +42,7 @@ console.log(False);
 
 // TEMA 53: Operador de Igualdad
 
-// En JavaScrpt puedes comparar valores para saber si son iguales o si no son iguales, si representan en el mismo valor.
+// En JavaScript puedes comparar valores para saber si son iguales o si no son iguales, si representan en el mismo valor.
 
 // Eso lo podemos hacer con el operador de igualdad.
 console.log(5 == 5); // esto que tenemos aqui (entre parentesis) se denomina expresion.
