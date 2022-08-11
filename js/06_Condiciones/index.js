@@ -646,11 +646,77 @@ function clasificarVolumen(valor){
 
     return volumen;
 }
+// Ya tenemos nuestra funcion para clasificar el volumen con una sentencia Switch
 
+// Mandamos a llamar nuestra funcion
 console.log(clasificarVolumen(2));
+
 
 // Ahora ya sabemos como definir o como escribir una sentencia Switch completamente, ya sabes como escribir sus casos, como manejar varios casos de la misma forma y como agregar un caso que se ejecute por defecto si en ninguna de las opciones, es el valor de esta variable o expresion.
 // ------------------------------------------------------------------
+
+
+
+
+// TEMA 74: Reemplazar "if else" por "switch"
+
+
+// Como reemplazar condiciones con Switch
+// Vamos a concer la equivalencia entre los condicionales y las sentencias Switch
+
+// Entonces en ciertos casos podemos reemplazar condicionales con sentencia Switch.
+
+// Por ejemplo en este caos tenemos una funcion llamada "seleccionarIdioma", que toma un valor 1, 2, 3 o si el valor es cualquier otro numero, va asignar el idioma por defecto "ingles" y luego retorna ese idioma, retorna el valor de esa variable "idioma" que declaramos.
+function seleccionarIdioma(valor){
+    var idioma;
+
+    if(valor == 1){
+        idioma = "Español";
+    } else if(valor == 2){
+        idioma = "Francés";
+    } else if(valor == 3){
+        idioma = Italiano;
+    } else{
+        idioma = "Inglés";
+    }
+
+    return idioma;
+}
+
+console.log(seleccionarIdioma(6));
+
+// Pero que ocurre con esto?? Nosotros podemos reemplazar este condicional con una sentencia Switch porque como puedes ver, estamos verificando casos especificos, relacionados con el valor de esta variable, si el valor es igual a 1 ocurre algo
+
+
+// Entonces, vamos a ver como adaptar este codigo utiizando la sentencia Switch
+
+function seleccionarIdioma(valor){
+    var idioma;
+
+    switch(valor){
+        case 1:
+            idioma = "Español";
+            break;
+        case 2:
+            idioma = "Francés";
+            break;
+        case 3:
+            idioma = "Italiano";
+            break;
+        default:
+            idioma = "Ingles";
+            break;
+    }
+
+    return idioma;
+}
+// Como podemos ver ya transformamos el condicional en una sentencia Switch
+
+console.log(seleccionarIdioma(2));
+
+// Entonces... cuando en un condicional estamos verificando si el valor de una variable o de una expresion es igual a otro valor podemos simplemente reemplazarlo con Switch y agregar un valor por defecto o una accion que se va a ejecutar por defecto con "default".
+// ------------------------------------------------------------------
+
 
 
 
