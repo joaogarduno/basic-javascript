@@ -720,6 +720,47 @@ console.log(seleccionarIdioma(2));
 
 
 
+// TEMA 75: Retornar Valores Booleanos
+
+// Ahora que ya sabemos como funcionan las sentencias Switch en JavaScript y porque son muy utiles.
+
+// Vamos a cambiar un poco el tema, ya que veremos como podemos retornar de forma muy concisa valores Booleanos:
+    // Verdadero (TRUE)
+    // Falso (FALSE)
+
+// Veamos el siguiente ejemplo, definimos una funcion que se va a llamar "esMenorQue" esta funcion va a comparar 2 valores "a" y "b", son los parametros que vamos a definir para esos valores y vamos a comprobar si "A" es menor que "B", estrictamente menor que "b", si es menor que "b" entonces retornaremos TRUE y si no vamos a retornar "false"
+function esMenorQue(a, b){
+    // Inicialmente podemos hacerlo con una condicional similar a este
+    if(a < b){
+        return true;
+    } else{
+        return false;
+    }
+}
+// Esto funcionalmente va a cumplir su proposito, pero hay una forma mas concisa de escribirlo, mucho mas concisa que va a resultar en una sola linea.
+
+// Lo que nosotros podemos hacer en lugar de escribir esa condicional, es simplemente retornar el valor de esta comparacion
+function esMenorQue(a, b){
+    return a < b;
+}
+// Solamente esto es lo que necesitamos para reemplazar lo que teniamos antes y podemos ver la diferencia
+// Debemos notar la diferencia (entre las 2 opciones) en complejidad.
+// Entonces que es lo que tenemos con esta ultima funcion, estamos retornando el resultado de esta comparacion, si "a" es menor que "b", esa condicion sera verdadera, y el valor TRUE se va a retornar, si es falsa esta condicion va a ser FALSE y ese es el valor que va a retornar y cumple exactamente el mismo proposito
+console.log(esMenorQue(3, 6)); // TRUE
+
+// Ahora si invertimos los el orden "6, 3", el resultado sera FALSE, asi que esta funcionando exactamente como queriamos
+console.log(esMenorQue(6, 3)); // FALSE
+
+// Tambien si los valores son iguales el resultado es FALSE
+console.log(esMenorQue(3, 3)); // FALSE
+// Ya que estamos ocupando un operador estricto, es decir el operador de comparacion estricta, estamos verificando si "a" es estrictamente menor que "b"
+
+// Bien ahora sabemos como reemplazar un condicional usado para retornar un valor booleano de una funcion y ese es el valor que se va a retornar.
+// ------------------------------------------------------------------
+
+
+
+
 
 
 
