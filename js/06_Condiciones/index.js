@@ -408,7 +408,9 @@ interpretarIMC(18.5);
 
 
 
-// TEMA 70: Codigo de Golf
+// TEMA 70 - Proyecto 4: Codigo de Golf
+
+// Proyecto 4
 
 // Comencemos con nuestro mini proyecto, en este mini proyecto vamos aplicar nuestros conocimientos de operadores de comparacion y de condicionales tambien vamos a definir una funcion asi que vamos a practicar varios de los conceptos que hemos aprendido.
 
@@ -762,6 +764,74 @@ console.log(esMenorQue(3, 3)); // FALSE
 
 
 
+// TEMA 76: Patrón de Retorno Anticipado
+
+// Continuando con el tema de "funciones" y de aspectos importantes que debes saber de las funciones veremos el patron de retorno anticipado.
+
+// Veamos que implica el patrón de retorno anticipado.
+
+// Cuando retornamos el valor de una funcion en ese momento que retornamos el valor, la funcion se detiene completamente, cualquier linea que este luego de "return" no se va a ejecutar.
+
+// Veamos esto con una funcion de muestra
+function miFuncion(){
+    console.log("hola");
+    return "Mundo";
+    console.log("adios");
+}
+// ¿Qué ocurre aquí?, podemos ver que el editor de codigo en la linea 777 se torna un poco mas tenue, es decir un poco mas transparente, ¿Por qué? porque si colocamos nuestro cursor encima de la linea nos dice que se a detectado codigo que no se puede alcanzar durante la ejecucion del programa "unreachable code detected" esto se puede traducir como inalcanzable
+// La linea 777 nunca se va a ejecutar la linea que dice "console.log("adios")", ¿Por qué? porque esta despues de una sentencia "return", cuando esta sentencia "return" se ejecuta, todo el codigo que pueda estar despues de "return" ya no se ejecuta la funcion se detiene inmediatamente y lo comprobamos ejecutando la funcion o una llamada a la funcion.
+console.log(miFuncion());
+
+// Esto es importante que conoscamos porque este es el patron anticipado es muy util, especificamente es util cuando necesitamos detener la funcion por alguna condicion especifica.
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+// En este ejemplo vamos a definir una funcion que se llame calcular raiz cuadrada, esa funcion va a tomar un numero como parametro.
+// ¿Qué vamos hacer? bueno la raiz cuadrada de un numero no existe por lo menos no en los numeros reales que son con los que normalmente trabajamos no existe si es un numero negativo, asi que, si esa condicion es verdadera si el numero es negativo no podemos calcular la raiz cuadrada y que es lo que deberiamos hacer simplemente detener la funcion y retornar un valor.
+// En ese caso lo que hariamos es retornar el valor "undefined" porque la operacion no esta definida.
+function calcularRaizCuadrada(num){
+    if(num < 0){
+        return undefined;
+    }
+    return Math.sqrt(num);
+
+}
+// Estamos retornando simplemente el valor generico que retornan las funciones cuando no se retorna un valor, en caso de que si el valor sea valido, sea mayor o igual a cero, entonces podemos calcular la raiz cudrada del numero y retornarlo lo hariamos con esta llamada a la funcio ".sqrt" (raiz cudrada)
+
+// Lo importante de el "patron de retorno anticipado" esta aqui en la condicion "if(num < 0)", si la condicion es verdadera vamos a retornar el valor de "undefined" e inmediatamente la funcion se va a detener.
+
+// Recuerda que las funciones por defecto retornan "undefined"
+
+// Cuandos se ejecuta el "return Math.sqrt(num)" esta linea ni se alcanza no existe, es como si no existiera, solamente cuando se ejecuta esta linea primero.
+// Pero si la condicion es falsa el condicional no se ejecuta y pasamos a esta linea y se retorna el valor
+
+console.log(calcularRaizCuadrada(25));
+
+console.log(calcularRaizCuadrada(-5));
+// ----------------
+
+
+
+// OTRO EJEMPLO
+
+// Ahora digamos que no se incluye la condiciona
+function calcularRaizCuadrada(num){
+    // if(num < 0){
+    //     return undefined;
+    // }
+    return Math.sqrt(num);
+}
+
+console.log(calcularRaizCuadrada(-5));
+// Nuestro resultado seria "NaN", que en Javascript significa "Not a Number", este es un tipo de valor especial que se retorna cuando una operacion retorna un valor que no es valido, que no es un numero, no es un numero valido.
+
+// Para evitar eso necesitamos utilizar el "patron de retorno anticipado" y evitar cualquier valor innesperado o situacion o error que se puede presentar
+
+// Bien ahora sabemos como utilizar ese patron y que "return" detiene la funcion inmediatamente y que puedes escribir mas de una sentencia "return" en nuestras funciones, dependiendo de donde necesitas retornar el valor en que punto del codigo necesitas retornar el valor y detener la ejecucion de la funcion.
+// ------------------------------------------------------------------
 
 
 
