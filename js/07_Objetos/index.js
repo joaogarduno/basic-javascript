@@ -112,6 +112,35 @@ console.log(miCuaderno.numeroDeHojas);
 
 
 
+// TEMA 81: Acceder a Propiedades: Variables
+
+// ¿Como podemos acceder a esos valores utilizando variables?
+
+// ¿Como poder acceder a la propiedad de un objeto usando una variable?, en lugar de un valor que escribimos directamente entre corchetes vamos a usar una variable.
+
+// Si definimos un objeto que represente los resultados de una competencia vamos asociar los numeros entre 1 y 4 del primero, segundo, tercero y cuarto lugar a el usuario correspondiente, digamos que es una competencia de programacion y los competidores se registraron con un nombre especifico de usuario
+
+var resultado = {
+    1: "beto234",
+    2: "gino008",
+    3: "pedro122",
+    4: "malakias2998"
+};
+
+// Ahora si queremos acceder a alguno de esos resultados especificos alguno de esos valores especificos podriamos usar una "variable" llamada "posicion".
+var posicion = 4;
+
+// es decir, queremos acceder al usuario que estaba en la posicion 4, ¿Como podemos hacerlo?, podemos escribir el nombre del objeto, el nombre de la variable que contiene a ese objeto y entre corchetes pasamos en lugar del nombre de la propiedad el nombre de la variable "posicion" esto es equivalente a escibir simplemente 4, pero como estamos escribiendo una variable, podemos trabajar con esa variable en nuestro programa, y hacer que este acceso a esta propiedad sea mas flexible, es decir sea mas dinamico, porque este valor va a depender del valor de la variable, no es un valor fijo
+console.log(resultado[posicion]);
+
+// Entonces podemos entender que ese valor se esta usando como el valor de la propiedad, el nombre de la propiedad que tenemos aqui y eso nos da mucho mas flexibilidad, porque quizas esa variable este en un lugar especifico de tu programa y la uses muchas veces y se actualice en tu programa y luego cuando llegue al punto donde necesites acceder a esa propiedad ese resultado va a estar personalizado al valor actual de la variable
+
+// Bien, ahora entendemos como acceder a propiedades de objetos usando una varible, esto no lo podemos hacer con la "notación de punto" solo con la notacion de corchetes, porque en la notacion de punto tenemos que escribir explicitamente el nombre de la propiedad, no podemos usar una variable.
+// ------------------------------------------------------------------
+
+
+
+
 
 
 
