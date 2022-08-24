@@ -837,6 +837,125 @@ console.log(calcularRaizCuadrada(-5));
 
 
 
+// TEMA 77 - Proyecto 5: Conteo de Cartas
+
+// Proyecto 5
+
+// Mini proyecto de contar cartas, para el juego "Blackjack", el juego de cartas "blackjack"...
+
+
+
+// Ahora vamos a trabajar en un mini proyecto centrado en representar lo que ocurre en un juego de casino de Blackjack un juego de cartas, vamos a practicar nuestro conocimiento de funciones y de la sentencia Switch que acabamos de aprender
+
+// 
+
+
+/* Descripcion
+
+En el juego de casino Blackjack el jugador puede sacarle ventaja a la casa llevando un registro
+del numero relativo de cartas altas y bajas que quedan en la baraja.
+
+Esto se llama "conteo de cartas".
+
+Tener más cartas altas en la baraja es una ventaja para el jugador. Se le asigna un valor a cada carta de acuerdo a la siguiente tabla.
+
+- Cuando el conteo es positivo, el jugador debería aporstar alto.
+- Cuando el conteo es 0 (cero) o negativo, el jugador debería apostar bajo.
+
+
+
+Cambio del conteo                       Cartas
+-----------------------------------------------------
+    +1                                2, 3, 4, 5, 6
+    0                                 7, 8, 9
+    -1                                10, 'J', 'Q', 'K', 'A'
+
+
+Nuestra meta es definir una función para contar cartas.
+
+La función debe tomar un parámetro carta que puede ser un número o una cadena de caracteres y luego aumentar o reducir el valor de la variable global conteo de acuerdo al valor de la carta (observa la tabla).
+
+La función debe retornar una cadena de caracteres con el conteo actual y la cadena:
+- "Apostar" si el conteo es positivo.
+- "Esperar" si el conteo es cero o negativo.
+
+El conteo actual y la decisión del jugador
+("apostar" o "esperar") deben estar separados por un espacio
+
+*/
+
+
+
+// definimos la variable global conteo, sera una variable Global porque esta definida en el programa principal y la estamos definiendo con la palabra clave "var", inicialmente su valor sera de 0 (cero), ya que se va a ir incrementando o disminuyendo o dejando exactamente igual dependiendo del valor de la carta
+var conteo = 0;
+
+
+// Definimos nuestra funcion "contarCartas"
+// El parametro se llama "carta", ese parametro tendra un valor especifico, numerico o letra, dependiendo el tipo de carta.
+function contarCartas(carta){
+    // Declaramos una variable local, esta variable solo va ser accesible o solo va a poder usarse dentro de la funcion "contarCartas", esa seria nuestra "decision final" si apostar o esperar.
+    var decision;
+
+    // pero primero tenemos que actualizar el valor del conteo, para eso vamos a utilizar una sentencia "SWITCH"
+    // Esa sentencia Switch va analisar el valor de la "carta" y dependiendo de su valor vamos a actualizar el valor de "conteo", aqui podemos ver en la tabla que si el valor es "2, 3, 4, 5, o 6" cualquiera de estos numeros deberiamos de aumentar el valor del conteo en 1, asi que vamos hacerlo
+    // recuerda entre "2 y 6", y como estamos utilizando una sentencia Switch vamos a tener varios caso posibles para ejecutar el mismo codigo, para eso escribimos muchos casos distintos
+
+    // Si carta tiene un valor de 2, 3, 4, 5 o 6 ¿Qué es lo que vamos hacer? vamos a incrementar el valor de la variable conteo en 1, simplemente escribimos 2 signos mas a la derecha del nombre de la variable, ejemplo, "conteo++", esto nos permite incrementar su valor en 1 y como estamos en una sentencia "switch" en uno de los casos tenemos que escribir la sentencia "break".
+    switch(carta){
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            conteo++;
+            break;
+
+        // Ahora para la segunda categoria de valores "7, 8 y 9" sabemos que no tenemos que cambiar el valor del conteo, asi que, en realidad no deberiamos de incluirlo en la sentencia "Switch" porque no tiene que haber ningun efecto sobre el conteo vamos a obviar esos casos, pero... En el otro caso, si tenemos que incluir estos valores 10, J, Q, K, A, en cualquiera de estos casos tenemos que reducir el valor del conteo en 1, asi que vamos a implementar esto en Switch
+        case 10:
+        case "J":
+        case "Q":
+        case "K":
+        case "A":
+            conteo--;
+            break;
+        // Entonces que es lo que vamos hacer en estos casos, vamos a tomar el valor de la variable global "conteo" y lo vamos a disminuir en 1, es decir lo vamos a reducir en 1.
+        // Tenemos la variable "Global" y la estamos modificando dentro de la funcion
+    }
+
+    // Aun nos queda la ultima parte de la funcion, debemos retornar una cadena a partir del valor de "conteo", la funcion debe retornar una cadena de caracteres con el conteo actual, es decir, tenemos que retornar ese conteo y tambien debemos incluir esta cadena, alguna de estas 2 "Apostar" si el conteo es "positivo" o "Esperar" si el conteo es CERO o es "Negativo".
+    // Para escoger la cadena, como solo tenemos 2 opciones podemos usar un condicional
+    if(conteo > 0){
+        decision = "Apostar";
+    } else{
+        decision = "Esperar"
+    }
+    // Ya tenemos el valor de conteo y tenemos la desicion de "apostar" o "esperar", entonces ya lo unico que tenemos que hacer es retornar nuestro valor
+    // ¿Cual debe ser el formato de esa cadena?, nos dicen que el conteo actual y la decision del jugador "apostar" o "esperar" deben estar separados por un espacio
+    return conteo + " " + decision;
+    // Y esta es la cadena que debemos retornar
+
+    //return `${conteo} ${decision}` // con template literals
+}
+
+// Vamos a probar nuestra funcion con distintas cartas...
+// Vamos a llamar a la funcion con distintos valores
+console.log(contarCartas(2));
+console.log(contarCartas(3));
+console.log(contarCartas(7));
+console.log(contarCartas("K"));
+console.log(contarCartas("A"));
+// Tenemos 5 llamadas a la funcion... pero como la cadena se retorna de la funcion, tenemos que rodear estas llamadas con console.log()
+// ------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
 
 
 
