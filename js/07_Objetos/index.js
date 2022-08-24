@@ -30,6 +30,29 @@ var miObjeto = {
 
 
 
+// TEMA 79: Acceder a Propiedades: Notación de Punto
+
+// Podemos acceder a las propiedades de un objeto usando algo que llamamos notacion de punto.
+
+// Ejemplo
+var miPerro = {
+    "nombre": "Daysie",
+    "edad": 5,
+    "peso": 6,
+    "raza": "Husky"
+};
+// Podemos acceder a las propiedades de ese objeto porque si no para que serian de utulidad en JavaScript, los objetos son muy utiles porque podemos acceder a sus propiedades
+
+// Por ejemplo, si quisieramos trabajar con el "nombre" de este objeto que es "Daysie", podemos acceder a ese valor en nuestro programa usando la notacion de "punto", ¿Como accederiamos a esta propiedad? escribiendo el nombre de la variable que contiene al objeto "miPerro.nombre" despues del punto iria la propiedad a la que estaremos teniendo acceso
+console.log(miPerro.nombre);
+console.log(miPerro.edad);
+console.log(miPerro.raza);
+
+// Asi es como accedemos a las propiedades de un objeto, recuerda con el nombre de la variable segido de un "punto" y luego el nombre de la "propiedad"
+
+
+
+
 
 
 
