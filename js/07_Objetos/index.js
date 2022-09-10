@@ -249,7 +249,55 @@ curso["vistas"] = 34500;
 console.log(curso.vistas);
 
 // Ahora sabemos agregar propiedades nuevas a un objeto
+// ------------------------------------------------------------------
 
+
+
+
+// TEMA 84: Eliminar Propiedades
+
+// Ahora vamos a ver como poder eliminar una propiedad de un objeto en javascript, la palabra clave aqui es "delete" que significa eleminar o borrar en español y veamos como la podemos usar.
+
+var curso = {
+    "titulo": "Aprende JavaScript desde Cero",
+    "idioma": "Español",
+    "duracion": 30
+};
+
+// Si queremos borrar la propiedad duracion, es decir ya no queremos tener un registro de la duracion del curso, tenemos que escribir la palabra clave "delete", seguida del nombre del objeto, es decir el nombre de la variable que contiene el objeto, luego un punto y el nombre de la propiedad.
+
+// Y como vemos que realmente se elimino esa propiedad del objeto curso, bueno primero imprimimos en consola la "duracion" antes de ser eliminada
+console.log(curso.duracion); // 30
+
+delete curso.duracion;
+
+// Imprimimos despues en consola para verificar que si fue fue eliminada.
+console.log(curso.duracion); // undefined
+
+// Y eso es todo lo que tenemos que hacer para borrar esa propiedad
+
+// Ahora si cambiamos una linea de codigo que nos muestre el objeto completo y vemos que ya no tiene la propiedad duracion luego de que la borramos con "delete"
+console.log(curso);
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+// Ahora vamos a ver como podemos hacer esto con otra propiedad
+
+var curso = {
+    "titulo": "Aprende JavaScript desde Cero",
+    "idioma": "Español",
+    "duracion": 30
+};
+
+// Digamos que queremos borrar la propiedad idioma, inicialmente ese valor sera español, pero luego de borrarla tendriamos que actualizar aqui el nombre de la propiedad
+console.log(curso.idioma) // Español
+
+delete curso.idioma;
+
+console.log(curso.idioma); // undefined
 
 
 
