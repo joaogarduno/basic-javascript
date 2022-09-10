@@ -204,6 +204,52 @@ console.log(mochila.contenido);
 
 // Ahora sabemos como actualizar las propiedades de un objeto
 
+// Recordar que primero el nombre de la variable seguido de un "." (punto), el nombre de la "propiedad" y asignamos el valor correspondiente, tambien lo podemos hacer con notacion de corchetes en lugar de notacion de punto, podemos usar la notacion de corchetes y va a funcionar
+// ------------------------------------------------------------------
+
+
+
+
+// TEMA 83: Agregar propiedades
+
+// Tambien puedes agregar nuevas propiedades a un objeto en Javascript veamos un ejemplo. 
+
+// Tendremos un objeto que va a representar un curso, el curso tendra un "titulo", tambien podemos especificar el idioma del curso y tambien tendriamos la "duracion" digamos que es un curso de 30min o 30 horas dependiendo el estandar que ocupemos para este valor.
+var curso = {
+    "titulo": "Aprende JavaScript desde Cero",
+    "idioma": "Español",
+    "duracion": 30
+};
+// Entonces... tenemos un objeto con 3 propiedades, ahora como podemos añadir una 4° propiedad y esa propiedad se llamara "vistas", sera el numero de vistas que ha tenido ese curso desde que se publico, la sintaxis es exactamente la misma que ocupamos para actualizar el valor de una propiedad, pero en este caso vamos a escribir el nombre de la propiedad que queremos agregar, el nombre de la variable, seguida de un punto, el nombre de la propiedad nueva y luego el valor que queremos asignar...
+curso.visitas = 34500;
+
+// Aqui tenemos nuestra propiedad nueva que podemos comprobar mostrandola en la consola
+console.log(curso.visitas);
+
+
+// ahora si hubieramos intentado acceder a esta propiedad de "visitas" antes de crearla, el resultado seria "undefined" y esto es muy importante que lo sepas tambien.
+
+// Si intentas acceder a una propiedad que no existe en un objeto, en ese momento en particular del programa el resultado o el valor que se va a reetornar es "undefined" y por eso tambien es bueno verificar que el valor sea "undefined" cuando estas trabajando con propiedades.
+// ----------------
+
+
+
+// OTRO EJEMPLO
+
+// Ahora debemos preguntarnos si podemos hacer esto mismo con "Notacion de corchetes".
+var curso = {
+    "titulo": "Aprende JavaScript desde Cero",
+    "idioma": "Español",
+    "duracion": 30
+};
+
+// Si usamos notacion de corchetes para crear la propiedad vistas y luego intentamos acceder a ella aqui podemos ver el valor
+curso["vistas"] = 34500;
+
+console.log(curso.vistas);
+
+// Ahora sabemos agregar propiedades nuevas a un objeto
+
 
 
 
