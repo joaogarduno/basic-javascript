@@ -141,6 +141,72 @@ console.log(resultado[posicion]);
 
 
 
+// TEMA 82: Actualizar propiedades
+
+// Ademas de crear un objeto en tu programa y acceder a sus propiedades tambien puedes actualizar el valor de esas propiedades para permitir que tu objeto cambie durante la ejecucion del programa.
+
+// Ejemplo, en el cual crearemos un objeto que llamaremos "mochila", su color sera azul, su "tamaño" sera mediano, pero tambien podemos asignar otros tipos de datos, otras estructuras de datos que se identifican como "los valores de las propiedades" como una "botella de agua" y un "cuaderno", ese seria el contenido de la mochila
+var mochila = {
+    "color": "azul",
+    "tamaño": "mediano",
+    "contenido": ["botella de agua", "cuaderno"]
+};
+
+// Una vez que ya tenemos estas propiedades definidas en nuestro programa vamos acceder a ellas y vamos a tratar de actualizarlas.
+
+// Para poder acceder a la propiedar color, escribimos el nombre de la variable "mochila" seguido de un punto y luego el nombre de la "propiedad" que en este caso es "color"
+console.log(mochila.color); // Valor inicial de este resultado "azul"
+
+// Pero luego digamos que queremos cambiar el color de nuestra mochila y para actualizar el valor de la propiedad lo que hacemos es escribir, el nombre de la variable que contiene o guarda al objeto, seguido de un punto, el nombre de la propiedad que queremos actualizar y luego le asignaremos un nuevo valor o un valor por el que sera reemplazado, en este caso sera una cadena de caracteres y sera "verde"
+mochila.color = "verde";
+// Y esto actualizara o cambiara el valor de "azul" a "verde" y lo comprobaremos mostrando el nuevo valor, imprimiendolo en consola.
+console.log(mochila.color); // Valor cambiado por "verde"
+
+// Entonces... inicialmente es "azul" y luego se reasigna o se cambia ese valor por "verde"
+// Y asi es como se reasigna o se cambia el valor.
+// ----------------
+
+
+
+// OTRO EJEMPLO
+
+// Tambien podemos trabajar con sus valores para modificarlos, por ejemplo:
+
+// Si nosotros queremos agregar algo a la mochila, tendriamos que acceder al valor de la propiedad "contenido" asi que vamos a ver como podemos actualizar este valor, y podemos utilizar la notacion de punto, ejemplo "mochila.conenido"
+var mochila = {
+    "color": "azul",
+    "tamaño": "mediano",
+    "contenido": ["botella de agua", "cuaderno"]
+};
+
+console.log(mochila.contenido);
+// Y con este "console" podemos ver el arreglo
+
+// Ahora digamos que queremos agregar un "lapiz" a nuestra mochila ¿Cómo podemos hacerlo?, para eso necesitamos llamar al metodo "push()"
+mochila.contenido.push("lápiz");
+// Este metodo debemos recordarlo cuando trabajamos con arreglos y este metodo nos permite agregar un elemento al final del arreglo, asi que agregamos la cadena de caracteres que diga "lapiz"
+
+// Y luego de eso vamos a volver a mostrar, el valor del "contenido" de la "mochila"
+console.log(mochila.contenido);
+
+// Ahora si quisieramos quitar un elemento de la lista utilizariamos el metodo "pop"
+// ----------------
+
+
+
+// OTRO EJEMPLO (continuando con el ejemplo anterior)
+
+// Pero si quisieramos reasignar el contenido de esa propiedad completamente por otro arreglo completamente nuevo tambien podemos hacerlo. Igual que reasignamos el valor de otras propiedades y aisgnamos otro arreglo completamente nuevo
+mochila.contenido = [];
+
+// Y luego si mostramos esa propiedad
+console.log(mochila.contenido);
+
+// Ahora sabemos como actualizar las propiedades de un objeto
+
+
+
+
 
 
 
