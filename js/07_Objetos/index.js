@@ -264,7 +264,7 @@ var curso = {
     "duracion": 30
 };
 
-// Si queremos borrar la propiedad duracion, es decir ya no queremos tener un registro de la duracion del curso, tenemos que escribir la palabra clave "delete", seguida del nombre del objeto, es decir el nombre de la variable que contiene el objeto, luego un punto y el nombre de la propiedad.
+// Si queremos borrar la propiedad "duracion", es decir ya no queremos tener un registro de la duracion del curso, tenemos que escribir la palabra clave "delete", seguida del nombre del objeto, es decir el nombre de la variable que contiene el objeto, luego un punto y el nombre de la propiedad.
 
 // Y como vemos que realmente se elimino esa propiedad del objeto curso, bueno primero imprimimos en consola la "duracion" antes de ser eliminada
 console.log(curso.duracion); // 30
@@ -298,6 +298,87 @@ console.log(curso.idioma) // Español
 delete curso.idioma;
 
 console.log(curso.idioma); // undefined
+// ------------------------------------------------------------------
+
+
+
+
+// TEMA 85: Objetos para busquedas
+
+// Ahora vamos a ver como podemos usar un objeto para reemplazar una sentencia Switch con la estructura que tenemos a continuación, analicemos el codigo y luego lo modificaremos...
+
+// tenemos una funcion que se llama "buscarElementoQuimico" que va a tomar el simbolo del elemento quimico como argumento y a partir de ese simbolo va a retornar el nombre completo del elemento químico.
+
+// Lo que estamos haciendo, basicamente es una asociacion de entre dos valores, en este caso y para esta sentencia Switch especifica.
+
+// Cuando tienes una sentencia Switch con esta estructura que asocia 2 valores facilmente podemos escribir codigo mas conciso con un objeto
+// Recueda que los objetos nos permite asociar una propiedad con su valor
+
+// En este caso vamos a crear un objeto que asocie los simbolos químicos con sus elementos químicos correspondientes
+
+function buscarElementoQuimico(simbolo){
+    // No necesitamos esta variable
+    // var elementoQuimico = "";
+
+    // Las propiedades de este objeto seran los simbolos químicos y vamos a usar esas propiedades para acceder a sus valores correspondientes que seran los nombres completos de los elementos químicos
+    var simbolosQuimicos = {
+        "Al": "Aluminio",
+        "S": "Azufre",
+        "Cl": "Cloro",
+        "He": "Helio",
+        "B": "Boro",
+        "Li": "Litio"
+    };
+    // Estamos reestructurando nuestro codigo de una forma especifica para poder realizar exactamente lo mismo que tenemos en Switch pero de forma mas concisa.
+    // Logramos asociar cada simbolo con su elemento químico correspondiente
+
+    // El unico cambio que nos falta por hacer es acceder al simbolo químico para obtener su valor correspondiente, es decir acceder a esa propiedad
+
+
+    // Tenemos la sentencia Switch como referencia
+    // switch (simbolo){
+    //     case "Al":
+    //         elementoQuimico = "Aluminio";
+    //         break;
+    //     case "S":
+    //         elementoQuimico = "Azufre";
+    //         break;
+    //     case "Cl":
+    //         elementoQuimico = "Cloro";
+    //         break;
+    //     case "He":
+    //         elementoQuimico = "Helio";
+    //         break;
+    //     case "B":
+    //         elementoQuimico = "Boro";
+    //         break;
+    //     case "Li":
+    //         elementoQuimico = "Litio";
+    //         break;
+    // }
+
+    // Simplemente retornamos el nombre de este objeto
+    // Podemos acceder a sus propiedad con "notacion de corchetes" y pasar el valor de la variable "simbolo" de la variable
+    return simbolosQuimicos[simbolo];
+    // Esto nos retornara el valor asociado a ese simbolo, el nombre completo del elemento químico, asi que este sera el nombre completo del elemento químico y el valor se va a retornar exactamente como lo queriamos
+
+}
+
+// De esta forma podemos ver como nuestro codigo es mucho mas conciso si lo modificamos para trabajar con un objeto en lugar de utilizar un Switch en este caso.
+
+// Ahora veamos cada uno de los posibles casos para confirmar que retorna el valor apropiado
+console.log(buscarElementoQuimico("Al"));
+console.log(buscarElementoQuimico("S"));
+console.log(buscarElementoQuimico("Cl"));
+console.log(buscarElementoQuimico("He"));
+console.log(buscarElementoQuimico("B"));
+console.log(buscarElementoQuimico("Li"));
+
+// Asi la funcion retorna los valores que esperabamos y tenemos codigo mucho mas conciso simplemente usando un OBJETO para asociar una propiedad a su valor correspondiente.
+
+// Ahora sabemos como usar objetos para escribir codigo mas conciso en casos como este, en el cual necesitamos asociar propiedades a valores.
+// ------------------------------------------------------------------
+
 
 
 
