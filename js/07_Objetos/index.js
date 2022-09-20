@@ -382,6 +382,98 @@ console.log(buscarElementoQuimico("Li"));
 
 
 
+// TEMA 86: Verificar Propiedades
+
+// Otra operacion muy importante que debemos aprender a realizar con un objeto es verificar si ese objeto tiene una "propiedad" o no, recuerda que en el tema anterior vimos que despues de borrar una propiedad, cuando ese objeto ya no tiene esa propiedad, el resultado retornado si es que intentamos acceder a ella es "undefined", pero para ello podemos verificar si la propiedad existe o no antes de usarla, ¿y como podemos verificar eso?
+var miCuaderno = {
+    "color": "verde",
+    "categoria": 3,
+    "precio": 4.56
+};
+
+// Para verificar si el objeto tiene o no una "propiedad" especifica, escribimos el "nombre del objeto" ó el "nombre de la variable", y luego escribimos, por ejemplo, "hasOwnProperty", esta "hasOwnProperty" palabra la podemos traducir como "tiene esta propiedad"
+console.log(miCuaderno.hasOwnProperty("color")); // TRUE
+// Estamos preguntando si este objeto que tenemos aqui tiene la propiedad que vamos a especificar entre parentesis "color", en este caso este OBJETO si tiene la PROPIEDAD "color", asi que el resultado sera "TRUE", por la llamada al metodo y la propiedad si existe.
+
+// Este metodo "hasOwnProperty" es muy util cuado estamos trabajando con un condicional, en un condicional podemos escribir esto como la condicion y si el objeto tiene esa propiedad la condicion sera VERDADERA y si no la condicion sera FALSA
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+// Ahora veamos que ocurre si intentamos verificar una propiedad que no existe en el objeto digamos "origen" como el país de origen.
+var miCuaderno = {
+    "color": "verde",
+    "categoria": 3,
+    "precio": 4.56
+};
+
+console.log(miCuaderno.hasOwnProperty("origen")); // FALSE
+// Este resultado seria FALSE porque el OBJETO "miCuaderno" no tiene una "propiedad" llamada "origen"
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+// Para mostrar que este OBJETO -> "hasOwnProperty" es muy util en un condicional vamos a crear o definir una función
+// Esa funcion va a verificar si un obejeto tiene una propiedad o no y va a mostrar un mensaje adecuado, va a tomar 2 parametros el "objeto" y la "propiedad"
+function verificarPropiedad(obj, propiedad){
+    // Y decimos, si esta condicion es verdadera, es decir si el OBJETO tiene la propiedad que especificamos como parametro, entonces que es lo que vamos a retornar, una cadena que va a ser la union de esta cadena con el valor de la propiedad en ese objeto
+    if(obj.hasOwnProperty(propiedad)){
+        return "Propiedad: " + obj[propiedad]; // este valor no sera "undefined" porque la condicion fue verdadera, Es decir que el objeto tiene esa propiedad que especificamos y podemos trabajar con ella de forma segura sabiendo que no sera "undefined".
+    } else{
+        // Si no, si el objeto no tiene la propiedad vamos a retornar esta cadena de caracteres
+        return "El objeto no tiene esta propiedad";
+    }
+}
+// Y esto es basicamente nuestra función
+
+// Creamos o pasamos nuestro objeto
+var miCuaderno = {
+    "color": "verde",
+    "categoria": 3,
+    "precio": 4.56
+};
+
+// probamos, vamos a verificar si mi objeto "miCuaderno" tiene la propiedad "color"
+console.log(verificarPropiedad(miCuaderno, "color"));
+// Y como resultado nos dice que, si tiene la "propiedad" "color" porque en consola nos muestra su valor el valor de esa propiedad es "verde".
+// La condicion fue verdadera y aqui se reemplazo el valor de la propiedad
+// ----------------
+
+
+
+// OTRO EJEMPLO:
+
+// Ahora si tratamos de pasar una propiedad que no existe...
+
+// FUNCIÓN
+function verificarPropiedad(obj, propiedad){
+    if(obj.hasOwnProperty(propiedad)){
+        return "Propiedad: " + obj[propiedad];
+    } else{
+        return "El objeto no tiene esta propiedad";
+    }
+}
+
+// OBJETO
+var miCuaderno = {
+    "color": "verde",
+    "categoria": 3,
+    "precio": 4.56
+};
+
+// CONSOLE
+console.log(verificarPropiedad(miCuaderno, "origen"));
+
+// En este caso la condicion fue falsa asi que pasamos a la clausula "else" y nos retorno en consola la cadena de caracteres "El objeto no tiene esta propiedad"
+
+
+// Bien, ahora sabemos como utilizar este METODO "hasOwnProperty" en un condicional y de forma independiente para verificar si un objeto tiene una propiedad o no, esto es muy util a medida que trabajemos con los objetos porque nos garantiza que cuando tratemos de acceder a una propiedad el valor no sera "undefined"
+
+
 
 
 
