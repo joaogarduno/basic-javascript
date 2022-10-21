@@ -384,16 +384,19 @@ console.log(buscarElementoQuimico("Li"));
 
 // TEMA 86: Verificar Propiedades
 
-// Otra operacion muy importante que debemos aprender a realizar con un objeto es verificar si ese objeto tiene una "propiedad" o no, recuerda que en el tema anterior vimos que despues de borrar una propiedad, cuando ese objeto ya no tiene esa propiedad, el resultado retornado si es que intentamos acceder a ella es "undefined", pero para ello podemos verificar si la propiedad existe o no antes de usarla, ¿y como podemos verificar eso?
+// Otra operacion muy importante que debemos aprender a realizar con un objeto, es verificar si ese objeto tiene una "propiedad" o no, recuerda que en el tema anterior vimos que despues de borrar una propiedad, cuando ese objeto ya no tiene esa propiedad, el resultado retornado si es que intentamos acceder a ella es "undefined", pero para ello podemos verificar si la propiedad existe o no antes de usarla, ¿y como podemos verificar eso?
 var miCuaderno = {
     "color": "verde",
     "categoria": 3,
     "precio": 4.56
 };
 
-// Para verificar si el objeto tiene o no una "propiedad" especifica, escribimos el "nombre del objeto" ó el "nombre de la variable", y luego escribimos, por ejemplo, "hasOwnProperty", esta "hasOwnProperty" palabra la podemos traducir como "tiene esta propiedad"
+// Para verificar si el objeto tiene o no una "propiedad" especifica, escribimos el "nombre del objeto" ó el "nombre de la variable", y luego escribimos, por ejemplo, "hasOwnProperty", esta palabra "hasOwnProperty" la podemos traducir como "tiene esta propiedad" que especificamos entre parentesis, digamos que la propiedad es color (en este caso el objeto si tiene la propiedad color)
+
+// Para mostrar el resultado en consola:
 console.log(miCuaderno.hasOwnProperty("color")); // TRUE
-// Estamos preguntando si este objeto que tenemos aqui tiene la propiedad que vamos a especificar entre parentesis "color", en este caso este OBJETO si tiene la PROPIEDAD "color", asi que el resultado sera "TRUE", por la llamada al metodo y la propiedad si existe.
+
+// Entonces, estamos preguntando si este objeto que tenemos aqui tiene la propiedad que vamos a especificar entre parentesis "color", en este caso este OBJETO si tiene la PROPIEDAD "color", asi que el resultado sera "TRUE", por la llamada al metodo y la propiedad si existe.
 
 // Este metodo "hasOwnProperty" es muy util cuado estamos trabajando con un condicional, en un condicional podemos escribir esto como la condicion y si el objeto tiene esa propiedad la condicion sera VERDADERA y si no la condicion sera FALSA
 // ----------------
@@ -410,7 +413,7 @@ var miCuaderno = {
 };
 
 console.log(miCuaderno.hasOwnProperty("origen")); // FALSE
-// Este resultado seria FALSE porque el OBJETO "miCuaderno" no tiene una "propiedad" llamada "origen"
+// Este resultado seria FALSE porque el OBJETO "miCuaderno" no tiene una "propiedad" llamada "origen", si lo verificamos en consola veremos el resultado sera FALSE ya que esta propiedad no existe en el objeto
 // ----------------
 
 
@@ -420,9 +423,9 @@ console.log(miCuaderno.hasOwnProperty("origen")); // FALSE
 // Para mostrar que este OBJETO -> "hasOwnProperty" es muy util en un condicional vamos a crear o definir una función
 // Esa funcion va a verificar si un obejeto tiene una propiedad o no y va a mostrar un mensaje adecuado, va a tomar 2 parametros el "objeto" y la "propiedad"
 function verificarPropiedad(obj, propiedad){
-    // Y decimos, si esta condicion es verdadera, es decir si el OBJETO tiene la propiedad que especificamos como parametro, entonces que es lo que vamos a retornar, una cadena que va a ser la union de esta cadena con el valor de la propiedad en ese objeto
+    // Y decimos, si esta condicion es verdadera, es decir si el OBJETO tiene la propiedad que especificamos como parametro, entonces ¿que es lo que vamos a retornar aqui?, una cadena que va a ser la union de esta cadena con el valor de la propiedad en ese objeto
     if(obj.hasOwnProperty(propiedad)){
-        return "Propiedad: " + obj[propiedad]; // este valor no sera "undefined" porque la condicion fue verdadera, Es decir que el objeto tiene esa propiedad que especificamos y podemos trabajar con ella de forma segura sabiendo que no sera "undefined".
+        return "Propiedad: " + obj[propiedad]; // este valor no sera "undefined" porque la condicion fue verdadera, es decir que el objeto tiene esa propiedad que especificamos y podemos trabajar con ella de forma segura sabiendo que no sera "undefined".
     } else{
         // Si no, si el objeto no tiene la propiedad vamos a retornar esta cadena de caracteres
         return "El objeto no tiene esta propiedad";
@@ -439,7 +442,7 @@ var miCuaderno = {
 
 // probamos, vamos a verificar si mi objeto "miCuaderno" tiene la propiedad "color"
 console.log(verificarPropiedad(miCuaderno, "color"));
-// Y como resultado nos dice que, si tiene la "propiedad" "color" porque en consola nos muestra su valor el valor de esa propiedad es "verde".
+// Y como resultado nos dice que, si tiene la "propiedad" "color" porque en consola nos muestra su valor, el valor de esa propiedad es "verde".
 // La condicion fue verdadera y aqui se reemplazo el valor de la propiedad
 // ----------------
 
@@ -447,7 +450,7 @@ console.log(verificarPropiedad(miCuaderno, "color"));
 
 // OTRO EJEMPLO:
 
-// Ahora si tratamos de pasar una propiedad que no existe...
+// Ahora si tratamos de pasar una propiedad que no existe, por ejemplo "origen"...
 
 // FUNCIÓN
 function verificarPropiedad(obj, propiedad){
@@ -471,7 +474,186 @@ console.log(verificarPropiedad(miCuaderno, "origen"));
 // En este caso la condicion fue falsa asi que pasamos a la clausula "else" y nos retorno en consola la cadena de caracteres "El objeto no tiene esta propiedad"
 
 
-// Bien, ahora sabemos como utilizar este METODO "hasOwnProperty" en un condicional y de forma independiente para verificar si un objeto tiene una propiedad o no, esto es muy util a medida que trabajemos con los objetos porque nos garantiza que cuando tratemos de acceder a una propiedad el valor no sera "undefined"
+// Bien, ahora sabemos como utilizar este METODO "hasOwnProperty" en un condicional y de forma independiente para verificar si un objeto tiene una propiedad o no, esto es muy util a medida que trabajemos con los objetos porque nos garantiza que cuando tratemos de acceder a una propiedad el valor no sera "undefined".
+
+// Vamos a aprender a manipular objetos mas complejos, son el tipo de objetos que trabajariamos por ejemplo, en desarrollo web
+// ------------------------------------------------------------------
+
+
+
+
+// TEMA 87: Objetos Complejos
+
+// Ya sabemos como trabajar con objetos en Javascript y todas sus operaciones principales, asi que empezaremos a trabajar con objetos mas complejos
+// Estos tienen combinaciones de distintos tipos de datos como sus valores, los valores de las propiedades y podemos ver que la variable "ordenesDePizzas" contiene un arreglo y lo sabemos por que vemos los corchetes abriendo y cerrando el arreglo.
+// Esto nos dice que es un arreglo de objetos, porque aqui tenemos las llaves "{}" que abren y cierran el objeto y dentro de cada objeto que tenemos aqui en nuestro arreglo tenemos secuencias de propiedades y sus valores que siguen un formato muy similar, las mismas propiedades asociadas a disntintos valores.
+
+// Esto es un formato que normalmente se utiliza o es muy similar JSON, asi que si en algun momento planeas aprender desarrollo web, aprender a manipular este tipo de objetos es vital, veamos como lo podemos hacer.
+
+// Primero que todo, lo escencial que debemos entender es que estamos trabajando con un arreglo asi que cad uno de estos objetos tiene un lugar en ese arreglo como si fuera un elemento, como si tuvieramos un arreglo con 2 cadenas de caracteres o 2 numeros, pero en este caso tenemos 2 objetos.
+// Luego cada objeto tiene su conjunto de propiedades y los valores de esas propiedades.
+// Los 2 objetos tienen las mismas propiedades, pero sus valores son distintos, entendemos con estos 2 objetos que podemos mezclar valores de distintos tipos, no es necesariamnete todos los valores tienen que ser del mismo tipo de dato.
+
+// Luego tenemos los "toppings" los "toppings" estan representados como otro arreglo, asi es, aunque paresca raro, tenemos 1 arreglo externo que contiene a los objetos, luego tenemos al objeto y dentro del objeto tenemos otro arreglo, como el valor de una propiedad, con este ejemplo puedes ver que los objetos son muy versatiles y podemos trabajar con ellos para representar practicamente cualquier dato que necesitemos.
+// Aquí representamos los "topping" con un arreglo porque necesitamos varios elementos, porque el cliente pude pedir mas de un "topping", luego "paraLlevar" es un valor booleano, VERDADERO si la pizza se ordeno para llevar o FALSO si la pizza se ordeno para comer en el lugar. Toda la data que necesitamos de la pizza esta representada en estos objetos para cada una de las ordenes.
+
+// ¿Como podemos acceder a estos objetos? vamos a trabajar con "console.log" la estructura de datos principal que contiene los objetos es un "arreglo", ese arreglo tiene las mismas propiedades que aprendiste cuando empezamos a trabajar con arreglos, el primer objeto o el primer elemento esta en el indice 0, el segundo objeto esta en el indice 1 y los objetos estan separados con una "coma" (,) ya que esto es muy importante que lo identifiquemos.
+// Cuando los objetos son parte de un arreglo tambien hay que separarlos con "coma" (,) porque son elementos distintos del arreglo
+var ordenesDePizzas = [
+    // objeto 1
+    {
+        "tipo": "margarita",
+        "tamaño": "individual",
+        "precio": 5.67,
+        "toppings": [
+            "extra queso",
+            "champiñones",
+            "piña"
+        ],
+        "paraLlevar": true
+    },
+    // objeto 2
+    {
+        "tipo": "cuatro quesos",
+        "tamaño": "familiar",
+        "precio": 18.34,
+        "toppings": [
+            "extra queso",
+            "pimentón"
+        ],
+        "paraLlevar": false
+    }
+];
+// Entonces, para acceder al primer objeto usamos el indice 0, el nombre de la variable y el indice 0, este indice 0 nos va a retornar el primer objeto y tambien si queremos el segundo objeto podemos cambiar el indice 0 por el indice 1 y seria este objeto el resultado 
+console.log(ordenesDePizzas[0]);
+console.log(ordenesDePizzas[1]);
+// Y como resultado podemos ver el primer objeto: "tipo", "tamaño", "precio", "toppings" y "paraLlevar"
+// Y luego nos muestra otro objeto: "tipo", "tamaño", "precio", "toppings" y "paraLlevar"
+// Accededimos al primer objeto primero y luego al segundo objeto con su indice correspondiente
+// ----------------
+
+
+
+
+// OTRO EJEMPLO:
+// Ahora digamos que queremos acceder al tipo de pizza que corresponde al primer objeto, digamos que queremos saber si esa pizza es "margarita" o cualquier otro tipo de pizza, solo la del "tipo" del primer objeto, ¿como lo podemos hacer? vamos a trabajar solo con la del primero objeto y luego podemos replicarlo para elsegundo objeto, simplemente cambiando el indice de 0 a 1.
+var ordenesDePizzas = [
+    // objeto 1
+    {
+        "tipo": "margarita",
+        "tamaño": "individual",
+        "precio": 5.67,
+        "toppings": [
+            "extra queso",
+            "champiñones",
+            "piña"
+        ],
+        "paraLlevar": true
+    },
+    // objeto 2
+    {
+        "tipo": "cuatro quesos",
+        "tamaño": "familiar",
+        "precio": 18.34,
+        "toppings": [
+            "extra queso",
+            "pimentón"
+        ],
+        "paraLlevar": false
+    }
+];
+// Para acceder a esa propiedad usamos notacion de punto, aunque tambien podemos usar notacion de corchetes
+console.log(ordenesDePizzas[0].tipo);
+console.log(ordenesDePizzas[1].tipo);
+// Accedemos al primer objeto y luego accedemos a su propiedad tipos eso nos deberia retornar el valor "margarita", asi que fue el primer "tipo" del primer objeto, es decir de la primera orden de pizza.
+// ----------------
+
+
+
+
+// OTRO EJEMPLO:
+// Ahora si quiseramos usar en lugar de notacion de punto, utilizamos notacion de corchetes tambien lo podemos hacer con "comillas"
+var ordenesDePizzas = [
+    // objeto 1
+    {
+        "tipo": "margarita",
+        "tamaño": "individual",
+        "precio": 5.67,
+        "toppings": [
+            "extra queso",
+            "champiñones",
+            "piña"
+        ],
+        "paraLlevar": true
+    },
+    // objeto 2
+    {
+        "tipo": "cuatro quesos",
+        "tamaño": "familiar",
+        "precio": 18.34,
+        "toppings": [
+            "extra queso",
+            "pimentón"
+        ],
+        "paraLlevar": false
+    }
+];
+console.log(ordenesDePizzas[0]["tipo"]);
+console.log(ordenesDePizzas[1]["tipo"]);
+
+// Y asi tambien podemos acceder a cualquier otra "propiedad" 
+console.log(ordenesDePizzas[0]["precio"]);
+
+// Tambien si queremos acceder a la lista de "toppings" tambien podemos haerlo
+console.log(ordenesDePizzas[0]["toppings"]);
+// "toppings" del segundo objeto simplemente cambiamos el indice a 1
+console.log(ordenesDePizzas[1]["toppings"]);
+// ----------------
+
+
+
+
+// OTRO EJEMPLO:
+// Ahora vamos a ver como podemos agregar una 3° orden de pizza a este objeto, recuerda que siempre tenemos que separar los objetos con una "coma" (,) cuando estan contenidos en un arreglo, es decir cuando son parte de un arreglo, asi que agregamos una "coma" y luego en la siguiente linea colocamos un par de llaves.
+// Normalmente el editor de codigo que estemos usando va alinear las llaves practicamente y podemos comenzar a escribir nuestro codigo
+var ordenesDePizzas = [
+    // objeto 1
+    {
+        "tipo": "margarita",
+        "tamaño": "individual",
+        "precio": 5.67,
+        "toppings": [
+            "extra queso",
+            "champiñones",
+            "piña"
+        ],
+        "paraLlevar": true
+    },
+    // objeto 2
+    {
+        "tipo": "cuatro quesos",
+        "tamaño": "familiar",
+        "precio": 18.34,
+        "toppings": [
+            "extra queso",
+            "pimentón"
+        ],
+        "paraLlevar": false
+    }
+    // objeto 3
+    {
+        "tipo": "napolitana",
+        "tamaño": "individual",
+        "precio": 6.78,
+        "toppings": [], // Lista vacia
+        "paraLlevar": true
+    }
+];
+// Ya tenemos un 3° objeto en nuestro arreglo podemos acceder a el con el indice 2 ya que es el 3° elemento de nuestro arreglo
+
+// Bien ahora sabemos como trabajar con este objeto que es un poco mas complejo en su estructura simplemente accedes al objeto que corresponde y luego accedes a su propiedad
+
+
 
 
 
