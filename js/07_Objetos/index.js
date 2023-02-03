@@ -639,7 +639,7 @@ var ordenesDePizzas = [
             "pimentón"
         ],
         "paraLlevar": false
-    }
+    },
     // objeto 3
     {
         "tipo": "napolitana",
@@ -652,6 +652,176 @@ var ordenesDePizzas = [
 // Ya tenemos un 3° objeto en nuestro arreglo podemos acceder a el con el indice 2 ya que es el 3° elemento de nuestro arreglo
 
 // Bien ahora sabemos como trabajar con este objeto que es un poco mas complejo en su estructura simplemente accedes al objeto que corresponde y luego accedes a su propiedad
+// ------------------------------------------------------------------
+
+
+
+
+// TEMA 88: Objetos Anidados
+
+// En el tema anterios descrubimos como podemos trabajar con objetos mas complejos, es decir, con una estructura mas elaborada, pero en este tema vamos a hablar sobre los "objetos anidados"
+
+// Los "objetos anidados" son objetos contenidos dentro de otros objetos, esto te debe sonar familiar, ya que es parecido al concepto de un array o arreglo anidado, que es un arreglo dentro de un arreglo.
+// En este caso tenemos un objeto dentro de otro objeto, en este ejemplo estoy indentando el codigo con 4 espacios para poder ver mejor la estructura del objeto, en Javascript puedes indentar tu codigo con 2 o 4 espacios, lo importante es mantener la consistencia en todo el codigo del programa
+
+// Analicemos la estructura de este objeto, tenemos un objeto principal que esta asignado a la variable "miReceta", ese objeto principal tiene 3 propiedades: "descripcion", "costo" e "ingredientes", pero nosostros nos vamos a centrar en la propiedad que tenemos("masa" y "cobertura"), el cual cuyo valor es un objeto, esto es ya un objeto anidado, es decir es un objeto dentro de un objeto, esas propiedades de "masa" y "cobertura" que a su vez tienen otros objetos como "propiedades", asi que tenemos una estructura mucho mas elebaorada con distintos niveles de objetos anidados, vamos a ver como poder acceder a sus elementos, por ejemplo, si queremos acceder al valor de "1 cucharadita" o al valor "120 grs" ¿Cómo podemos hacerlo?
+var miReceta = {
+    "descripcion": " mi postre favorito",
+    "costo": 15.6,
+    "ingredientes": {
+        "masa": {
+            "harina": "100 grs",
+            "sal": "1 cucharadita",
+            "agua": "1 taza"
+        },
+        "cobertura": {
+            "azucar": "120 grs",
+            "chocolate": "4 cucharadas",
+            "mantequilla": "200 grs"
+        }
+    }
+};
+
+// Iniciamos accediendo a las "propiedades" principales del objeto mi receta, "descripcion", "costo" e "ingredientes", recuerda que primero escribimos el nombre de la variable y luego el nombre de la propiedad.
+console.log(miReceta.descripcion);
+console.log(miReceta.costo);
+console.log(miReceta.ingredientes);
+// En "ingredientes", que es la parte clave de este ejemplo, es que tenemos un objeto, es un "objeto anidado", que correspode a la propiedad "ingredientes", ahora lo que haremos es que vamos a trabajar solo con esta propiedad.
+// ----------------
+
+
+
+
+// OTRO EJEMPLO:
+
+// Ya que sabemos con que objeto vamos a trabajar, que sera "ingredientes", pero digamos que queremos acceder a los ingredientes necesarios para crear la masa de la receta, ¿como podemos hacerlo utilizando notacion de punto?.
+
+var miReceta = {
+    "descripcion": " mi postre favorito",
+    "costo": 15.6,
+    "ingredientes": {
+        "masa": {
+            "harina": "100 grs",
+            "sal": "1 cucharadita",
+            "agua": "1 taza"
+        },
+        "cobertura": {
+            "azucar": "120 grs",
+            "chocolate": "4 cucharadas",
+            "mantequilla": "200 grs"
+        }
+    }
+};
+
+// Escribimos la pripiedad que queremos acceder, y notamos como estamos creando un camino, de "miReceta", vamos a "ingredientes" que es la propiedad del objeto y luego vamos a la siguiente propiedad del objeto anidado que es "masa", si verificamos el valor en la consola, podemos ver que es el objeto que corresponde a "masa": "harina", "sal" y "agua" y asi es como vemos el objeto que corresponde a "masa".
+console.log(miReceta.ingredientes.masa);
+
+// Ya estamos adentrandonos en la estructura del objeto
+// ----------------
+
+
+
+
+// OTRO EJEMPLO:
+
+var miReceta = {
+  "descripcion": " mi postre favorito",
+  "costo": 15.6,
+  "ingredientes": {
+      "masa": {
+          "harina": "100 grs",
+          "sal": "1 cucharadita",
+          "agua": "1 taza"
+      },
+      "cobertura": {
+          "azucar": "120 grs",
+          "chocolate": "4 cucharadas",
+          "mantequilla": "200 grs"
+      }
+  }
+};
+// Una vez que tenemos ese objeto, que corresponde a "masa" podemos seguir adentrandonos aun mas, podemos acceder al valor de "harina", de "sal" y de "agua" para saber cuanto necesitamos de cada uno.
+console.log(miReceta.ingredientes.masa.harina);
+console.log(miReceta.ingredientes.masa.sal);
+console.log(miReceta.ingredientes.masa.agua);
+// Podemos ver los valores de cada una de estas propiedades.
+// ----------------
+
+
+
+
+// Otro ejemplo:
+
+// Hasta ahora estamos utilizando la notacion de punto, pero tambien podemos utilizar la notacion de corchetes, en ese caso lo unico que tenemos que hacer es reemplazar ese punto por un par de corchetes, y escribir la propiedad entre comillas dentro de los corchetes y el resultado sera exactamente igual
+
+var miReceta = {
+  "descripcion": " mi postre favorito",
+  "costo": 15.6,
+  "ingredientes": {
+      "masa": {
+          "harina": "100 grs",
+          "sal": "1 cucharadita",
+          "agua": "1 taza"
+      },
+      "cobertura": {
+          "azucar": "120 grs",
+          "chocolate": "4 cucharadas",
+          "mantequilla": "200 grs"
+      }
+  }
+};
+
+// 
+console.log(miReceta.ingredientes.masa["harina"]);
+console.log(miReceta.ingredientes.masa["sal"]);
+console.log(miReceta.ingredientes.masa["agua"]);
+
+// La ventaja de utilizar notacion de corchetes es que podemos escribir dentro de los corchetes una "variable", asi que podrias personalizar los valores que accedemos, dependiendo del valor de una variable.
+// Esto es muy util por ejemplo si estamos interactuando con el usuario y el usuario escoge una opcion, es decir si quiere la cantidad de harina, la cantidad de azucar, la cantidad de chocolate, es asi como podemos personalizar todo ese camino o recorrido que nos lleva a ese valor con esas variables.
+// Pero solamente es obligatorio la notacion de corchetes cuando el nombre de la propiedad tiene un espacio y si necesitas utilizar una variable si necesitas utilizar la notacion de corchetes.
+// ----------------
+
+
+
+
+// Otro ejemplo:
+
+// Veamos como podemos acceder a los elementos de la "cobertura" en lugar de la "masa"
+var miReceta = {
+  "descripcion": " mi postre favorito",
+  "costo": 15.6,
+  "ingredientes": {
+      "masa": {
+          "harina": "100 grs",
+          "sal": "1 cucharadita",
+          "agua": "1 taza"
+      },
+      "cobertura": {
+          "azucar": "120 grs",
+          "chocolate": "4 cucharadas",
+          "mantequilla": "200 grs"
+      }
+  }
+};
+
+// 
+console.log(miReceta.ingredientes.cobertura);
+// Una vez que tenemos el objeto podemos acceder a sus valores y lo haremos con notacion de punto
+
+// Cada una de estas lineas nos retorna el valor de la propiedad especifica
+console.log(miReceta.ingredientes.cobertura.azucar);
+console.log(miReceta.ingredientes.cobertura.chocolate);
+console.log(miReceta.ingredientes.cobertura.mantequilla);
+// Ya sabemos con utilizar la notacion de punto.
+// Podemos ver como estamos trazando un camino y vamos a ir paso por paso en este camino, comenzamos con el nombre de la variable que contiene el objeto proncipal, luego entramos a ingredientes que es la propiedad que queremos acceder, luego en cada uno de esos "ingredientes" ingresamos a un ingrediente en especifico como "cobertura" y asi es como vamos trazando el camino de los objetos y vamos mas adentro de la estructura de afuera hacia adentro, entonces despues de "cobertura" entramos a la propiedad que corresponde "Azucar", "chocolate" "mantequilla" y poder llegar a sus valores.
+
+// Podemos detenernos en cualquier punto del camino, por ejemplo si solo queremos acceder el objeto "cobertura", podemos acceder al objeto sin acceder a ninguna de sus propiedades, o podemos seguir adentrandonos en su estructura con notacion de puntos y tambien podemo utilizar notacion de corchetes, en cualquier punto de este camino
+console.log(miReceta.ingredientes["cobertura"].azucar);
+console.log(miReceta.ingredientes["cobertura"].chocolate);
+console.log(miReceta.ingredientes["cobertura"].mantequilla);
+// Esto es muy util queremos reemplazar el valor de una variable para cambiar el resultado dependiendo del valor de la variable, ahora sabemos como acceder a cada uno de estos elementos
+
+
 
 
 
