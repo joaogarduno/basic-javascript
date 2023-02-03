@@ -821,6 +821,53 @@ console.log(miReceta.ingredientes["cobertura"].chocolate);
 console.log(miReceta.ingredientes["cobertura"].mantequilla);
 // Esto es muy util queremos reemplazar el valor de una variable para cambiar el resultado dependiendo del valor de la variable, ahora sabemos como acceder a cada uno de estos elementos
 
+// Es muy importante saber trabajar con "objetos anidados" ya que esta estructura es muy importante para el formato "JSON" (JavaScript Object Notation), es un formato que es muy utilizado en desarrollo web.
+// ------------------------------------------------------------------
+
+
+
+
+// Tema 89: Arreglos Anidados
+// Tambien podemos acceder a Arreglos Anidados que son arreglos que se encuentran dentro de estructuras mas complejas, como por ejemplo dentro de un objeto y es parte de un arreglo, veamos como poder acceder a sus elementos.
+
+// Un arreglo que va a tener 2 objetos con listas de plantas, en este caso la primera propiedad seria "tipo", "lista", 
+var misPlantas = [
+    // PRIMER OBJETO EN EL ARREGLO
+    // indice 0
+    {
+        tipo: "flores",
+        lista: [
+            "rosas",
+            "tulipanes",
+            "dientes de león"
+        ]
+    },
+
+    // SEGUNDO OBJETO EN EL ARREGLO
+    // indice 1
+    {
+        tipo: "árboles",
+        lista: [
+            "abeto",
+            "pino",
+            "abedul"
+        ]
+    }
+];
+// Con esto ya tenemos nuestro arreglo de objetos, estos arreglos mas pequeños que tenemos dentro, a eso se le conoce o se les llama como arreglos anidados, es decir los arreglos son parte de un objeto y asu vez ese objeto es parte de otro arreglo, entonces la sintaxis que debemos usar para acceder a sus elementos individuales es distinta, vamos a ver como podemos acceder a esos elementos.
+
+// acceder a la primera flor de la estructura
+// Recuerda que la estructura principal que tiene nuestro objeto es los arreglos
+// Cada objeto es un elemento de ese arreglo
+// Entonces si queremos navegar através de estos debemos hacer con los index o su indice que la primera parte por ejemplo pertenece a "indice 0"
+var primeraFlor = misPlantas[0].lista[0];
+console.log(primeraFlor);
+
+// accedemos al segundo objeto en el arreglo
+var segundoArbol = misPlantas[1].lista[1];
+console.log(segundoArbol);
+
+
 
 
 
