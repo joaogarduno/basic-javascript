@@ -866,7 +866,169 @@ console.log(primeraFlor);
 // accedemos al segundo objeto en el arreglo
 var segundoArbol = misPlantas[1].lista[1];
 console.log(segundoArbol);
+// ------------------------------------------------------------------
 
+
+
+
+
+// Tema 90 - Proyecto: Colección de Discos
+
+// Es es un mini proyecto y esta enfocado en actualizar una coleccion de discos, vamos a practicar conocimiento de objetos, condicionales, como acceder a actualizar y eliminar las propiedades de un objeto y mucho más.
+
+/* 
+  Tenemos un objeto que representa parte de una colección de albumes musicales.
+  Cada album tiene un número de indetificación único (id) asociado a otras propiedades.
+  
+  No todos los albumes tienen la información completa.
+*/
+
+var coleccionDeDiscos = {
+  7853: {
+    tituloDelAlbum: 'Bee Gees Greatest',
+    artista: 'Bee Gees',
+    canciones: ["Stayin' Alive"]
+  },
+  5439: {
+    tituloDelAlbum: 'ABBA Gold'
+  }
+};
+
+// Actividad
+/*
+  Define una funcion actualizarDiscos que tome los siguientes parámetros:
+  - discos (el objeto que representa la coleccion de discos).
+  - id
+  - Propiedad ("artista" o "canciones").
+  - Valor.
+
+  Tu meta es completar la función implementando las siguientes reglas para modificar el objeto pasado a la función:
+
+  - Si "valor" es una cadena vacía, elimina la propiedad del álbum correspondiente.
+
+  - Si "propiedad" es igual a la cadena de caracteres "canciones" pero el álbum no tiene una propiedad llamada "canciones", crea un arreglo vacío y agrega "valor" a ese arreglo.
+  
+  - Si "propiedad" es igual a la cadena de caracteres "canciones" y "valor" no es una cadena vacía, agrega "valor" al final del arreglo de canciones del álbum correspondiente.
+
+  - Si "valor" no es una cadena vacía y "propiedad" no es igual a "canciones", asigna el valor del parámetro "valor" a la propiedad.
+  Si la propiedad no existe, debes crearla y asignar este valor.
+
+
+*/
+
+// Primero definimos la funcion
+// Tendra 4 parametros "discos", "id", "propiedad" y "valor", para implementar la primera regla tenemos que confirmar si el valor del parametro "valor" es una cadena vacia
+function actualizarDiscos(discos, id, propiedad, valor) {
+  if(valor === ""){
+    delete discos [id][propiedad];
+  } else if(propiedad === "canciones"){
+    discos[id][propiedad] = discos[id][propiedad] || [];
+    discos[id][propiedad].push(valor);
+  } else{
+    discos[id][propiedad] = valor;
+  }
+}
+
+console.log(coleccionDeDiscos[7853].tituloDelAlbum);
+
+// Manda a llamar la funcion con sus argumentos
+actualizarDiscos(coleccionDeDiscos, 7853, "tituloDelAlbum", "");
+
+console.log(coleccionDeDiscos[7853].tituloDelAlbum);
+// Primero accedemos al objeto que contiene los álbumes, en este caso "discos", tambien la podemos llamar coleccion, luego con conotacion de corchetes estamos accediendo al ID del album a partir de su ID (de su numero de identificacion unico), eso nos retornara el objeto anidado que corresponde al "album", por ejemplo si el ID es el "7853", todo el contenido de eso seria el objeto anidado eso es lo que obtendriammos con la primera notacion de corchetes y luego accedemos a la propiedad que especificamos como argumento, artista o canciones o cualquier otra propiedad.
+
+// En este caso accederemos a esa propiedad y la eliminaremos, con esto ya tenemos la primera regla implementada
+// ----------------
+
+
+
+
+
+// OTRO EJEMPLO
+// Ahora nos vamos con el siguiente propiedad del objeto:
+
+var coleccionDeDiscos = {
+  7853: {
+    tituloDelAlbum: 'Bee Gees Greatest',
+    artista: 'Bee Gees',
+    canciones: ["Stayin' Alive"]
+  },
+  5439: {
+    tituloDelAlbum: 'ABBA Gold'
+  }
+};
+
+function actualizarDiscos(discos, id, propiedad, valor) {
+  if(valor === ""){
+    delete discos [id][propiedad];
+  } else if(propiedad === "canciones"){
+    discos[id][propiedad] = discos[id][propiedad] || [];
+    discos[id][propiedad].push(valor);
+  } else{
+    discos[id][propiedad] = valor;
+  }
+}
+
+// Ahora nos vamos con el siguiente propiedad del objeto:
+console.log(coleccionDeDiscos[5439].canciones);
+
+// Manda a llamar la funcion con sus argumentos
+actualizarDiscos(coleccionDeDiscos, 5439, "canciones", "Mamma Mia");
+
+console.log(coleccionDeDiscos[5439].canciones);
+// ----------------
+
+
+
+
+
+// OTRO EJEMPLO
+// Asignar el artista que sera el grupo ABBA
+
+var coleccionDeDiscos = {
+  7853: {
+    tituloDelAlbum: 'Bee Gees Greatest',
+    artista: 'Bee Gees',
+    canciones: ["Stayin' Alive"]
+  },
+  5439: {
+    tituloDelAlbum: 'ABBA Gold'
+  }
+};
+
+function actualizarDiscos(discos, id, propiedad, valor) {
+  if(valor === ""){
+    delete discos [id][propiedad];
+  } else if(propiedad === "canciones"){
+    discos[id][propiedad] = discos[id][propiedad] || [];
+    discos[id][propiedad].push(valor);
+  } else{
+    discos[id][propiedad] = valor;
+  }
+}
+
+console.log(coleccionDeDiscos[5439].artista);
+
+// Manda a llamar la funcion con sus argumentos
+actualizarDiscos(coleccionDeDiscos, 5439, "artista", "ABBA");
+
+console.log(coleccionDeDiscos[5439].artista);
+
+// Practicamos como trabajar con:
+/*
+
+- funciones.
+- parametros.
+- argumentos.
+- condicionales como eliminar una propiedad de un objeto.
+- Como acceder a una propiedad.
+
+Aprendimos una nueva sintaxis la parte de "discos[id][propiedad] = discos[id][propiedad] || []", que nos permite asignar un valor que sirva como respaldo su el valor anterior es "undefined"
+// Y trabajamos tambien con todas las clausulas if, else if y else.
+
+
+
+*/
 
 
 
