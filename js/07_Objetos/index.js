@@ -1025,10 +1025,89 @@ console.log(coleccionDeDiscos[5439].artista);
 
 Aprendimos una nueva sintaxis la parte de "discos[id][propiedad] = discos[id][propiedad] || []", que nos permite asignar un valor que sirva como respaldo su el valor anterior es "undefined"
 // Y trabajamos tambien con todas las clausulas if, else if y else.
-
-
-
 */
+// ------------------------------------------------------------------
+
+
+
+
+// 
+// Tema 91: Ciclo While
+
+// ya sabemos como trabajar con objetos en JavaScript ya que es un tema muy importante, pero vamos a pasar a otro aspecto del lenguaje de programacion que nos va a permitir escribir programas muy poderosos, mucho mas poderosos de los que hemos escrito hasta ahora, y estos son los ciclos o bucles.
+
+// Los ciclos o bucles nos permiten repetir, una secuencia de instrucciones un numero especifico de veces tenemos 2 tipos de ciclos:
+
+// Ciclos o bucles "while" y ciclos o bucles "for"
+
+// En español traducimos el termino a ciclo o bucle se usan de forma equivalente en ingles el termino original se denomina "loop"
+
+// CICLO WHILE
+// Los ciclos "while" se usan cuando no tenemos un numero especifico de iteraciones.
+
+// ¿QUÉ ES UNA ITERACION?
+// Una iteracion es una repeticion del bloque de codigo que queremos repetir, cuando no sabemos el numero especifico de iteraciones que queremos realizar, pero si sabemos que es lo que tiene que ser cierto para continuar el proceso usamos un ciclo "while"
+
+// ¿Cómo mostrariamos un mensaje 3, 4 o 5 o 6 veces en la consola?, por ejemplo el siguiente mensaje hola "mundo", y lo que realmente hariamos es escribir solo "console.log("Hola , Mundo") repitiendolo tantas vaces sea necesario o las veces que quieres mostrar el mensaje, pero nos daremos cuenta que eso no es practico, ya que si quisieramos repetir el mensajae 20 veces tendriamos que tener 20 líneas de "console.log("Hola, mundo"), algo tan sencillo como esto hacer un tarea repetitiva no nos deberia tomar tantas lineaas de codigo y sera que nuestro codigo sea imposible de leer e ineficiente para escribir, imagina aquellos programas mas complejos que controlan funciones muchisimo mas complejas, para eso, para evitarnos tanto problema de repetir codigo tenemos los cilos "while", nos permiten ese codigo simplemente con una estructura especifica y repetirlo
+
+// Recordar que los ciclos while nos permiten escribir ese codigo simplemente con una estructura especifica y repetirlo
+
+// definimos una variable
+
+var i = 0;
+
+//  tenemos que escribir la condicion que tiene que ser verdadera para poder continuar
+while(i <= 200){
+    console.log('perrito');
+    i++;
+}
+
+// Gracias a los cilos podemos escribiir programas mucho mas poderosos
+// ----------------
+
+
+
+
+
+// OTRO EJEMPLO:
+
+// CICLO WHILE
+var miArreglo = [];
+var i = 0;
+
+console.log(miArreglo);
+
+// Queremos agregar los numeros entre 0 y 9 a este arreglo, ¿Cómo lo podemos hacer? lo podemos hacer con un ciclo "while"
+while(i <= 10){
+    // ¿Qué queremos hacer?, lo que intentamos hacer es agregar ese valor al arreglo
+    miArreglo.push(i);
+    i++;
+
+}
+
+console.log(miArreglo);
+// ----------------
+
+
+
+
+
+// OTRO EJEMPLO:
+
+// 
+
+var numeros = [2, 3, 4, 5, 6, 8, 9, 34];
+
+// USamos un ciclo "while " para quitarle cierte numeros de ese arreglo, en la condicion podemos usar, la loguitud o el tamaño del arreglo
+while(numeros.length > 4){
+    numeros.pop();
+}
+
+console.log(numeros);
+// con este console.log podemos ver que lo unica que nos imprime es hasta ese numero de longitud con el metodo "pop()"
+
+// Esto es solo una introduccion ciclo while en JavaScript, y es muy importante recordar actualizar las variables, para que la condicion en algun momento sea falsa, si esta condicion nunca es falsa el proceso en teoria nunca se va a detener
+
 
 
 
