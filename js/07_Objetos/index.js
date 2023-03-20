@@ -1107,8 +1107,55 @@ console.log(numeros);
 // con este console.log podemos ver que lo unica que nos imprime es hasta ese numero de longitud con el metodo "pop()"
 
 // Esto es solo una introduccion ciclo while en JavaScript, y es muy importante recordar actualizar las variables, para que la condicion en algun momento sea falsa, si esta condicion nunca es falsa el proceso en teoria nunca se va a detener
+// ------------------------------------------------------------------
 
 
+
+
+
+
+
+
+// Tema 92: CICLO For
+
+// Ahora veremos el ciclo o bucle "for" en JavaScript y veremos como funciona.
+
+// usamos el ciclo "for" cuando sabemos cuantas iteraciones van a ser necesarias y el ciclo "for" nos actualiza esa variable que antes teniamos que actualizarla nosotros mismo, con el ciclo "while" la actualiza automaticamente.
+
+// Vamos hacer algo que es equivalente a lo que hicimos con el ciclo "while", agregar los numeros del 0 hasta el 9 a un arreglo, pero con el cliclo "for", la forma de escribir codigo es una forma un poco diferente
+
+var miArreglo = [];
+
+// inicializar una variable, a esto se le llama la "vaariable del ciclo" en ingles "loop variable", es decir, "la variable del ciclo" esta variable es la que va a decidir si se sigue ejecuando o no
+// Despues tenemos la condicion que decide que mientras i sea < menor que 10 el ciclo va a continuar
+// depues tenemos que decirle a JavaScript como queremos actualizar esa variable en cada iteracion, por ejemplo si queremos incrementar el valor de i en 1, escribimos i++, entonces eso es lo que basicamente se tiene aqui en el ciclo "for"
+for(var i = 0; i < 10; i++){
+    // vamos añadir el valor de I al arreglo
+    miArreglo.push(i);
+}
+
+console.log(miArreglo);
+// Entonces esto es semejante al ejemplo anterior con el ciclo "while", pero la ventaja que tienen los ciclo "for" es que podemos especificar todas las condiciones importantes para el ciclo, tenemos el valor inicial de la variable del ciclo, tenemos la condicion y tiene que ser verdadera para que el ciclo continue ejecutandose y tambien tenemos aqui lo que queremos hacer con esa variable cada ves quecomience la iteracion o cada vez que temine una iteracion que es iquivalente.
+// ----------------
+
+
+
+
+
+
+// OTRO EJEMPLO
+
+// En este caso queremos incrementar el  valor de i en 1 pero no necesariamente tenemos que incrementar ese valor de uno en un uno, se puede incrementar en otro valor, en ese caso se tendria que hacer de la siguiente manera:
+var miArreglo = [];
+
+for (var i = 0; i < 10; i = i + 2){
+    miArreglo.push(i);
+}
+
+console.log(miArreglo);
+
+// Tambien podemos utilizar el operador de incremento de la siguiente manera "i += 2", es decir...
+// for (var i = 0; i < 10; i += 2){}
 
 
 
