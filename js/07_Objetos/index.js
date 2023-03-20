@@ -1156,6 +1156,43 @@ console.log(miArreglo);
 
 // Tambien podemos utilizar el operador de incremento de la siguiente manera "i += 2", es decir...
 // for (var i = 0; i < 10; i += 2){}
+// ------------------------------------------------------------------
+
+
+
+
+
+// TEMA 93: Ciclos "for": Numeros impares
+
+// declaramos el arreglo en JavaScript ya que vamos a guardar los numero  impares en ese arreglo, vamos a tener los impares entre 1 y 19, pero, ¿Cómo lo podemos hacer con un ciclo FOR?
+var miArreglo = [];
+
+for(var i = 1; i < 50; i += 2){
+    miArreglo.push(i);
+}
+
+console.log(miArreglo);
+// Este ciclo nos muestra los numeros impares
+
+// Con estos ciclos nos permite realizar operaciones mas complejas sin escribir mas lineas de codigo
+// Tambien podemos realizar procesos mas eficientes
+// ----------------
+
+
+
+
+// OTRO EJEMPLO
+
+// Numeros pares
+let otroArreglo = [];
+
+for(var i = 2; i <= 30; i += 2){
+    otroArreglo.push(i);
+}
+
+console.log(otroArreglo);
+// ------------------------------------------------------------------
+
 
 
 
