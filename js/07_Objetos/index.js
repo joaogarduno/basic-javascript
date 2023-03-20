@@ -1195,6 +1195,42 @@ console.log(otroArreglo);
 
 
 
+// // TEMA 94: Ciclos "for": Contar Hacia Atras
+
+// Tambien podemos contar hacia atras con un cilo o bucle "for".
+
+// Hasta ahora hem,os incrementado el valor de "i" que es la variable del ciclo, pero ahora tambien podemos reducir su valor, veamos como podemos hacerlo.
+for(var i = 15; i >= 10; i--){
+  console.log(i);
+}
+
+
+// Tambien podemos reducir de 2 en 2
+for(var i = 15; i >= 10; i-=2){
+  console.log(i);
+}
+// Si nos damos cuenta vemos que podemos modificar el valor de "i" como queramos, ya que incluso se pude multiplicar  por 2 o dividirlo entre 2
+// ----------------
+
+
+
+
+// OTRO EJEMPLO:
+
+// Vamos a ver un ejemplo con el arreglo 
+// A este arreglo le vamos a incluir ciertos valores, pero ¿Qué tipo de valores?, el valor inicial de "i" sera "10" y queremos continuar el proceso mientras "i" sea mayor que 0
+var miArreglo = [];
+
+for(var i = 10; i > 0; i -= 2){
+  miArreglo.push(i);
+}
+
+console.log(miArreglo);
+// Se va reduciendo de 2 en 2
+
+
+
+
 
 
 
