@@ -1227,6 +1227,86 @@ for(var i = 10; i > 0; i -= 2){
 
 console.log(miArreglo);
 // Se va reduciendo de 2 en 2
+// ------------------------------------------------------------------
+
+
+
+
+
+// TEMA 95: Iterar Sobre un Arreglo con un Ciclo "for"
+
+// Tambien podemos utilizar los ciclos "for" para iterar sobre un arreglo.
+// Iterar sobre un arreglo significa que vas a obtener cada uno de los elementos de ese arreglo y lo vas a poder utilizar en el cuerpo del ciclo, es decir vas a poder hacer algo con cada uno de los elementos de ese arreglo.
+
+// En este caso vamos a sumar todos esos valores utilizando un ciclo y el total de la suma la vamos a acumular en la variable "total" que inicialmente tiene el valor de cero 0
+
+// Definimos un arreglo que va a tener 4 valores (4, 6, 8, 2)
+var miArreglo = [4, 6, 8, 2];
+// Esto que haremos aqui se puede aplicar para cualquier tipo de dato o elemento, incluyendo objetos, cadena de caracteres, incluyendo arreglos anidados y cualquier otro tipo de dato
+
+var total = 0;
+
+// Para sumar todos los valores tenemos que ir acumulando esos valores en el total, para eso tenemos que acceder a cada uno de los valores en una iteracion del ciclo, vamos a necesitar 4 iteraciones porque exiten 4 elementos.
+
+// inicialmente el valor de "i" sera cero "0" la variable del ciclo ya que vamos a utilizar la variable "i" como indice el indice del arreglo, recordar que los indices de los arreglos comienzan desde 0 y se incrementan en uno por ejemplo; 0, 1, 2, 3, 4, 5
+for (var i = 0; i < miArreglo.length; i++){
+    total += miArreglo[i];
+}
+// Vamos a sumar todos esos valore sutilizando un ciclo.
+// ¿Pero, cual será la condicion para que el proceso siga? mientras el valor de "i" sea estrictamente menor que la longuitud  o el tamaño del arreglo, es decir mientras "i" sea un indice valido porque es menor que la longitud del arreglo.
+
+// Y continuando con el proceso incrementamos el valor de "i" con "i++" en 1 antes de la proxima iteracion.
+// Pero porque hacemos uso de un operador estricto de comparacion estricta y no puede ser igual al tamaño del arreglo porque estamos comenzando a contar desde cero, recordar que los indices comienzan desde cero, entonces el ultimo indice sera la longitud del arreglo -1, ese es el ultimo indice valido para ese arreglo, es por eso que utilizamos ese valor estricto del operador "<"
+
+
+
+// mostramos el total desde la consola cuando termine el proceso.
+console.log(total);
+// ----------------
+
+
+
+
+
+// OTRO EJEMPLO:
+// iterar sobre un arreglo.
+
+// Digamos que tenemos un arreglo de cadena de caracteres, que representan lenguajes de programación
+var lenguajes = ['JavaScript', 'PHP', 'Python', 'Java', 'C++', 'C#'];
+
+// Digamos que queremos mostrar cada una de esas cadenas en mayuscula, queremos combertir todos sus caracteres en mayuscula, entonces lo que podemos hacer es iterar sobre el arreglo porque queremos hacer algo con cada uno de estos elementos
+for (var i = 0; i < lenguajes.length; i++){
+    console.log(lenguajes[i].toUpperCase());
+
+}
+// ----------------
+
+
+
+
+
+// OTRO EJEMPLO
+
+// En este caso vamos a trabajar con un ciclo "for" dentro de una funcion
+// Definimos una funcion que va a contar la cantidad de numeros pares en un arreglo
+function contarNumerosPares(arreglo){
+    var total = 0;
+
+    for (var i = 0; i < arreglo.length; i++){
+        if (arreglo[i] % 2 == 0){
+            total++ // Incrementamos el total en uno
+        }
+    }
+
+    return total;
+}
+
+console.log(contarNumerosPares([5, 3, 1, 7, 9])); // Numeros impares como resultado seria: 0 (cero) numeros pares
+console.log(contarNumerosPares([1, 3, 5, 7, 9, 2, 4])); // numeros pares e impares, resultado: 2 numeros pares
+console.log(contarNumerosPares([2, 4, 6, 8, 10])); // numeros pares, resultado: 5 numeros pares
+
+// vemos varios ejemplos de como poder trabajar con un ciclo "for" para iterar sobre los elementos de un arreglo.
+// ------------------------------------------------------------------
 
 
 
