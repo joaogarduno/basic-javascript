@@ -315,8 +315,45 @@ for (i = 0; i < miArreglo.length; i++) {
     console.log('Elemento:')
     }
 }
-// Estos son los ciclos anidados, para poder obtener este conocimiento se requiere de practica y entender como funciona este tipo de ciclo, los ciclos anidados
+// Estos son los ciclos anidados, para poder obtener este conocimiento se requiere de practica y entender como funciona este tipo de ciclo, los ciclos anidados.
+// ------------------------------------------------------------------
 
+
+
+
+
+// TEMA 97: Ciclos "do while"
+// Este es un tercer tipo de ciclo que podemos usar en JavaScript, que es basicamente un ciclo "while" pero con un pequeño cambio, y es el ciclo "do while" que al español lo podemos traducir como "hacer mientras", es decir... "hacer tal cosa mientras una condicion sea verdadera".
+// Vamos a comparar este tipo de ciclo con el ciclo "while".
+
+// Ejemplo de ciclo "while"
+var x;
+
+var x = 5;
+
+while(x < 10){
+  console.log(x);
+  x++;
+}
+// Esto es un cilo "while", pero un ciclo "do while" nos permite otra cosa 
+
+
+// Ejemplo de ciclo "do while"
+var x = 16;
+
+do{
+  console.log(x);
+  x++;
+} while (x < 18)
+// La diferencia de este ciclo con el ciclo "while" es que este siempre se va a ejecutar almenos una ves la secuencia de instrucciones que tenemos aqui.
+
+// Pero... para que me va a servir un "do while" cuales son las situaciones de la vida real en las que podia necesitarlo, una de las situaciones ideales para un cilo "do while" es cuando nececitas que un usuario ingrese algun valor tienes que verificar si ese valor es valido o no, pero necesitamos pedirselo al usuario almenos una vez luego de que ingrese el valor en la condicion "while" del "do while" lo podemos verificar.
+// Entonces si este es valido continuas el programa y si no es valido continuas pidiendo el valor al usuario, hasta que el usuario ingrese un valor valido para tu programa.
+
+// Entonces gracias a esto podemos entender la diferencia entre "while" y el "do while" y cuando podemos ocupar este tipo de ciclo, asi que podemos trabajar con los ciclos "for", "while", y "do while" en JavaScript.
+
+
+// BUSCAR UN PERFIL EN UNA LISTA DE CONTACTOS.
 
 
 
