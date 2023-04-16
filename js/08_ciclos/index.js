@@ -351,23 +351,125 @@ do{
 // Entonces si este es valido continuas el programa y si no es valido continuas pidiendo el valor al usuario, hasta que el usuario ingrese un valor valido para tu programa.
 
 // Entonces gracias a esto podemos entender la diferencia entre "while" y el "do while" y cuando podemos ocupar este tipo de ciclo, asi que podemos trabajar con los ciclos "for", "while", y "do while" en JavaScript.
+// ------------------------------------------------------------------
+
+
+
 
 
 // BUSCAR UN PERFIL EN UNA LISTA DE CONTACTOS.
 
+// TEMA 98 - PROYECTO 7: Busqueda de perfil.
+
+// 
+/*
+
+Combinaremos nuestro conocimiento de:
+- Arreglos.
+- Objetos
+- Ciclos
+- Funciones
+
+En este mini proyecto
+
+*/
+
+// Vamos a definir una funcion que nos va a permitir buscar un "contacto", en una "lista de contactos", digamos que tenemos en nuestra lista 3 contactos, podemos ver que esos 3 contactos estan representados como objetos, y lo vemos de forma vertical con cada una de sus propiedades y su valor correspondiente, pero esos objetos siguen siendo elementos de un arreglo y nos damos cuenta por el corchete que abre y cierra, entonces siguen siendo elementos de un arreglo asi que cada uno de estos objetos ocupa un indice especifico en ese arreglo, conociendo sus indices nos permitira interactuar con cada uno de estos, es decir una vez identificados los indices podemos iterar sobre el arreglo con un ciclo "for" para acceder a cada uno de esos objetos.
+
+// entonces definiremos una funcion que nos permitira conseguir una propiedad de un contacto, vamos a buscar un contacto con base a su nombre, asumiremos que el nombre es unico y en base a una propiedad que especifiquemos vamos a obtener su valor si es que la proiedad existe
+
+var contactos = [
+  {
+    'nombre': 'Nora',
+    'apellido': 'Nav',
+    'numero': '054783992',
+    'gustos': ['Pizza', 'Programación']
+  },
+  {
+    'nombre': 'Harry',
+    'apellido': 'Potter',
+    'numero': '55267892',
+    'gustos': ['Hogwarts', 'Magia']
+  },
+  {
+    'nombre': 'Sherlock',
+    'apellido': 'Holmes',
+    'numero': '722567739',
+    'gustos': ['Casos Interesantes', 'Violín']
+  }
+];
+
+// funcion
+function buscarPerfil(nombre, propiedad){
+
+  // vamos a escibir un ciclo "for" para poder iterar sobre los elementos de un arreglo, vamos a acceder al arreglo directamente, el arreglo "contactos" que es un variable global, puede ser usada dentro de las funciones dentro del programa porque esta definida en el programa principal 
+  
+  /*
+  - Inicialmente el valor de "i" es cero, ya que vamos a utilizar a "i" como indice
+  - Mientras el valor de "i" sea menor que el tamaño de la lista de contactos, es decir su longuitud
+  - Y en cada iteracion vamos a incrementar el valor de "i" en 1
+  */
+  for(var i = 0; i < contactos.length; i++){
+
+    // dentro del ciclo tendramos una condicional, para acceder a cada uno de los contactos en el arreglo usando el indice "i"
+    // recuerda que la variable "i" es la variable del CICLO y se actualizara automaticamente
+
+    // aqui estamos accediendo al contacto correspondiente en base a su nombre, es decir estamos tomando el nombre como valor unico, es decir como si fuera una llave primaria, y  para eso vamos acceder a la propiedad "nombre" del "contacto" que corresponde.
+
+    // Entonces primero accedemos al objeto y con la "notacion de punto" accedemos a su nombre y luego se compara con el operador de "igualdad estricta" con el nombre que queremos conseguir, entonces el ultimo "nombre" es el nombre del contacto que quremos conseguir.
+    if(contactos[i].nombre === nombre){
+
+      // Entonces... si esto es verdadero, es decir es el contacto que buscamos, retornaremos el valor de la propiedad que corresponde.
+      // Vamos a tomar ese contacto, el que estamos verificando y vamos a acceder a la propiedad que especificamos como parametro, en esta ultima parte no podemos utilizar la "notacion de punto", porque "propiedad" es una variable, si usaramos notacion de punto en lugar de notacion de corchetes asi:
+
+      // return contactos[i].propiedad
+
+      // se tendira que buscar una propiedad cullo nombre en realidad sea "propiedad" es decir no se reemplazaria el valor de la variable, si no que se buscara una propiedad con este nombre y eso no es lo que queremos, lo que queremos es que se reemplace el valor de la variable que estamos metiendo desde la funcion es decir del parametro por eso utilizamos la notacion de corchetes. Si ese valor existe su valor se va a retornar.
+
+       // Pero tambien tenemos que manejar el caso en el que la propiedad no exista, es decir si queremos acceder a una propiedad que no esta en el objeto del contacto tenemos que retornar una cadena de caracteres que avise que ocurrio en ese caso.
+
+      // En Javascript hay una forma muy sencilla y concisa de escribirlo, y lo hacemos asi...
+      // Si la propiedad existe retorna esa propiedad pero si esa propiedad no existe ese valor sera "undefined" y por lo tanto podemos utilizar el operador OR || para retornar la cadena de caracteres en su lugar, la propiedad no existe
+      return contactos[i][propiedad] || 'La propiedad no existe.';
+    }
+  }
+  return "El contacto no existe en la lista";
+}
+// DE esta manera tenemos nuestra funcion implementada, vamos a iterar sobre los elementos del arreglo "contactos" cada uno de esos elementos es un objeto, accedemos a ese objeto y decimos si  nombre es igual al nombre que buscamos retornamos la propiedad, si no, es decir si la propiedad no existe retornamos la cadena con el mensaje de "la propiedad no existe" y si nunca se consigue ese contacto retornamos esa cadena de caracteres de "El contacto no esta en la lista de contactos".
+
+// ejecutamos la funcion
+console.log(buscarPerfil('Nora', 'gustos'));
+
+// Probamos con otro contacto
+console.log(buscarPerfil('Harry', 'apellido'));
+
+// Ahora si quiere acceder al numero de telefono de "Sherlock"
+console.log(buscarPerfil('Sherlock', 'numero'));
+// Esto funciona correctamente cuando el contacto y la propiedad estan en el arreglo
+
+// Pero que pasa cuando el contacto no existe
+console.log(buscarPerfil('Nora', 'direccion'));
+// Digamos que queremos acceder al contacto nora pero a una propiedad que no existe en ese contacto o en ese objeto, sabemos que nora es un contacto aqui, es el primer objeto pero no tiene una propiedad llamada "direccion" en las opciones.
+// Cuando se trata de acceder a la propiedad direccion de ese objeto este valor -> "contactos[i][propiedad] || "La propiedad no existe." " porque la propiedad no existe, en ese caso se retorna la cadena de caracteres "La propiedad no existe".
 
 
+// Ahora por ultimo el caso de que el contacto NO existe, en ese caso se muestra la cadena de caracteres "El contacto no está en la lista", entonces al regresar esa cadena de caracteres significa que el ciclo se completo, es decir esa condicion nunca fue verdadera nunca se retorno un valor asi que el ciclo se completo y pasamos a la linea donde se envia esa cadena de caracteres donde nos notifica que no esta el contacto en la lista.
+console.log(buscarPerfil('Joao', 'numero'));
 
+/*
+COMBINACION DE CONOCIMIENTOS DE:
+  -ARREGLOS
+  -OBJETOS
+  -FUNCIONES
+  -PARAMETROS
+  -ARGUMENTOS
+  -CICLOS
+  -CONDICIONALES
+  -SENTENCIAS "RETURN"
+  -CADENA DE CARACTERES
+  -OPERADORES
 
+Todo esto es combinado para permitirnos escribir programas mas complejos y poderosos.
 
-
-
-
-// ----------------
-// ----------------
-// ----------------
-
-
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
+*/
 // ------------------------------------------------------------------

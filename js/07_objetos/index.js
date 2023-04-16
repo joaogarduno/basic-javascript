@@ -872,7 +872,7 @@ console.log(segundoArbol);
 
 
 
-// Tema 90 - Proyecto: Colección de Discos
+// Tema 90 - Proyecto 6: Colección de Discos
 
 // Es es un mini proyecto y esta enfocado en actualizar una coleccion de discos, vamos a practicar conocimiento de objetos, condicionales, como acceder a actualizar y eliminar las propiedades de un objeto y mucho más.
 
