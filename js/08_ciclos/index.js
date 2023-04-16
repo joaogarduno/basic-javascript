@@ -473,3 +473,78 @@ Todo esto es combinado para permitirnos escribir programas mas complejos y poder
 
 */
 // ------------------------------------------------------------------
+
+
+
+
+
+
+
+
+// TEMA 99: NUMEROS ALEATORIOS
+
+// Ahora vamos a ver como podemos generar un numero aleatorio en JavaScript, tenemos todas las herramientas que necesitamos para generar un numero aleatorio en JavaScript.
+
+// Simplemente tenemos que usar la palabra "Math" que significa "Matematicas"
+
+// Definiremos una funcion que se llamara "generarFraccionAleatoria" esta funcion no va a tomar argumentos si no que retornara un valor aleatorio,  ¿cómo vamos a generar ese valor? la clave es escribir "Math" con la "M" mayuscula (así como se ve dentro de la funcion).
+// "Math" es un objeto que nos da funciones matematicas basicas y constantes una de esas funciones matematicas basicas que podemos usar es la funcion "random()".
+// "random()" significa "aleatorio" en español y esta funcion "random()" no toma ningun parametro, es decir no necesita "argumentos" para retornar un valor aleatorio.
+// El metodo retorna un "valor" aleatorio entre 0 y 1, pero el 1 no esta incluido en los posibles resultados, asi que en notacion matematicas tendriamos algo asi [0, ] pero el 1 no estaria incluido en el resultado, el 0 si estaria incluido en los posibles resultado.
+// Asi que para generar un rango tendremos que hacer algo especifico ya que el numero 1 no va estar incluido ahi
+function generarFraccionAleatoria(){
+  return Math.random()
+}
+
+// Probamos nuestra funcion
+console.log(generarFraccionAleatoria());
+// Como resultado es un numero aleatorio con muchos decimales esos numero aleatorios van a ser muy utiles para genera numeros aleatorios en un rango especifico por ejemplo si necesitamos numero entre 3 y 5, o 10 y 15 vamos a poder hacerlo, en base a estos valores que los vamos a tener que transformar un poco, pero nunca ninguno de estos resultados va ser 1, asi que tratemos de recordar que entre 0 y 1 pero nunca pueden ser 1 exactamente.
+// ----------------
+
+
+
+
+// OTRO EJEMPLO
+
+// Ahora, no necesariamente llamar a "Math.random()" dentro de una funcion, tambien en este caso lo hicimos para definir la funcion que podriamos llamar.
+// Pero... tambien podemos llamarlo simplemente en nuestro programa donde necesitemos ese valor aleatorio o podemos asignar el valor a una variable.
+
+console.log(Math.random());
+// ----------------
+
+
+
+
+// OTRO EJEMPLO
+
+// Y tambien podemo asignarlo a una variable, por ejemplo
+var numeroAleatorio = Math.random();
+// Esto generara un valor y este valor sera asignado a una variable y luego si mostramos el valor de esa variable en la consola podemos ver el resultado
+console.log(numeroAleatorio);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------------
+// ----------------
+// ----------------
+
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
