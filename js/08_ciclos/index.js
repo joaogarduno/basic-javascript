@@ -603,6 +603,92 @@ for(i = 0; i < 15; i++){
 
 
 
+// Tema 101:  NUMEROS ENTEROS ALEATORIOS
+
+// NOTA: se repite el tema el 100 y el 101 es el mismo tema (se hizo para probar si los comentarios o la informacion o las notas tienen el mismo sentido y cual es el que explica mejor).
+
+
+// Así como puedes generar numeros decimales aleatorios en javascript, tambien podemos escribir una expresión que nos permitar convertir esos numeros decimales a numeros enteros dentro de un rango especifico
+
+// Vamos a ver como podemos obtener un numero aleatorio entre 0 y 19
+
+// Lo que tenemos que escribir es "Math.floor();" esto ahara toda la magia de la expresión
+
+// "Math." --> -> Sabemos que es un objeto, ese objeto nos permite usar funciones y constantes y matematicas escenciales una de esas funcionaes representada como un metodo es "floor".
+
+// "floor()" --> lo que hace es retornar el mayor numero entero que es menor o igual a su argumento numerico al numero que pasamos entre parentesis ()
+// Y lo que hace es basicamente truncar la parte decimal, basicamente lo que hace es tomar la parte entera de lo que esta entre parensis, entre parentesis tenemos que generar ese numero aleatorio.
+
+// (Math.random()) --> Recuerda que ese numero aleatorio va a estar entre 0 y 1, cero puede ser uno de esos valores, pero uno nunca va a poder ser uno de esos valores no incluye al valor 1.
+
+// Ahora como podemos transformar ese valor en un entero para obtener el rango que queremos lo multiplicamos por un entero
+
+let numAlet = Math.floor(Math.random() * 20);
+
+// Math.floor(Math.random() * 20);
+
+// "Math.random()" --> este valore sera un decimal, entre 0 y 1, sin incluir 1, como no puede ser 1 este producto nunca sera 20 sera 19. ... y algo nunca 20 exactamente y como se aplica la funcion "floor()" ese numero sera truncado a 19 si es 19. y algo el resultado sera 19.
+
+// De esta manera estamos generando un limite superior para el rango de valores que podemos obtener y el valor de "Math.random()" puede ser 0 es el minimo valor que puede tener asi que cero por 20 seria 0 y cuando aplicamos floor el resultado seria 0 y el valor aqui seria 0.
+
+// asi que estamos obteniendo un rango de valores que va desde 0 hasta 19 (incluyendo el 19 ya que el tope es 20) y eso es lo que necesitamos.
+
+console.log(numAlet);
+// Si mostramos este numero aleatorio en la consola podemos verlo.
+// Ahora el resultado que nos muestra nos damos cuenta que es entero pero en realidad el valor que nos esta mostrando es por ejemplo 8. y algo pero el metodo "floor()" lo redondeo o lo trunco, es decir trunco los decimales a un numero entero.
+
+
+
+// ----------------
+// OTRO EJEMPLO
+
+// Vamos a definir una funcion que genere un numero entero aleatorio, esa funcion tendra un solo "parametro" sera el limite superior del rango de numeros que queremos generar y vamos a escribir la expresion que teniamos antes de forma general, retornaremos el valor y vamos a aplicar el metodo "floor()" y dentro generaremos un numero aleatorio entre cero y 1 sin incluir 1, pero esta vez en ves de multiplicar por 20 que es un numero fijo, que es un numero que no podiamos cambiar (ya que era el tope de numero) vamos a multiplicarlo el valor del parametro que es el "limite superior"
+
+function generarEnteroAleatorio(limiteNumerico){
+
+  // Generando un entero aleatorio entre 0 y el límite superior (sin incluirlo)
+  return Math.floor(Math.random() * limiteNumerico)
+}
+// Entonces esto nos esta permitiendo generar valores "enteros" entre 0 y el limite superior sin incluirlo
+
+console.log(generarEnteroAleatorio(5));
+console.log(generarEnteroAleatorio(5));
+console.log(generarEnteroAleatorio(5));
+console.log(generarEnteroAleatorio(5));
+console.log(generarEnteroAleatorio(5));
+// Estas opciones fueron generadas aleatoriamente
+
+
+
+// OTRO EJEMPLO
+
+// Si queremos intentar generar muchos numeros aleatorios podemos hacerlo con un ciclo
+
+function generarEnteroAleatorio(limiteNumerico){
+
+  return Math.floor(Math.random() * limiteNumerico)
+}
+
+// Escribimos un ciclo para repetir el proceso de generar un numero aleatorio, en este caso seran 15 veces es decir 15 numeros aleatorios
+for(let i = 0; i < 15; i++){
+
+  // Ejecutaremos este código 15 veces, es decir esta línea se ejecutara 15 veces
+  console.log(generarEnteroAleatorio(5));
+}
+// En ningun lado vemos el valor de 5
+// Así generamos un entero aleatorio en JavaScript desde 0 hasta un límite superior.
+
+// Támbien hay una forma de generar numeros enteros aleatorios en un rango especifico, con un limite inferior y un limite superior.
+
+
+
+
+
+// ------------------------------------------------------------------
+// TEMA 102: NUMEROS ENTEROS ALEATORIOS EN UN RANGO
+
+
+
 
 
 
