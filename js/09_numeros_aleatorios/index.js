@@ -312,6 +312,46 @@ console.log(c + d)
 // Cuando llamamos a la función "parseInt()" el valor retornado sera un entero con todas sus propiedades
 
 // Esta funcion llamada parseInt es muy importante en JavaScript y tambien la podemos usar con una pequeña variación especificando la base, esto lo veremos en el proximo tema.
+// ------------------------------------------------------------------
+
+
+
+
+
+// TEMA 104: Función parseInt() con una base
+
+// Tambien puedes usar la funcion parseInt() de una forma mas poderosa porque puedes convertir una cadena de caracteres en otro sistema numerico al sistema decimal, como un entero.
+
+// Ejemplo:
+// mostramos el resultado con "console.log()" y llamamos a la funcion "parseInt()" pero en este caso pasaremos una cadena de caracteres con ceros y unos, ¿Cuál es el sistema numerico es ese ?, es el sistema numerico binario.
+
+// Para eso para especificar que el sistema numerico de este numero es binario tendremos que pasar un segundo argumentocon el valor de 2 que representa la base de ese sistema es base 2
+console.log(parseInt("110111", 2))
+// Como resultado nos da un numero de 55
+// Y es exactamente el equivalente de este numero binario en el sistema decimal.
+// ----------------
+
+
+
+
+// OTRO EJEMPLO:
+
+// También podemos pasar el numero como un numero en JavasCript sin ser una cadena de caracteres necesariamente.
+console.log(parseInt(110111, 2));
+// En este caso solo escribimos el número binario y especificamos que la base de ese numero es 2 y tenemos el mismo resultado si lo tuvieramos como una cadena de caracteres.
+
+
+
+
+// OTRO EJEMPLO:
+
+// Veamos un ejemplo ahora con el sistema hexadecimal cuya base es 16.
+console.log(parseInt("3E0A", 16))
+// En el sistema hexadecimal podemos usar ciertas letras y este es un ejemplo de un numero en el sistema hexadecimal, su equivalente en el sistema decimal seria 15882 esto es exactamente el valor en numero decimal.
+
+
+console.log(parseInt(3E0A, 16));
+// Pero si estos valores los pasamos sin comilla nos daria un error de sintaxis, solo es con el numero binario que podriamos hacer esa escepcion, pero como tenemos letras necesitamos representarlo como una cadena de caracteres y tenemos el numero entero en el sistema decimal
 
 
 
