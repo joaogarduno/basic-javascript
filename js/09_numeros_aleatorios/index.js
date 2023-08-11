@@ -286,9 +286,9 @@ console.log(parseInt("abc"))
 
 // OTRO EJEMPLO
 
-// Ahora, nosotros vamos a comprobar en la practica las ventajas de usar esta funcion, digamos que tenemos 2 variables y digamos que por alguna razon en nuestro programa esas variables tienen cadenas de caracteres asignados pero en realidad queremos trabajar con enteros.
+// Ahora, nosotros vamos a comprobar en la practica las ventajas de usar esta funcion, digamos que tenemos 2 variables y digamos que por alguna razón en nuestro programa esas variables tienen cadenas de caracteres asignados, pero en realidad queremos trabajar con enteros.
 
-// por ejemplo si necesitamos sumar los valores que es lo que vamos a obtener
+// por ejemplo si necesitamos sumar los valores que es lo que vamos a obtener, obtendremos una concatenacion o una union de esa cadena de caracteres que no es lo que queremos
 let a = 8
 
 let b = 4
@@ -303,12 +303,15 @@ let y = "4"
 
 console.log(x + y)
 
-// Obtendremos una "concatenacion" o una "union" de esas cadenas de caracteres que no es lo que queremos en ese caso lo que necesitamos hacer, es convertir las cadenas de caracteres a enteros
+// Obtendremos una "concatenacion" o una "union" de esas cadenas de caracteres que no es lo que queremos en ese caso lo que necesitamos hacer, es convertir las cadenas de caracteres a enteros.
+
 let c = parseInt("8")
 let d = parseInt("4")
 
 console.log(c + d)
-// Ahora cuando llamamos a esta funcion "parseInt()" el valor retornado 
+// Cuando llamamos a la función "parseInt()" el valor retornado sera un entero con todas sus propiedades
+
+// Esta funcion llamada parseInt es muy importante en JavaScript y tambien la podemos usar con una pequeña variación especificando la base, esto lo veremos en el proximo tema.
 
 
 
