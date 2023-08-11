@@ -235,6 +235,81 @@ for (i = 0; i < 10; i++){
 }
 
 // En este caso vamos a ver que el límite superior si se incluye en los posibles resultados
+// ------------------------------------------------------------------
+
+
+
+
+
+// TEMA 103: Función parseInt()
+
+// En JavaScript podemos usar una funcion especifica que nos ofrece el lenguaje para convertir una cadena de caracteres que representa un numero en un numero porque recuerda que:
+// Esto --> "5" no es igual a esto --> 5 en un lenguaje de programación
+
+// El primer elemento que vemos "5" es el tipo de dato "string" o "cadena de caracteres".
+// Y este elemento --> 5 es un numero Entero.
+
+// Ahora, lo que haremos es como podemos convertir una cadena de caracteres que representa un número como en el ejemplo anterior es un numero "5" (cinco), pero ahora como lo podemos convertir al tipo de dato entero para poder trabajar y operar ese valor en nuestro programa.
+
+// Ejemplo:
+console.log(parseInt())
+
+// Parse significa como convertir o procesar un entero.
+// Esta funcion lo que hace es convertir una cadena de caracteres a un entero, es lo que nos dice la documentacion "Convertir una cadena de caracteres a un entero" y esa cadena de caracteres sera que vamos a pasar entre parentesis, la cadena de caracteres es 5
+
+console.log(parseInt("5"))
+
+// Tambien podemos convertir numero negativo a Entero
+console.log(parseInt("-47"))
+
+// Y lo bueno de esto es que podemos empezar a operar con estos valores si es lo que queremos en nuestro programa utilizando operaciones "aritmeticas" que normalmente usariamos con numeros tambien puedes convertir 0 de cadena de caracter a un entero.
+console.log(parseInt("0"))
+
+// y un numero decimal, pero en este caso el numero decimal se trunca, es decir, solo se convierte en numero o valor entero de ese numero eliminando la parte decimal, ejemplo "6.7" --> resultado: 6
+console.log(parseInt("6.7"))
+// NOTA: no se redondea, ya que en el caso que se redondeara tendriamos un valor de: 7, si no que solo se mantienen la parte Entera.
+
+// El resultado es el mismo sin importar la parte decimal.
+console.log(parseInt("6.2"))
+
+
+// Tambien pudes usar esta función para convertir un numero decimal en un numero entero y funciona exactamente como queriamos, es decir, trunco la parte decimal, pero en este ejemplo si era un numero decimal no una cadena de caracteres
+console.log(parseInt(6.7))
+
+// Pero si tratamos de convertir un valor que en realidad no represente un numero vamos a tener un valor especifico, por ejemplo "abc";
+console.log(parseInt("abc"))
+// Esta cadena de caracteres no representa un numero y por lo tanto la funcion va a retornar "NaN" esto significa "Not a Number" significa que no es un numero valido y por lo tanto no se pudo convertir a un numero entero
+// ----------------
+
+
+
+
+// OTRO EJEMPLO
+
+// Ahora, nosotros vamos a comprobar en la practica las ventajas de usar esta funcion, digamos que tenemos 2 variables y digamos que por alguna razon en nuestro programa esas variables tienen cadenas de caracteres asignados pero en realidad queremos trabajar con enteros.
+
+// por ejemplo si necesitamos sumar los valores que es lo que vamos a obtener
+let a = 8
+
+let b = 4
+
+console.log(a + b)
+
+
+// Pero si esos valores fueran de tipo string
+let x = "8"
+
+let y = "4"
+
+console.log(x + y)
+
+// Obtendremos una "concatenacion" o una "union" de esas cadenas de caracteres que no es lo que queremos en ese caso lo que necesitamos hacer, es convertir las cadenas de caracteres a enteros
+let c = parseInt("8")
+let d = parseInt("4")
+
+console.log(c + d)
+// Ahora cuando llamamos a esta funcion "parseInt()" el valor retornado 
+
 
 
 

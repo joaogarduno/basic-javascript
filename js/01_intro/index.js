@@ -11,7 +11,7 @@ Varias lineas */
 
 // TEMA 2: Tipo de datos
 
-// En JavaScript se trabajan con valores, y cada uno de estos valore tienen un tipo especifico de dato cada uno de ellos dependiendo de su proposito dentro del codigo.
+// En JavaScript se trabajan con valores, y cada uno de estos valores tienen un tipo especifico de dato cada uno de ellos dependiendo de su proposito dentro del codigo.
 
 // Incluyendo:
     // undefined -> no exite valor asignado
