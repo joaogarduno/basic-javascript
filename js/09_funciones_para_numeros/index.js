@@ -351,7 +351,13 @@ console.log(parseInt("3E0A", 16))
 
 
 console.log(parseInt(3E0A, 16));
-// Pero si estos valores los pasamos sin comilla nos daria un error de sintaxis, solo es con el numero binario que podriamos hacer esa escepcion, pero como tenemos letras necesitamos representarlo como una cadena de caracteres y tenemos el numero entero en el sistema decimal
+// Pero si estos valores los pasamos sin comilla nos daria un error de sintaxis, solo es con el numero binario que podriamos hacer esa escepcion, pero como tenemos letras necesitamos representarlo como una cadena de caracteres y tenemos el numero entero en el sistema decimal.
+// ------------------------------------------------------------------
+
+
+
+
+
 
 
 
