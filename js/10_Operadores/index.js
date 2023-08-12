@@ -132,17 +132,84 @@ console.log(c > d ? c + 2 : d *3)
 
 
 // Ahora en el proximo capitulo explicaremos como utilizar multiples operadores condicionales u operadores ternarios
+// ------------------------------------------------------------------
 
 
 
 
 
+// TEMA 106: Múltiples Operadores Condicionales
+
+// Podemos combinar el poder de los operadores condicionales o ternarios, escribiendo multiples operadores condicionales o ternario uno dentro del otro, similar al concepto que vimos anteriormente de anidado
+
+// Escribiremos una función "compararNumeros" y la definimos, esta función va a comparar 2 números "a" y "b"
+function compararNumeros(a, b){
+  if(a == b){
+    return 'a y b son IGUALES'
+  } else if(a > b){
+    return 'a es MAYOR que b'
+  } else{
+    return 'a es menor que b'
+  }
+}
+// Operador "==" que nos permite saber si ambos valores seran del mismo tipo de dato.
+// Tambien podemos utilizar el operador de igualdad estricta "===" si queremos verificar que el tipo de dato es igual es decir, es el mimo.
+
+// Pero en este caso trabajaremos con el operador de igualdad "=="
+
+// En ese caso si son iguales queremos retornar una cadena de caracteres que nos diga que "a" y "b" son iguales.
+// Pero si ese no es el caso si "a > b" queremos retornar una cadena que diga que "a es mayor que b"
+// Y por ultimo si ese no es el caso tampoco, retornamos la cadena "a es menor que b" o el equivalente es que "b es mayor que a".
+
+console.log(compararNumeros(6, 10))
+// Listo con eso ya tenemos nuestro condicional.
+// ----------------
 
 
 
 
+// OTRO EJEMPLO:
 
+// Ahora como podemos reemplazar toda esta "condicional" con un operador "condicional ternario" que nos permita simular la funcionalidad de la clausula "else if()"
 
+// Primero que nada debemos entender que es lo que queremos lograr con el operador "condicional"
+function compararNumeros(a, b){
+  // Lo primero que tenemos que hacer es escribir la sentencia "return" ya que lo primero que vamos a retornar el valor retornado por el operador condicional.
+  return a == b ? 'a y b son IGUALES'
+        : a > b ? 'a es MAYOR que b'
+        : 'b es MAYOR que a'
+}
+
+console.log(compararNumeros(10, 10))
+
+// 1. Lo primero que hacemos es escribir la sentencia "return", ya que vamos a retornar el valor retornado por el operador condicional
+// 2. Lo primero que hacemos con el operador condicional es siempre escribir primero la condición --> "a == b", en este caso verificamos si "a" es igual a "b", estamos usando el operador de igualdad.
+// 3. Ahora si ese fuera el caso o es el caso ¿qué es lo queremos hacer? retornar la cadena de "a y b son IGUALES"
+// 4. Pero si ese no es el caso que queremos hacer, ¿cómo podemos simular que tenemos una "clausula" "else if()"?
+
+// NOTA: Recuerda que cuando utilizamos un operador "condicional" o "ternario", este es el valor resultante si la condicion es "verdadera" ---> "a y b son IGUALEs". Pero si la condicion es "falsa" el valor que escribamos depues de los dos puntos ":" es el valor que se va a retornar.
+
+// En este caso como queremos siguir verificando otras condiciones, es decir, mas de una condicion, no vamos a escribir un valor directamente despues de los dos puntos ":", si no otro operador condicional.
+
+// NOTA 2: Cuando escribimos varias condiciones como lo haremos ahorita es recomendable dividir este operador en varias lineas, para alinear las condiciones verticalmente (como se muestra en el codigo de arriba).
+
+// Entonces si la primera condicion es "falsa", el primer valor que esta entre comilla no se retorna y nos saltamos a la siguiente condicion es decir después de los dos puntos ":" y escribimos la nueva condición (recordar que despues de los dos puntos). Y en ese caso ¿Qué es lo que queremos retornar? queremos retornar una cadena que diga que "a es MAYOR que b".
+// Y si ese tampoco es el caso, es decir, si la condición es falsa entonces queremos retornar otro valor, otra cadena y esa cadena dira "b es MAYOR que a"
+
+// Y de esta manera podemos hacer uso de los operadores ternarios reemplazando los operadores multiples con la clausula de "else if()"
+// Esta condicion utilizando un operador "ternario" es lo equivalente a la condicional que escribimos anteriormente con la clausula "else if()".
+
+// Tenemos nuestras 2 conciones "a == b" y "a > b" y lo que seria equivalente a la clausula "else" haciendo uso de los dos puntos ":" como un valor por defecto al que va evaluar esa expresión que se va a retornar si las condiciones son falsas.
+
+// En este caso veamos la lógica:
+// Si esta condicion es "verdadera" --> "a == b" se retorna este valor --> "a y b son IGUALES"
+// Si esta condición es "falsa" --> "a == b", pasamos al siguiente operador condicional ": a > b ? 'a es MAYOR que b'".
+// Si esta condición es "verdadera" --> "a > b" el valor que se retornara sera "a es MAYOR que b".
+// Y si es "falsa" --> ": 'b es mayor que a'", este valor es el valor como de respaldo si en dado caso de que las 2 anteriores condiciones son falsas.
+
+// Con esto ya podemos hacer uso de los "multiples operadores condcionales" o "ternarios"
+// Recordar de alinear las condiciones para que sea mas facil de leer y de entender visualmente
+// Y en la ultima linea tiene el valor que se retornara si las otras 2 condiciones son falsas
 
 
 
