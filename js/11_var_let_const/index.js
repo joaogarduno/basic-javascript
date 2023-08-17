@@ -212,9 +212,119 @@ console.log(color)
 // Esas son las diferencias principales entre "var" y "let".
 // "var" crea una variable que se puede usar a nivel global, con ámbito global o dentro de una función, pero "let" es mas reestrictivo y reestringe el ambito de esa variable al bloque de código o a la expresion donde la variable fue declarado definida.
 
-// Ya podemo trabajar con "var" y "let" y debemos escoger cual necesitamos para nuestro programa.
+// Ya podemos trabajar con "var" y "let" y debemos escoger cual necesitamos para nuestro programa.
 // Los mismos principios aplican si estuvieramos dentro de una función: "var" va a permitir que la variable se use en la función, pero si usamos "let" va a estar restringido su uso al bloque.
 // ------------------------------------------------------------------
+
+
+
+
+
+// TEMA 109: const en JavaScript
+
+// Esta es la tercera opcion que podemos utilizar para poder declarar un variable en JavaScript, la palabra "clave" o "reservada" es "const"
+
+// "const" es una abreviacion de "constante" en ingles "constant" son variables que solo pueden ser usadas para acceder a ese valor no podemos modificar el valor una vez que ya haya sido asignado por primera vez
+
+// Ejemplo:
+
+// Si declaramos una variable con "const" y la llamamos "miConstante" y le asignamos el valor "35" vamos a acceder a su valor para mostrarte que si se puede acceder al valor de la constante
+const miConstante = 35
+
+console.log(miConstante)
+// Y vemos que si efectivamente el valor de nuestra constante es "35"
+
+// Pero que ocurre si queremos cambiar el valor de esta variable por ejemplo a "15"
+
+miConstante = 15
+// No arroja un error, error nos dice "TypeError: Assignment to constant variable.", entonces una constante solo se puede leer mas no se puede reasignar su valor o modificar su valor despues de que haya sido asignado inicialmente.
+// ----------------
+
+
+
+
+// OTRO EJEMPLO:
+
+// PEro en este ejemplo hay algo curioso que crees que va a ocurrir si intentamos hacer esto.
+// Anteriormente con "var" podiamos declarar una variable y luego asignarle un nuevo valor en otra línea, esto tambien se podia hacer con "let", ¿Pero, que ocurre con "const"?
+
+const miConstante;
+
+miConstante = 35;
+
+console.log(miConstante);
+// Nos dice que es un error de sintaxis, ya que las declaraciones "const" requieren un valor de inicialización, esto quiere decir que no podemos partir esto en 2 líneas, tenemos que asignar el valor o un valor en la misma linea
+
+const miConstante = 45
+console.log(miConstante)
+// De esta manera si vemos el valor que se le esta asignando a la variable "constante" es correcto
+
+// Algo muy importante es que por convencion en JavaScript las "constantes" (como la variable declarada anteriormente) se escriben en MAYUSCULAS y se separan las palabras con un "guion bajo" "_" eso lo usamos para disntinguirlas visualmente para que nosostros y otros desarrolladores sepan que no deben tratar de cambiar el valor de esa constante.
+
+// Ejemplo
+// Si la escribimos toda en MAYUSCULAS podemos ver el siguiente formato igual se pude ver utilizando el "console.log()" y vemos el valor de "45"
+const MI_VARIABLE = 45
+console.log(MI_VARIABLE)
+// ----------------
+
+
+
+// OTRO EJEMPLO
+
+// Ahora vamos a ver un ejemplo con una funcion que vamos a usar para calcular el area de un circulo (debemos tener una idea de que constante vamos a usar o declarar en esta función, una constante muy famosa)
+function calcularAreaCirculo(radio){
+  // Vamos a declarar una "constante" "PI", el valor que le asignaremos a esta constante sera 3.14, digamos que queremos usar de forma constante ese valor con 2 decimales (aunque sabemos que tiene infinitos decimales)
+  const PI = 3.14
+
+  // Y verificaremos si el radio es menor que "cero" "0", si es menor que "cero" vamos a usar el patrón de retorno anticipado (return) que hemos aprendido durante este curso, para retornar el valor "undefined"
+  if(radio < 0){
+    return undefined
+  }
+
+  // Si ese no es el caso, entonces vamos a retornar el valor de PI por el "radio" elevado al "cuadrado".
+  return PI * (radio ** 2)
+  // NOTA: el operador " ** " que nos permite elevar un valor al cuadrado o a cualquier otra potencia. Un "asterisco" es "multiplicación" y "**" dos asteriscos es elevar esta base a este exponente.
+
+  // Asi estamos implementando la "formula" PI por radio al cuadrado para el area del circulo.
+}
+
+// Ahora mandamos a llamar la función con distintos valores
+console.log(calcularAreaCirculo(5))
+// ----------------
+
+
+
+
+// OTRO EJEMPLO:
+
+// Si no definieramos el PI como una constante, algo como esto podría ocurrir en nuestro programa.
+function calcularAreaCirculo(radio){
+  // Digamos que no la estamos definiendo como una constante asi que la vamos a escribir en minuscula.
+  var pi = 3.14
+
+  if(radio < 0){
+    return undefined
+  }
+  
+  // Yo puedo cambiar el valor de PI
+  pi = -45.2
+  // Imagina el error que tendra nuestro programa si hacemos este cambio inesperado sin darnos cuenta.
+  // Ese es el riesgo que corremos cuando no creamos "constantes" si no variables
+
+
+  return pi * (radio ** 2);
+}
+
+// Si necesitamos que ese valor se mantenga exactamente igual durante todo el progama deberiamos declararla con "const".
+
+// NOTA: este ejemplo solo se menciona para entender como es que puede afectarnos al crear nuestro programa con "variables" y no con "constante", despues de leer todo este ejemplo regresamos al anterior de este ejemplo ☝️
+// Volvemos al ejemplo anterior 👆️
+
+
+// Con esto sabemos la importancia de usar "const".
+// Cuando queremos que el valor de una variable no cambie durante toda la ejecucion del programa
+// ------------------------------------------------------------------
+
 
 
 
