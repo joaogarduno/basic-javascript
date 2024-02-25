@@ -229,7 +229,7 @@ console.log(color)
 // Ejemplo:
 
 // Si declaramos una variable con "const" y la llamamos "miConstante" y le asignamos el valor "35" vamos a acceder a su valor para mostrarte que si se puede acceder al valor de la constante
-const miConstante = 35
+const miConstante = 35;
 
 console.log(miConstante)
 // Y vemos que si efectivamente el valor de nuestra constante es "35"
@@ -245,7 +245,7 @@ miConstante = 15
 
 // OTRO EJEMPLO:
 
-// PEro en este ejemplo hay algo curioso que crees que va a ocurrir si intentamos hacer esto.
+// Pero en este ejemplo hay algo curioso que crees que va a ocurrir si intentamos hacer esto.
 // Anteriormente con "var" podiamos declarar una variable y luego asignarle un nuevo valor en otra línea, esto tambien se podia hacer con "let", ¿Pero, que ocurre con "const"?
 
 const miConstante;
@@ -255,7 +255,7 @@ miConstante = 35;
 console.log(miConstante);
 // Nos dice que es un error de sintaxis, ya que las declaraciones "const" requieren un valor de inicialización, esto quiere decir que no podemos partir esto en 2 líneas, tenemos que asignar el valor o un valor en la misma linea
 
-const miConstante = 45
+const miConstante = 45;
 console.log(miConstante)
 // De esta manera si vemos el valor que se le esta asignando a la variable "constante" es correcto
 
@@ -324,6 +324,36 @@ function calcularAreaCirculo(radio){
 // Con esto sabemos la importancia de usar "const".
 // Cuando queremos que el valor de una variable no cambie durante toda la ejecucion del programa
 // ------------------------------------------------------------------
+
+
+
+
+// TEMA 110: MUTAR ARREGLO DECLARADO CON "const"
+
+// Debemos tener en cuenta un aspecto de const para cuando lo usemos en JavaScript.
+
+// Cuando declares una variable con "const" en Javascript, eso no significa que ese valor no puede cambiar, si no que significa que no podemos asignar un valor nuevo a esa variable.
+
+// Para poder mostrar un ejemplo de esto podemos mutar un arreglo que fue declarado con "const"
+
+// Recuerda la convencion establecida para las variables con CONST, que significa que cuando una variable este declarada con CONST esto significa que no se puede cambiar o mutar, es por eso que ese tipo de variables se declaran con letras mayusculas para que podamos identificar que ese tipo de variables no se deben modificar o cambiar sus valores, es por eso que se escriben con MATYÚSCULAS a esto se le conoce como la "convencion establecida para las constantes".
+const MI_AREGLO = [1, 2, 3, 4, 5];
+
+// Si intentamos reasignar el valor a otro arreglo completamente distinto, esto nos mostrara un error, ya que definimos el arreglo con CONST
+// MI_AREGLO = [6, 7, 8, 9, 10]
+
+// Entonces recueda que no se puede asignar un valor nuevo a esa variable, pero si podemos cambiar lo elementos de este arreglo
+MI_AREGLO[0] = 5;
+MI_AREGLO[1] = 6;
+MI_AREGLO[2] = 7;
+MI_AREGLO[3] = 8;
+
+console.log(MI_AREGLO);
+
+// Vemos que el arreglo fue mutado, asi que si podemos reasignar los valores individuales de esta estructura de datos de este arreglo que tenemos.
+// Entonces, lo que no podemos hacer es una asinación directa a esa variable o constante despues de declararla, pero si podemos usar la notación de corchetes para reasignar los valores del arreglo.
+
+// Ahora vamos a ver como impedir la mutación de un objeto esto tendra que ver con el congelamiento.
 
 
 
