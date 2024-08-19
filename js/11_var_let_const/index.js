@@ -354,12 +354,78 @@ console.log(MI_AREGLO);
 // Entonces, lo que no podemos hacer es una asinación directa a esa variable o constante despues de declararla, pero si podemos usar la notación de corchetes para reasignar los valores del arreglo.
 
 // Ahora vamos a ver como impedir la mutación de un objeto esto tendra que ver con el congelamiento.
+// ------------------------------------------------------------------
 
 
 
 
 
 
+
+// TEMA 111: CREAR UN OBJETO INMUTABLE
+// ¿Existe una forma en JavaScript de impedir la mutación de un objeto?
+// De no permitir que se cambie la estructura de un objeto.
+// En el caso anterior fue sobre un arreglo, pero ahorita estaremos hablando de objetos.
+
+// Existe una forma de que un objeto sea inmutable
+let colores = {
+  "verde": "#10E04B",
+  "azul": "#1B50E0",
+  "negro": "#000000",
+  "blanco": "#FFFFFF"
+};
+
+// Ya tenemos lo colores que vamos a necesitar y digamos que no queremos que ese objeto mute en ningun momento, es decir, no queremos cambiar esos valores en ninguna circunstancia, asi que no queremos que se agregen, ni se borren colores de este objeto, basicamente queremos congelarlo
+
+// Esa posibilidad esta disponible en Javascript con un metodo llamado "FREEZE"
+// Método llamado "freez"
+Object.freeze(colores)
+// "freeze" Este es un metodo previene la modificación de atributos, de propiedades existentes y sus valores y previenen la incorpoción o edición de nuevas propiedades al objeto.
+
+// Básicamente congela el objeto en ese estado cuando se ejecuta la linea, entre parentesis tenemos que pasar la variable que contiene el objeto, y de esa manera lo estamos "congelando"
+
+// PROBAMOS
+colores.amarillo = "#FFF200";
+
+console.log(colores);
+
+
+// OTRO EJEMPLO
+// Ahora, digamos que queremos cambiar el valor de una propiedad existente
+
+let colores = {
+  "verde": "#10E04B",
+  "azul": "#1B50E0",
+  "negro": "#000000",
+  "blanco": "#FFFFFF"
+};
+
+Object.freeze(colores)
+
+colores.verde = '#345SG5'
+
+console.log(colores);
+
+// Este es el efecto que tiene "freez sobre un objeto"
+
+
+
+// OTRO EJEMPLO
+// Ahora digamos que quiero borrar una propiedad de ese objeto.
+let colores = {
+  "verde": "#10E04B",
+  "azul": "#1B50E0",
+  "negro": "#000000",
+  "blanco": "#FFFFFF"
+};
+
+Object.freeze(colores)
+
+delete colores.verde
+
+console.log(colores);
+
+// Pues tampoco se podra borrar gracias al efecto que tiene "freez" sobre un objeto
 
 
 
