@@ -36,6 +36,7 @@ const fecha = () => new Date();
 
 
 
+
 // TEMA 113: FUNCIONES FLECHA CON PARÁMETROS
 // 
 // Cómo definir funciones flecha que tomen uno o mas parametros, en el ejemplo anterior la funcion flecha no tomaba ningun parametro solo retornaba un objeto.
@@ -89,6 +90,35 @@ const sumar = (a, b) => {
 
 // Y así tenemos la misma función que teniamos antes.
 console.log(sumar(1, 1));
+// ------------------------------------------------------------------
+
+
+
+
+
+
+// TEMA 114: Valores por Defecto para Parámetros
+// También podemos asignar un valor por defecto a los parámetros de una función flecha, esto es útil cuando queremos permitir que el usuario omita algún argumento para usar el valor por defecto
+const incrementar = (num, valor) => num + valor;
+
+// Para asignar un valor por defecto al incremento vamos a simplemente escribir un signo igual y el valor por defecto para ese parámetro...
+const incrementar = (num, valor = 1) => num + valor;
+// Este principio también aplica a las funciones normales y a las funciones que estamos definiendo y a las funciones anonimas
+
+// Si llamamos a la función "incrementar()" y pasamos el valor 5 nada más para este número se deberia usar el valor por defecto
+console.log(incrementar(5))
+
+
+
+
+// ----------------
+// OTRO EJEMPLO
+// Pero si pasamos el valor del incremento como segundo argumento también deberia funcionar y se deveria de personalizar el valor de este parámetro, el resultado deberia ser 8
+const incrementar = (num, valor = 1) => num + valor;
+
+console.log(incrementar(5, 3))
+
+// Así es como puedes asignarle un valor por defecto a un parámetro de tu función, el nombre del parámetro en la lista del parámetro seguido de un signo igual y el valor por defecto que quieres asignar.
 // ------------------------------------------------------------------
 
 
