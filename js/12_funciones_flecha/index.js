@@ -250,6 +250,27 @@ const sumar = (...args) => {
 
 
 
+// TEMA 116: OPERADOR SPREAD
+// 
+// Ahora conoceremos un operador que hace exactamente lo contrario que el operador REST, este operador se llama SPREAD, este operador toma un arreglo y practicamente lo descompone en sus elementos individuales para que la función pueda recibirlos y asignarlos a sus parametros correspondientes
+const numeros = [1, 2, 3];
+
+function sumar(x, y, z){
+  return x + y + z
+}
+
+// En este caso vamos a utilizar el operador SPREAD, porque nosotros no podemos pasar directamente este argumento [1, 2, 3] a la funcion, la función toma 3 parámetros, necesita 3 valores separados y nosotros actualmente tenemos un arreglo
+// En lugar de escribir esto sumar(numeros[0], numeros[1], numeros[2]) y extraer los valores individuales, tenemos un operador que nos permite hacer exactamente esto
+console.log(sumar(...numeros))
+// Es el mismo simbolo del operador REST, pero ahora en lugar de usarlo en la lista de parámetros lo vamos a usar en la llamada a la función cuando pasemos el argumento, luego escribimos el nombre de la variable, el nombre de la variable que hubieramos pasado como argumento con el arreglo y esto lo que basicamente va a hacer es descomponerlo en sus elementos individuales y asignarlos en ese mismo orden a los parametros
+// ------------------------------------------------------------------
+
+
+
+
+
+
+
 
 
 
